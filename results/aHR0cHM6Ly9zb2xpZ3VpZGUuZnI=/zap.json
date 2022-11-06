@@ -1,6 +1,6 @@
 {
 	"@version": "2.12.0",
-	"@generated": "Sun, 30 Oct 2022 01:18:01",
+	"@generated": "Sun, 6 Nov 2022 01:07:22",
 	"site":[ 
 		{
 			"@name": "https://soliguide.fr",
@@ -68,6 +68,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://soliguide.fr/fiche/esi-chez-monsieur-vincent-paris-12/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://soliguide.fr/fiche/esi-espace-saint-martin-paris-4/",
 							"method": "GET",
 							"param": "",
@@ -76,13 +83,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/fiche/esi-la-maison-du-partage-paris-0/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/fiche/esi-maison-dans-la-rue-bichat-paris-11/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -164,6 +164,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://soliguide.fr/fiche/esi-chez-monsieur-vincent-paris-12/",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://soliguide.fr/fiche/esi-espace-saint-martin-paris-4/",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -192,7 +199,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -287,7 +294,7 @@
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10017",
@@ -409,7 +416,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "2506"
+					"sourceid": "2509"
 				},
 				{
 					"pluginid": "10063",
@@ -546,20 +553,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-152x152.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "",
@@ -600,9 +593,16 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
@@ -649,27 +649,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-152x152.png",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-180x180.png",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -710,9 +689,16 @@
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/sitemap.xml",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
 						}
 					],
-					"count": "13",
+					"count": "11",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
@@ -773,13 +759,6 @@
 							"evidence": "AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM"
 						},
 						{
-							"uri": "https://soliguide.fr/fiche/entraide-et-partage-avec-les-sans-logis-epalsl-paris-10/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM"
-						},
-						{
 							"uri": "https://soliguide.fr/fiche/esi-agora-paris-3/",
 							"method": "GET",
 							"param": "",
@@ -806,6 +785,13 @@
 							"param": "",
 							"attack": "",
 							"evidence": "AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM"
+						},
+						{
+							"uri": "https://soliguide.fr/styles.ae9ee18e74a24cb5.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyB3aWR0aD0nNTEyJyBoZWlnaHQ9JzUxMic+PHBhdGggZmlsbD0ncmdiKDI1NSwyNTUsMjU1KScgZD0nTTI1NiA4QzExOS4wNDMgOCA4IDExOS4wODMgOCAyNTZjMCAxMzYuOTk3IDExMS4wNDMgMjQ4IDI0OCAyNDhzMjQ4LTExMS4wMDMgMjQ4LTI0OEM1MDQgMTE5LjA4MyAzOTIuOTU3IDggMjU2IDh6bTAgMTEwYzIzLjE5NiAwIDQyIDE4LjgwNCA0MiA0MnMtMTguODA0IDQyLTQyIDQyLTQyLTE4LjgwNC00Mi00MiAxOC44MDQtNDIgNDItNDJ6bTU2IDI1NGMwIDYuNjI3LTUuMzczIDEyLTEyIDEyaC04OGMtNi42MjcgMC0xMi01LjM3My0xMi0xMnYtMjRjMC02LjYyNyA1LjM3My0xMiAxMi0xMmgxMnYtNjRoLTEyYy02LjYyNyAwLTEyLTUuMzczLTEyLTEydi0yNGMwLTYuNjI3IDUuMzczLTEyIDEyLTEyaDY0YzYuNjI3IDAgMTIgNS4zNzMgMTIgMTJ2MTAwaDEyYzYuNjI3IDAgMTIgNS4zNzMgMTIgMTJ2MjR6Jy8+PC9zdmc+"
 						}
 					],
 					"count": "11",
@@ -814,7 +800,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10027",
@@ -875,7 +861,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "2508"
+					"sourceid": "2512"
 				},
 				{
 					"pluginid": "10109",
@@ -937,6 +923,13 @@
 							"evidence": "<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM&amp;libraries=places&amp;types=address&amp;language=fr&amp;v=3\"></script>"
 						},
 						{
+							"uri": "https://soliguide.fr/fiche/esi-chez-monsieur-vincent-paris-12/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM&amp;libraries=places&amp;types=address&amp;language=fr&amp;v=3\"></script>"
+						},
+						{
 							"uri": "https://soliguide.fr/fiche/esi-espace-saint-martin-paris-4/",
 							"method": "GET",
 							"param": "",
@@ -945,13 +938,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/fiche/esi-la-maison-du-partage-paris-0/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDGZQlHzeXuz1fT_TjlnD1twnVA02JxKlM&amp;libraries=places&amp;types=address&amp;language=fr&amp;v=3\"></script>"
-						},
-						{
-							"uri": "https://soliguide.fr/fiche/esi-maison-dans-la-rue-bichat-paris-11/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -971,7 +957,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -1115,13 +1101,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-152x152.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "",
@@ -1164,13 +1143,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				}
 			]
 		}

@@ -1,6 +1,6 @@
 {
 	"@version": "2.12.0",
-	"@generated": "Sun, 30 Oct 2022 01:17:47",
+	"@generated": "Sun, 6 Nov 2022 01:06:56",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -87,6 +87,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "",
@@ -131,13 +138,6 @@
 						{
 							"uri": "https://www.reconnect.fr/sitemap.xml",
 							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": ""
@@ -237,9 +237,16 @@
 							"param": "X-Frame-Options",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"method": "POST",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -743,6 +750,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/annexe/cgs-cs",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -751,13 +765,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.e93be57d.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -1386,7 +1393,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "210"
+					"sourceid": "212"
 				}
 			]
 		}

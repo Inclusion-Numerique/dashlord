@@ -1,6 +1,6 @@
 {
 	"@version": "2.12.0",
-	"@generated": "Sun, 13 Nov 2022 01:03:56",
+	"@generated": "Sun, 20 Nov 2022 01:09:53",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -232,7 +232,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"uri": "https://www.reconnect.fr/reset-password/email",
 							"method": "POST",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -325,7 +325,7 @@
 					"reference": "<p>https://bugs.jqueryui.com/ticket/15284</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "130"
+					"sourceid": "131"
 				},
 				{
 					"pluginid": "10017",
@@ -769,13 +769,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgs-cs",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -784,6 +777,13 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -1050,44 +1050,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": "where"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where"
 						}
 					],
-					"count": "20",
+					"count": "15",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1433,7 +1398,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "216"
+					"sourceid": "214"
 				}
 			]
 		}

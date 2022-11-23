@@ -48330,7 +48330,51 @@
         }
       }
     },
-    "updownio": null,
+    "updownio": {
+      "token": "2x13",
+      "url": "https://lafrancedessolutions.gouv.fr",
+      "alias": "",
+      "last_status": 200,
+      "uptime": 100,
+      "down": false,
+      "down_since": null,
+      "error": null,
+      "period": 600,
+      "apdex_t": 0.5,
+      "string_match": "",
+      "enabled": true,
+      "published": false,
+      "disabled_locations": [],
+      "recipients": [
+        "email:3715942461"
+      ],
+      "last_check_at": "2022-11-23T13:24:42Z",
+      "next_check_at": "2022-11-23T13:34:39Z",
+      "mute_until": null,
+      "favicon_url": null,
+      "custom_headers": {},
+      "http_verb": "GET/HEAD",
+      "http_body": "",
+      "ssl": {
+        "tested_at": "2022-11-23T13:14:47Z",
+        "expires_at": "2023-02-20T08:53:08Z",
+        "valid": true,
+        "error": null
+      },
+      "metrics": {
+        "apdex": 1,
+        "timings": {
+          "redirect": 0,
+          "namelookup": 36,
+          "connection": 155,
+          "handshake": 156,
+          "response": 147,
+          "total": 494
+        }
+      },
+      "uptimeGrade": "A",
+      "apdexGrade": "A"
+    },
     "nmap": {
       "host": "lafrancedessolutions.gouv.fr",
       "protocol": "tcp",
@@ -48703,7 +48747,7 @@
         "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
         "port": "443",
         "severity": "OK",
-        "finding": "89 >= 30 days"
+        "finding": "88 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -48906,7 +48950,7 @@
         "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
         "port": "443",
         "severity": "INFO",
-        "finding": "1669191061"
+        "finding": "1669210335"
       },
       {
         "id": "HSTS_time",
@@ -48958,11 +49002,32 @@
         "finding": "0 at '/'"
       },
       {
+        "id": "X-Frame-Options",
+        "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
+        "port": "443",
+        "severity": "OK",
+        "finding": "DENY"
+      },
+      {
+        "id": "X-Content-Type-Options",
+        "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
+        "port": "443",
+        "severity": "OK",
+        "finding": "nosniff"
+      },
+      {
+        "id": "X-XSS-Protection",
+        "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "1; mode=block"
+      },
+      {
         "id": "Cache-Control",
         "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
         "port": "443",
         "severity": "INFO",
-        "finding": "private, no-cache, no-store, max-age=0, must-revalidate"
+        "finding": "s-maxage=31536000, stale-while-revalidate"
       },
       {
         "id": "banner_reverseproxy",
@@ -49469,21 +49534,26 @@
         "ip": "lafrancedessolutions.gouv.fr/109.232.236.90",
         "port": "443",
         "severity": "INFO",
-        "finding": "95"
+        "finding": "96"
       }
     ],
     "thirdparties": {
       "trackers": [],
       "cookies": [],
       "headers": {
-        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "cache-control": "s-maxage=31536000, stale-while-revalidate",
         "content-encoding": "gzip",
         "content-type": "text/html; charset=utf-8",
-        "date": "Wed, 23 Nov 2022 08:09:58 GMT",
+        "date": "Wed, 23 Nov 2022 13:31:12 GMT",
+        "etag": "\"kwaec868xes96\"",
         "strict-transport-security": "max-age=31536000",
         "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-nextjs-cache": "HIT",
         "x-powered-by": "Next.js",
-        "x-request-id": "af9ddb47-1b00-49aa-bd70-b54f2c2c043d"
+        "x-request-id": "dcc6fb9d-8843-45c7-b7c9-3a8230a1f33f",
+        "x-xss-protection": "1; mode=block"
       },
       "endpoints": [
         {
@@ -49683,7 +49753,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Wed, 23 Nov 2022 08:08:54",
+      "@generated": "Wed, 23 Nov 2022 13:30:27",
       "site": [
         {
           "@name": "https://lafrancedessolutions.gouv.fr",
@@ -49706,13 +49776,6 @@
               "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>"
             },
             {
-              "name": "Missing Anti-clickjacking Header",
-              "riskcode": "2",
-              "confidence": "2",
-              "riskdesc": "Medium (Medium)",
-              "desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>"
-            },
-            {
               "name": "Permissions Policy Header Not Set",
               "riskcode": "1",
               "confidence": "2",
@@ -49725,13 +49788,6 @@
               "confidence": "2",
               "riskdesc": "Low (Medium)",
               "desc": "<p>The web/application server is leaking information via one or more \"X-Powered-By\" HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</p>"
-            },
-            {
-              "name": "X-Content-Type-Options Header Missing",
-              "riskcode": "1",
-              "confidence": "2",
-              "riskdesc": "Low (Medium)",
-              "desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>"
             },
             {
               "name": "Base64 Disclosure",
@@ -49769,6 +49825,20 @@
               "desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>"
             },
             {
+              "name": "Storable and Cacheable Content",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>"
+            },
+            {
+              "name": "Storable but Non-Cacheable Content",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>"
+            },
+            {
               "name": "User Controllable HTML Element Attribute (Potential XSS)",
               "riskcode": "0",
               "confidence": "1",
@@ -49784,7 +49854,7 @@
       {
         "requestedUrl": "https://lafrancedessolutions.gouv.fr/",
         "finalUrl": "https://lafrancedessolutions.gouv.fr/",
-        "fetchTime": "2022-11-23T08:09:11.491Z",
+        "fetchTime": "2022-11-23T13:30:44.749Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -49795,7 +49865,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.9969549179077148
+            "score": 1
           },
           "accessibility": {
             "title": "Accessibility",
@@ -49827,7 +49897,7 @@
               "snapshot"
             ],
             "id": "seo",
-            "score": 0.69
+            "score": 1
           },
           "pwa": {
             "title": "PWA",
@@ -49837,7 +49907,7 @@
               "navigation"
             ],
             "id": "pwa",
-            "score": 0.3
+            "score": 0.6
           }
         },
         "audits": {
@@ -49847,53 +49917,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4231,
+            "numericValue": 1530,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 1363,
-                  "firstMeaningfulPaint": 1363,
-                  "largestContentfulPaint": 6088,
-                  "interactive": 4231,
-                  "speedIndex": 1706,
-                  "totalBlockingTime": 9,
-                  "maxPotentialFID": 67,
+                  "firstContentfulPaint": 1530,
+                  "firstMeaningfulPaint": 1530,
+                  "largestContentfulPaint": 4629,
+                  "interactive": 1530,
+                  "speedIndex": 2565,
+                  "totalBlockingTime": 0,
+                  "maxPotentialFID": 48,
                   "cumulativeLayoutShift": 0,
                   "cumulativeLayoutShiftMainFrame": 0,
                   "totalCumulativeLayoutShift": 0,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 272799655,
+                  "observedTimeOriginTs": 266630968,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 272799655,
-                  "observedFirstPaint": 699,
-                  "observedFirstPaintTs": 273498380,
-                  "observedFirstContentfulPaint": 699,
-                  "observedFirstContentfulPaintTs": 273498380,
-                  "observedFirstContentfulPaintAllFrames": 699,
-                  "observedFirstContentfulPaintAllFramesTs": 273498380,
-                  "observedFirstMeaningfulPaint": 699,
-                  "observedFirstMeaningfulPaintTs": 273498380,
-                  "observedLargestContentfulPaint": 913,
-                  "observedLargestContentfulPaintTs": 273712512,
-                  "observedLargestContentfulPaintAllFrames": 913,
-                  "observedLargestContentfulPaintAllFramesTs": 273712512,
-                  "observedTraceEnd": 3341,
-                  "observedTraceEndTs": 276140462,
-                  "observedLoad": 865,
-                  "observedLoadTs": 273664526,
-                  "observedDomContentLoaded": 686,
-                  "observedDomContentLoadedTs": 273485961,
+                  "observedNavigationStartTs": 266630968,
+                  "observedFirstPaint": 953,
+                  "observedFirstPaintTs": 267584098,
+                  "observedFirstContentfulPaint": 953,
+                  "observedFirstContentfulPaintTs": 267584098,
+                  "observedFirstContentfulPaintAllFrames": 953,
+                  "observedFirstContentfulPaintAllFramesTs": 267584098,
+                  "observedFirstMeaningfulPaint": 953,
+                  "observedFirstMeaningfulPaintTs": 267584098,
+                  "observedLargestContentfulPaint": 1483,
+                  "observedLargestContentfulPaintTs": 268113572,
+                  "observedLargestContentfulPaintAllFrames": 1483,
+                  "observedLargestContentfulPaintAllFramesTs": 268113572,
+                  "observedTraceEnd": 4058,
+                  "observedTraceEndTs": 270688672,
+                  "observedLoad": 1515,
+                  "observedLoadTs": 268145839,
+                  "observedDomContentLoaded": 948,
+                  "observedDomContentLoadedTs": 267579408,
                   "observedCumulativeLayoutShift": 0,
                   "observedCumulativeLayoutShiftMainFrame": 0,
                   "observedTotalCumulativeLayoutShift": 0,
-                  "observedFirstVisualChange": 689,
-                  "observedFirstVisualChangeTs": 273488655,
-                  "observedLastVisualChange": 922,
-                  "observedLastVisualChangeTs": 273721655,
-                  "observedSpeedIndex": 764,
-                  "observedSpeedIndexTs": 273563724
+                  "observedFirstVisualChange": 941,
+                  "observedFirstVisualChangeTs": 267571968,
+                  "observedLastVisualChange": 1491,
+                  "observedLastVisualChangeTs": 268121968,
+                  "observedSpeedIndex": 1300,
+                  "observedSpeedIndexTs": 267931282
                 },
                 {
                   "lcpInvalidated": false
@@ -49911,23 +49981,23 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 43,
-                  "numScripts": 12,
+                  "numRequests": 36,
+                  "numScripts": 16,
                   "numStylesheets": 4,
                   "numFonts": 3,
-                  "numTasks": 746,
-                  "numTasksOver10ms": 5,
+                  "numTasks": 738,
+                  "numTasksOver10ms": 7,
                   "numTasksOver25ms": 1,
-                  "numTasksOver50ms": 0,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 82.079,
-                  "throughput": 19779149.083421834,
-                  "maxRtt": 82.079,
-                  "maxServerLatency": 13.000000000000014,
-                  "totalByteWeight": 1064541,
-                  "totalTaskTime": 273.1819999999995,
-                  "mainDocumentTransferSize": 8314
+                  "rtt": 80.741,
+                  "throughput": 6706616.891637563,
+                  "maxRtt": 80.741,
+                  "maxServerLatency": 179.536,
+                  "totalByteWeight": 824151,
+                  "totalTaskTime": 280.61199999999906,
+                  "mainDocumentTransferSize": 6595
                 }
               ]
             }
@@ -49949,21 +50019,21 @@
     "ecoindex": [
       {
         "label": "EcoIndex",
-        "value": 74
+        "value": 76
       },
       {
         "label": "Note",
-        "value": "B"
+        "value": "A"
       },
       {
         "label": "GES",
-        "value": 1.52,
+        "value": 1.48,
         "unit": "gCO2e",
-        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 34km en voiture (Peugeot 208 5P 1.6 BlueHDi FAP (75ch) BVM5)"
+        "comment": "Pour un total de 2000 visites par mois, ceci correspond à 33km en voiture (Peugeot 208 5P 1.6 BlueHDi FAP (75ch) BVM5)"
       },
       {
         "label": "Eau",
-        "value": 2.28,
+        "value": 2.22,
         "unit": "cl",
         "comment": "Pour un total de 2000 visites par mois, ceci correspond à 1 douche"
       }
@@ -49971,6 +50041,10 @@
     "summary": {
       "404": "A+",
       "httpGrade": "D+",
+      "apdex": 1,
+      "apdexGrade": "A",
+      "uptime": 100,
+      "uptimeGrade": "A",
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
@@ -49981,18 +50055,18 @@
       "cookiesCount": 0,
       "trackersGrade": "A",
       "trackersCount": 0,
-      "lighthouse_performance": 0.9969549179077148,
+      "lighthouse_performance": 1,
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.98,
       "lighthouse_accessibilityGrade": "A",
       "lighthouse_best-practices": 1,
       "lighthouse_best-practicesGrade": "A",
-      "lighthouse_seo": 0.69,
-      "lighthouse_seoGrade": "B",
-      "lighthouse_pwa": 0.3,
-      "lighthouse_pwaGrade": "E",
+      "lighthouse_seo": 1,
+      "lighthouse_seoGrade": "A",
+      "lighthouse_pwa": 0.6,
+      "lighthouse_pwaGrade": "C",
       "declaration-a11y": "C",
-      "ecoindexGrade": "B"
+      "ecoindexGrade": "A"
     }
   }
 ]

@@ -1,6 +1,7 @@
 {
+	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 20 Nov 2022 01:16:02",
+	"@generated": "Wed, 23 Nov 2022 07:29:18",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -40,7 +41,7 @@
 							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/sitemap.xml",
+							"uri": "https://aplus.beta.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -171,14 +172,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjMzMWZhZGU4MTZkNTc0YWZjNmRjMTQ4ZTQ2YTUyZjczMzc1YTJkZmMtMTY2ODkwNjk1NDk2OC05NGNiOGY4MDY3ZGI2ZGU1N2NjY2FlMjMifSwiZXhwIjoxNjcxNDk4OTU0LCJuYmYiOjE2Njg5MDY5NTQsImlhdCI6MTY2ODkwNjk1NH0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjA0MGZlMzEzODZhNzYwMzkzOWQwNzFhMGMwOGY5MzE0NTk1NTIwMTctMTY2OTE4ODU1MDQ5MS05NjBlMzVmZjMyZTVmY2M4YzVlZTYyNzYifSwiZXhwIjoxNjcxNzgwNTUwLCJuYmYiOjE2NjkxODg1NTAsImlhdCI6MTY2OTE4ODU1MH0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjNlYWY5NWQyMDgyODM5ZDIwMmM1NGY4MjZjYTMyYzJkODk3Mjg4N2UtMTY2ODkwNjk1NTU2Mi05M2FjM2NkZmYzZTQ2NDRiZjAzMWE5YTgifSwiZXhwIjoxNjcxNDk4OTU1LCJuYmYiOjE2Njg5MDY5NTUsImlhdCI6MTY2ODkwNjk1NX0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjhkMWIwYzY4NGI2NjE4MGI0ZmY4OGY3NWJmYWY3MjA1MzEwMmM3ZjAtMTY2OTE4ODU1MDAxMS0xMDE2YjAxODQ0Y2UzMjg3NDk4MGE2NmUifSwiZXhwIjoxNjcxNzgwNTUwLCJuYmYiOjE2NjkxODg1NTAsImlhdCI6MTY2OTE4ODU1MH0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -206,16 +207,16 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY2ODkwNjk1OSwiaWF0IjoxNjY4OTA2OTU5fQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY2OTE4ODU1NCwiaWF0IjoxNjY5MTg4NTU0fQ"
 						}
 					],
 					"count": "6",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"331fade816d574afc6dc148e46a52f73375a2dfc-1668906954968-94cb8f8067db6de57cccae23\"},\"exp\":1671498954,\"nbf\":1668906954,\"iat\":1668906954}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"040fe31386a7603939d071a0c08f931459552017-1669188550491-960e35ff32e5fcc8c5ee6276\"},\"exp\":1671780550,\"nbf\":1669188550,\"iat\":1669188550}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10027",
@@ -241,7 +242,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "61"
+					"sourceid": "64"
 				},
 				{
 					"pluginid": "10109",
@@ -288,7 +289,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10015",

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Wed, 23 Nov 2022 07:29:18",
+	"@generated": "Sun, 27 Nov 2022 01:08:00",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -46,15 +46,22 @@
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10011",
@@ -155,7 +162,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10094",
@@ -172,14 +179,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjA0MGZlMzEzODZhNzYwMzkzOWQwNzFhMGMwOGY5MzE0NTk1NTIwMTctMTY2OTE4ODU1MDQ5MS05NjBlMzVmZjMyZTVmY2M4YzVlZTYyNzYifSwiZXhwIjoxNjcxNzgwNTUwLCJuYmYiOjE2NjkxODg1NTAsImlhdCI6MTY2OTE4ODU1MH0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjY1NzlmYTM4Zjg1MmRkMGYxZmFjYzY4MTA1MWYzMDUzMjUxODY3NTItMTY2OTUxMTI3Mjc3OS1hODQyMGRiZGRkN2MxMWZhOWM5YjRmYzcifSwiZXhwIjoxNjcyMTAzMjcyLCJuYmYiOjE2Njk1MTEyNzIsImlhdCI6MTY2OTUxMTI3Mn0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjhkMWIwYzY4NGI2NjE4MGI0ZmY4OGY3NWJmYWY3MjA1MzEwMmM3ZjAtMTY2OTE4ODU1MDAxMS0xMDE2YjAxODQ0Y2UzMjg3NDk4MGE2NmUifSwiZXhwIjoxNjcxNzgwNTUwLCJuYmYiOjE2NjkxODg1NTAsImlhdCI6MTY2OTE4ODU1MH0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6Ijg3MDEzOTJkMTcwOTlmMTEyMDcyOWJhOWFhOTNmODYyMDBiNGRiYTQtMTY2OTUxMTI3MzI1My1hNmRiM2I2OTIwZjQ0OTIzMzU1ZDFjNTkifSwiZXhwIjoxNjcyMTAzMjczLCJuYmYiOjE2Njk1MTEyNzMsImlhdCI6MTY2OTUxMTI3M30"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -207,16 +214,16 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY2OTE4ODU1NCwiaWF0IjoxNjY5MTg4NTU0fQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY2OTUxMTI3NiwiaWF0IjoxNjY5NTExMjc2fQ"
 						}
 					],
 					"count": "6",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"040fe31386a7603939d071a0c08f931459552017-1669188550491-960e35ff32e5fcc8c5ee6276\"},\"exp\":1671780550,\"nbf\":1669188550,\"iat\":1669188550}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"6579fa38f852dd0f1facc681051f305325186752-1669511272779-a8420dbddd7c11fa9c9b4fc7\"},\"exp\":1672103272,\"nbf\":1669511272,\"iat\":1669511272}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10027",
@@ -242,7 +249,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "64"
+					"sourceid": "63"
 				},
 				{
 					"pluginid": "10109",
@@ -289,7 +296,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -329,7 +336,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -356,14 +363,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c9e2b2d0fb7004fdc3df09922c23c75f-index.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=31536000"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/javascripts/bc48bc5b8f6cee02ed1dc6331eeff3c3-stats.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -425,7 +432,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				}
 			]
 		}

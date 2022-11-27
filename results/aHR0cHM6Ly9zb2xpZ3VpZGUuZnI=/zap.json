@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Wed, 23 Nov 2022 07:23:27",
+	"@generated": "Sun, 27 Nov 2022 01:01:22",
 	"site":[ 
 		{
 			"@name": "https://soliguide.fr",
@@ -21,6 +21,13 @@
 					"instances":[ 
 						{
 							"uri": "https://soliguide.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -97,13 +104,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "24"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10020",
@@ -117,6 +124,13 @@
 					"instances":[ 
 						{
 							"uri": "https://soliguide.fr",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -166,13 +180,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/ps",
-							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ps/contact/",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -199,7 +206,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
 					"cweid": "1021",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "90003",
@@ -213,6 +220,13 @@
 					"instances":[ 
 						{
 							"uri": "https://soliguide.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"https://www.googletagmanager.com/gtag/js?id=UA-111184026-1\" async=\"\" defer=\"\"></script>"
+						},
+						{
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -289,13 +303,13 @@
 							"evidence": "<script src=\"https://www.googletagmanager.com/gtag/js?id=UA-111184026-1\" async=\"\" defer=\"\"></script>"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "24"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10017",
@@ -309,6 +323,13 @@
 					"instances":[ 
 						{
 							"uri": "https://soliguide.fr",
+							"method": "GET",
+							"param": "https://www.googletagmanager.com/gtag/js?id=UA-111184026-1",
+							"attack": "",
+							"evidence": "<script src=\"https://www.googletagmanager.com/gtag/js?id=UA-111184026-1\" async=\"\" defer=\"\"></script>"
+						},
+						{
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "https://www.googletagmanager.com/gtag/js?id=UA-111184026-1",
 							"attack": "",
@@ -358,13 +379,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/ps",
-							"method": "GET",
-							"param": "https://www.googletagmanager.com/gtag/js?id=UA-111184026-1",
-							"attack": "",
-							"evidence": "<script src=\"https://www.googletagmanager.com/gtag/js?id=UA-111184026-1\" async=\"\" defer=\"\"></script>"
-						},
-						{
-							"uri": "https://soliguide.fr/ps/contact/",
 							"method": "GET",
 							"param": "https://www.googletagmanager.com/gtag/js?id=UA-111184026-1",
 							"attack": "",
@@ -391,7 +405,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "24"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10110",
@@ -411,7 +425,7 @@
 							"evidence": "eval"
 						},
 						{
-							"uri": "https://soliguide.fr/main.4a74246053d90b20.js",
+							"uri": "https://soliguide.fr/main.f000eabf7c88f677.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -424,7 +438,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "97"
+					"sourceid": "65"
 				},
 				{
 					"pluginid": "10063",
@@ -444,6 +458,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://soliguide.fr/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://soliguide.fr/ar",
 							"method": "GET",
 							"param": "",
@@ -452,6 +473,27 @@
 						},
 						{
 							"uri": "https://soliguide.fr/ar/contact/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/js/gtagnoconsent.prod.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/js/tarteaucitronInit.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/tarteaucitron.js-1.9.5/tarteaucitron.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -472,42 +514,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es",
+							"uri": "https://soliguide.fr/polyfills.89cc64f29c821094.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es/contact/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ps",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ps/contact/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru/contact/",
+							"uri": "https://soliguide.fr/runtime.80c19611ba4d788d.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -520,7 +534,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "24"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10035",
@@ -540,42 +554,56 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar",
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-114x114.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-120x120.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-60x60.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-72x72.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-76x76.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/favicon.ico",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -583,20 +611,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/robots.txt",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru/contact/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -636,42 +650,63 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar",
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-114x114.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-120x120.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-60x60.png",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-72x72.png",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-76x76.png",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/favicon.ico",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -685,20 +720,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ru",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru/contact/",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://soliguide.fr/sitemap.xml",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -706,7 +727,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
@@ -732,7 +753,7 @@
 							"evidence": "iVBORw0KGgoAAAANSUhEUgAAAHcAAAAeCAYAAAAWwoEYAAADl0lEQVRoge1Y0W3bQAx9CjKARlC+9GVUmqDJBHEmiDyB6wkcTxBngtgTxJ0gzgQW4C/9aYOmE6g4lTQo+k6y3Rb94QOERNQd+cjj8XiGwWAwGAwGg8FgMBgMBoPB8F8RNRXe+whEKe7c36ZCAeCRxC9Rig2PUd8kPgAsoxSfQ3YAzAA8D/HwYYCb05kBKKO0teFkmbC1jlKsAnq/Abjn+QBqAIsoRS30ttwG/HNz1wH/XIxWTicLdvtW7xTAGEAMtP685CNsBTe2d/BLydfXAG57SEnMAST0zgYZSUCPk02bCvkJduIzuJzDLfPolbY+tLKmar+/8+IRePy4qdpE03qHuH8fipFb4N2+XdA3AJ/0vaQxt7s9FvkIS2XvtqnwM0rxpOQfbnE5G2LhTCmUO2fHIngOmcv+KG3HafDchB6ntwjYqenR2PqC7sOZ3E7FXHB0vqxoFyUyLh7OEH7LOGouvhhN3eIBeKXv0n5MsufdHqXcwYR5U2EbpV35lSspVPJmQj4TcgRK7jTg5IzmPUhhwM5a2WHUFCx+NgiDucmgh7idikLovHFlL0pxQ9xzX+IIP9Y6FrJsqhjlQpZRAkFVDCjZfcCHt6bqJDmuh5ylCWx0RVnk3oumaknqTH5sqrY0fBWyULaHUIgAgxb46MxV3DbieAhxOxUxjSuljig9lMQ/Bcfoi9BTEv9aLORSndVxYOH525sUDC6u2gWxcNzBNRxPanyh3ktKinOgy3WoxPbtUM0t6RkbQnzBnFPgi9GCOEubY9UffIryz9iKRe8s/FUfEWosJJGxagp85bpUO3VywQ46lOtAWfNxKwa4JXQ+628+bpxYGXXMzp5rXH401VEyXwIdowXFaKWSMFHvMTVmGnc+P3oXV2QOiBCfgex8QtcQCbcQE/H+eoHzrkFo1KM7zVO4jVVj5s6lRiWF7zyXyfRMc97J3tzj87mYqZ7E2YjzUct9GUi4tjHLR8dVkBLjQcuHFleWvQfRNEhFR7uX7pkctOwvZXsft7sAtyldEUIN2UTeLxnEfxKYswzdi88BdbZ8hifUoSMftQvP+muRwN6+Q3DeqqRExP9QmTtcheiHh0Ot1x2i2km1bP9pbufw5zZdyWsOrh7vQae5OZWbsMv30pi7cd/CKj3coPEVaCP4Zhx4eQWhOZ1Y9MTXGyP8/iGjEyfa1T4fO/4Lea9vBoPBYDAYDAaDwWAwGAwGwz8GgF8siXCCbrSRhgAAAABJRU5ErkJggg=="
 						},
 						{
-							"uri": "https://soliguide.fr/main.4a74246053d90b20.js",
+							"uri": "https://soliguide.fr/main.f000eabf7c88f677.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -752,7 +773,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "97"
+					"sourceid": "65"
 				},
 				{
 					"pluginid": "10027",
@@ -800,7 +821,7 @@
 							"evidence": "user"
 						},
 						{
-							"uri": "https://soliguide.fr/main.4a74246053d90b20.js",
+							"uri": "https://soliguide.fr/main.f000eabf7c88f677.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -813,7 +834,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "100"
+					"sourceid": "68"
 				},
 				{
 					"pluginid": "10109",
@@ -827,6 +848,13 @@
 					"instances":[ 
 						{
 							"uri": "https://soliguide.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"assets/tarteaucitron.js-1.9.5/tarteaucitron.js\"></script>"
+						},
+						{
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -882,13 +910,6 @@
 							"evidence": "<script type=\"text/javascript\" src=\"assets/tarteaucitron.js-1.9.5/tarteaucitron.js\"></script>"
 						},
 						{
-							"uri": "https://soliguide.fr/ps/contact/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"assets/tarteaucitron.js-1.9.5/tarteaucitron.js\"></script>"
-						},
-						{
 							"uri": "https://soliguide.fr/ru",
 							"method": "GET",
 							"param": "",
@@ -909,7 +930,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "24"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -929,6 +950,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://soliguide.fr/",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://soliguide.fr/ar",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -979,13 +1007,6 @@
 						},
 						{
 							"uri": "https://soliguide.fr/ru",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru/contact/",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1005,7 +1026,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "24"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -1025,42 +1046,63 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar",
+							"uri": "https://soliguide.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ar/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-114x114.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-120x120.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/en/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/es/contact/",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-60x60.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-72x72.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-76x76.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://soliguide.fr/assets/images/icones/favicon.ico",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1074,20 +1116,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/ru",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://soliguide.fr/ru/contact/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://soliguide.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -1095,13 +1123,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "24"
+					"sourceid": "1"
 				}
 			]
 		}

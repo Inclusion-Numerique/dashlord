@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 27 Nov 2022 01:02:32",
+	"@generated": "Sun, 4 Dec 2022 00:55:33",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -54,7 +54,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "208"
+					"sourceid": "207"
 				},
 				{
 					"pluginid": "10038",
@@ -82,6 +82,13 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -135,23 +142,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "POST",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
-							"method": "POST",
-							"param": "",
-							"attack": "",
-							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
@@ -240,13 +233,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "POST",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/reset-password/sms",
 							"method": "POST",
 							"param": "X-Frame-Options",
@@ -254,7 +240,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -340,7 +326,7 @@
 					"reference": "<p>https://bugs.jqueryui.com/ticket/15284</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "133"
+					"sourceid": "134"
 				},
 				{
 					"pluginid": "10017",
@@ -550,7 +536,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -757,7 +743,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "137"
+					"sourceid": "139"
 				},
 				{
 					"pluginid": "10021",
@@ -791,14 +777,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.e93be57d.css",
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -1196,7 +1182,7 @@
 							"evidence": "private"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1413,7 +1399,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "215"
+					"sourceid": "219"
 				}
 			]
 		}

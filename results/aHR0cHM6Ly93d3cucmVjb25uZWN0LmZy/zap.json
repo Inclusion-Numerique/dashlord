@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 4 Dec 2022 00:55:33",
+	"@generated": "Sun, 11 Dec 2022 01:00:06",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -54,7 +54,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "207"
+					"sourceid": "208"
 				},
 				{
 					"pluginid": "10038",
@@ -82,13 +82,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -139,6 +132,13 @@
 						{
 							"uri": "https://www.reconnect.fr/sitemap.xml",
 							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/reset-password/email",
+							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": ""
@@ -233,6 +233,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/reset-password/email",
+							"method": "POST",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/reset-password/sms",
 							"method": "POST",
 							"param": "X-Frame-Options",
@@ -240,7 +247,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -326,7 +333,7 @@
 					"reference": "<p>https://bugs.jqueryui.com/ticket/15284</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "134"
+					"sourceid": "135"
 				},
 				{
 					"pluginid": "10017",
@@ -536,7 +543,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -743,7 +750,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "139"
+					"sourceid": "137"
 				},
 				{
 					"pluginid": "10021",
@@ -770,14 +777,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgs-cs",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -785,6 +785,13 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.e93be57d.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -880,18 +887,18 @@
 							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor"
-						},
-						{
 							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Calibri/Encoding/WinAnsiEncoding/FontDescriptor"
+						},
+						{
+							"uri": "https://www.reconnect.fr/annexe/mentions-legales",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor"
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
@@ -1051,9 +1058,44 @@
 							"param": "",
 							"attack": "",
 							"evidence": "where"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where"
 						}
 					],
-					"count": "15",
+					"count": "20",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1182,7 +1224,7 @@
 							"evidence": "private"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1399,7 +1441,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "219"
+					"sourceid": "215"
 				}
 			]
 		}

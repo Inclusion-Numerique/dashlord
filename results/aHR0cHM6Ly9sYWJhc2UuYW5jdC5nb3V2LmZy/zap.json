@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 11 Dec 2022 01:22:24",
+	"@generated": "Sun, 18 Dec 2022 01:18:34",
 	"site":[ 
 		{
 			"@name": "https://labase.anct.gouv.fr",
@@ -40,7 +40,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "69"
+					"sourceid": "66"
 				},
 				{
 					"pluginid": "10038",
@@ -81,14 +81,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/label",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
+							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -205,6 +205,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/profil-mot-de-passe",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/profil-suppression",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -226,7 +233,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -397,7 +404,7 @@
 							"evidence": "X-Powered-By: Nuxt"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/profil-mot-de-passe",
+							"uri": "https://labase.anct.gouv.fr/profil-suppression",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -465,14 +472,14 @@
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/label",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
+							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -561,14 +568,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/label",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
+							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -657,14 +664,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.37e89d86.js",
+							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -849,6 +856,13 @@
 							"evidence": "db"
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/page/charte",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "db"
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
@@ -898,7 +912,7 @@
 							"evidence": "db"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bDB\\b and was detected in the element starting with: \"<script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -930,7 +944,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "69"
+					"sourceid": "66"
 				},
 				{
 					"pluginid": "10015",
@@ -999,13 +1013,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/profil-mot-de-passe",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://labase.anct.gouv.fr/profil-suppression",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -1027,7 +1034,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
@@ -1155,7 +1162,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "63"
+					"sourceid": "62"
 				}
 			]
 		}

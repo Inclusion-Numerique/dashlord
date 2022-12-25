@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 18 Dec 2022 01:18:34",
+	"@generated": "Sun, 25 Dec 2022 01:30:41",
 	"site":[ 
 		{
 			"@name": "https://labase.anct.gouv.fr",
@@ -266,6 +266,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.ac794c09.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/a-propos",
 							"method": "GET",
 							"param": "",
@@ -281,13 +288,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -404,7 +404,7 @@
 							"evidence": "X-Powered-By: Nuxt"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/profil-suppression",
+							"uri": "https://labase.anct.gouv.fr/profil-mot-de-passe",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -458,6 +458,13 @@
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.ac794c09.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/a-propos",
 							"method": "GET",
 							"param": "",
@@ -466,13 +473,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "nginx/1.18.0 (Ubuntu)"
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -554,6 +554,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.ac794c09.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/a-propos",
 							"method": "GET",
 							"param": "",
@@ -562,13 +569,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -678,6 +678,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/page/contact",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -713,7 +720,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
@@ -760,14 +767,14 @@
 							"evidence": "Logiciel_00ApacheLicenseVersion2"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/label",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Logiciel_00ApacheLicenseVersion2"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
+							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -842,6 +849,13 @@
 							"evidence": "db"
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.ac794c09.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query"
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/a-propos",
 							"method": "GET",
 							"param": "",
@@ -856,25 +870,11 @@
 							"evidence": "db"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/charte",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "db"
-						},
-						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "db"
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug"
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/profil-informations",
@@ -912,7 +912,7 @@
 							"evidence": "db"
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bDB\\b and was detected in the element starting with: \"<script>window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1013,7 +1013,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/profil-suppression",
+							"uri": "https://labase.anct.gouv.fr/profil-mot-de-passe",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1067,6 +1067,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.ac794c09.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/a-propos",
 							"method": "GET",
 							"param": "",
@@ -1082,13 +1089,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1162,7 +1162,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "62"
+					"sourceid": "63"
 				}
 			]
 		}

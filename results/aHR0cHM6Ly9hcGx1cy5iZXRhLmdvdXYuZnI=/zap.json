@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 1 Jan 2023 01:07:52",
+	"@generated": "Sun, 8 Jan 2023 01:06:01",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -46,22 +46,15 @@
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
-						},
-						{
-							"uri": "https://aplus.beta.gouv.fr/sitemap.xml",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
 						}
 					],
-					"count": "5",
+					"count": "4",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10011",
@@ -162,7 +155,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10094",
@@ -179,14 +172,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjRlMzcwZTJjZDBjOTVkMzNmYjRlODI0MGFiMTE0ZGU1YTcyZmViMTUtMTY3MjUzNTI2MzAzNC00NWQzYTY2MDQ2NTRhMGZhOTczOGVkMzgifSwiZXhwIjoxNjc1MTI3MjYzLCJuYmYiOjE2NzI1MzUyNjMsImlhdCI6MTY3MjUzNTI2M30"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjA3MzA5ZjA0ZWRmYWE2NzQ3MGM3YmJmNGE3MjNjZWMzZjE3YmJmNTItMTY3MzEzOTk1NTA0My05ZWE4YTlhMjE0OGMwYmI1NjJkN2E4NTAifSwiZXhwIjoxNjc1NzMxOTU1LCJuYmYiOjE2NzMxMzk5NTUsImlhdCI6MTY3MzEzOTk1NX0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6ImJiMGY3M2UwOWRjN2FmNWVjMmMxMWNhYWIxM2M0OGI1MmMzOTRkNTQtMTY3MjUzNTI2MzcxMy04MDRjMjg5YzU3OWNlNGUwNzI1YjBkOTgifSwiZXhwIjoxNjc1MTI3MjYzLCJuYmYiOjE2NzI1MzUyNjMsImlhdCI6MTY3MjUzNTI2M30"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjliNjBjZGQzNWY3N2U2OWI5NGQ5MTg5ZGJjNzMzNDE1NTEwYjQyYWItMTY3MzEzOTk1NDY4Mi00Mjk2YjZmZGY0YWE1NTY2M2E0NjI3ZDMifSwiZXhwIjoxNjc1NzMxOTU0LCJuYmYiOjE2NzMxMzk5NTQsImlhdCI6MTY3MzEzOTk1NH0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -214,23 +207,23 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3MjUzNTI2NywiaWF0IjoxNjcyNTM1MjY3fQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3MzEzOTk1NywiaWF0IjoxNjczMTM5OTU3fQ"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/login",
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3MjUzNTI2OCwiaWF0IjoxNjcyNTM1MjY4fQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3MzEzOTk1OCwiaWF0IjoxNjczMTM5OTU4fQ"
 						}
 					],
 					"count": "7",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"4e370e2cd0c95d33fb4e8240ab114de5a72feb15-1672535263034-45d3a6604654a0fa9738ed38\"},\"exp\":1675127263,\"nbf\":1672535263,\"iat\":1672535263}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"07309f04edfaa67470c7bbf4a723cec3f17bbf52-1673139955043-9ea8a9a2148c0bb562d7a850\"},\"exp\":1675731955,\"nbf\":1673139955,\"iat\":1673139955}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10027",
@@ -283,13 +276,6 @@
 							"evidence": "<noscript><p><img src=\"//stats.data.gouv.fr/piwik.php?idsite=42\" style=\"border:0;\" alt=\"\" /></p></noscript>"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/668749d675c09909421b5d0b148e4c09-index.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a>b)\",\"g\");return\"b\"!==e.exec(\"b\").groups.a||\"bc\"!==\"b\".replace(e,\"$"
-						},
-						{
 							"uri": "https://aplus.beta.gouv.fr/login",
 							"method": "GET",
 							"param": "",
@@ -297,13 +283,13 @@
 							"evidence": "<noscript><p><img src=\"//stats.data.gouv.fr/piwik.php?idsite=42\" style=\"border:0;\" alt=\"\" /></p></noscript>"
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p>",
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10015",
@@ -439,7 +425,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 8 Jan 2023 00:57:48",
+	"@generated": "Sun, 15 Jan 2023 00:58:03",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -323,7 +323,7 @@
 					"count": "1",
 					"solution": "<p>Please upgrade to the latest version of jquery-ui.</p>",
 					"otherinfo": "<p>CVE-2021-41184</p><p>CVE-2021-41183</p><p>CVE-2021-41182</p><p>CVE-2022-31160</p><p></p>",
-					"reference": "<p>https://bugs.jqueryui.com/ticket/15284</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p></p>",
+					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
 					"sourceid": "134"
@@ -605,7 +605,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10096",
@@ -743,7 +743,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "137"
+					"sourceid": "139"
 				},
 				{
 					"pluginid": "10021",
@@ -784,7 +784,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.e93be57d.css",
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -839,7 +839,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10094",
@@ -1051,44 +1051,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": "where"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later"
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where"
 						}
 					],
-					"count": "20",
+					"count": "15",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1175,9 +1140,16 @@
 							"param": "",
 							"attack": "",
 							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>"
+						},
+						{
+							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>"
 						}
 					],
-					"count": "10",
+					"count": "11",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload.</p>",
 					"reference": "",

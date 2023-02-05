@@ -1,5 +1,12 @@
 [
          {
+              "id"           : "engine_problem",
+              "ip"           : "www.conseiller-numerique.gouv.fr/",
+              "port"         : "443",
+              "severity"     : "WARN",
+              "finding"      : "No engine or GOST support via engine with your /home/testssl/bin/openssl.Linux.x86_64"
+          }
+,         {
               "id"           : "service",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
@@ -128,22 +135,50 @@
               "id"           : "cipher_order-tls1_2",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "server"
+              "severity"     : "INFO",
+              "finding"      : "NOT a cipher order configured"
           }
 ,         {
-              "id"           : "cipherorder_TLSv1_2",
+              "id"           : "cipher-tls1_2_xc030",
+              "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 256   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9f",
+              "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 2048    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "cipher-tls1_2_xc02f",
+              "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 256   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "cipher-tls1_2_x9e",
+              "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLSv1.2   x9e     DHE-RSA-AES128-GCM-SHA256         DH 2048    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+          }
+,         {
+              "id"           : "supportedciphers_TLSv1_2",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "server"
+              "severity"     : "INFO",
+              "finding"      : "server -- < TLS 1.3 client determined"
           }
 ,         {
               "id"           : "FS",
@@ -171,7 +206,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'supported versions/#43' 'key share/#51' 'max fragment length/#1' 'EC point formats/#11' 'extended master secret/#23'"
+              "finding"      : "'renegotiation info/#65281' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'max fragment length/#1' 'extended master secret/#23'"
           }
 ,         {
               "id"           : "TLS_session_ticket",
@@ -339,7 +374,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "41 >= 30 days"
+              "finding"      : "34 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -542,7 +577,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1674954524"
+              "finding"      : "1675559335"
           }
 ,         {
               "id"           : "HSTS",
@@ -733,7 +768,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2015-4000",
               "cwe"          : "CWE-310",
-              "finding"      : "--"
+              "finding"      : "no DH key with <= TLS 1.2"
           }
 ,         {
               "id"           : "BEAST",
@@ -783,7 +818,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_81",
@@ -972,21 +1007,21 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_110l",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_111d",
@@ -1063,21 +1098,21 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "60"
+              "finding"      : "90"
           }
 ,         {
               "id"           : "cipher_strength_score_weighted",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "24"
+              "finding"      : "36"
           }
 ,         {
               "id"           : "final_score",
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "81"
+              "finding"      : "93"
           }
 ,         {
               "id"           : "overall_grade",
@@ -1433,7 +1468,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "41 >= 30 days"
+              "finding"      : "34 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -1636,7 +1671,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1674954681"
+              "finding"      : "1675559443"
           }
 ,         {
               "id"           : "HSTS",
@@ -2527,7 +2562,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "41 >= 30 days"
+              "finding"      : "34 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -2730,7 +2765,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1674954837"
+              "finding"      : "1675559545"
           }
 ,         {
               "id"           : "HSTS",
@@ -3418,7 +3453,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "cipher_order",
@@ -3621,7 +3656,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.104",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "41 >= 30 days"
+              "finding"      : "34 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -3824,7 +3859,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1674954996"
+              "finding"      : "1675559651"
           }
 ,         {
               "id"           : "HSTS",
@@ -4065,7 +4100,7 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
           }
 ,         {
               "id"           : "clientsimulation-android_81",
@@ -4380,6 +4415,6 @@
               "ip"           : "www.conseiller-numerique.gouv.fr/46.252.181.104",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "636"
+              "finding"      : "421"
           }
 ]

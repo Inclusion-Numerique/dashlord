@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 12 Feb 2023 01:31:06",
+	"@generated": "Sun, 19 Feb 2023 01:30:11",
 	"site":[ 
 		{
 			"@name": "https://labase.anct.gouv.fr",
@@ -9,6 +9,32 @@
 			"@port": "443",
 			"@ssl": "true",
 			"alerts": [ 
+				{
+					"pluginid": "10062",
+					"alertRef": "10062",
+					"alert": "PII Disclosure",
+					"name": "PII Disclosure",
+					"riskcode": "3",
+					"confidence": "3",
+					"riskdesc": "High (High)",
+					"desc": "<p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p>",
+					"instances":[ 
+						{
+							"uri": "https://labase.anct.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "503826292263"
+						}
+					],
+					"count": "1",
+					"solution": "",
+					"otherinfo": "<p>Credit Card Type detected: Maestro</p><p>Bank Identification Number: 503826</p><p>Brand: MAESTRO</p><p>Category: </p><p>Issuer: </p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "47"
+				},
 				{
 					"pluginid": "90022",
 					"alertRef": "90022",
@@ -20,14 +46,14 @@
 					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
 					"instances":[ 
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/entry.f7affd70.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/entry.718e2d12.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Internal Server Error"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/error-component.2a2489c8.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/error-component.528f7071.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -40,7 +66,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "65"
+					"sourceid": "66"
 				},
 				{
 					"pluginid": "10038",
@@ -245,14 +271,21 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.0ec2d4b7.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.76b37555.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/textBlock.vue_vue_type_script_setup_true_lang.76e51ba1.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.a2b6755d.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -267,13 +300,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -423,6 +449,13 @@
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
@@ -431,13 +464,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/charte",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "nginx/1.18.0 (Ubuntu)"
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -519,6 +545,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
@@ -527,13 +560,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/charte",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -615,14 +641,21 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.0ec2d4b7.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.76b37555.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/textBlock.vue_vue_type_script_setup_true_lang.76e51ba1.js",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.a2b6755d.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -637,13 +670,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/charte",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/contact",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -807,6 +833,13 @@
 							"evidence": "db"
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query"
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
@@ -815,13 +848,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/charte",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "db"
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -985,14 +1011,21 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.0ec2d4b7.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/index.56253ef6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.76b37555.js",
+							"uri": "https://labase.anct.gouv.fr/_nuxt/textBlock.vue_vue_type_script_setup_true_lang.76e51ba1.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.a2b6755d.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1007,13 +1040,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1080,7 +1106,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "61"
+					"sourceid": "63"
 				}
 			]
 		}

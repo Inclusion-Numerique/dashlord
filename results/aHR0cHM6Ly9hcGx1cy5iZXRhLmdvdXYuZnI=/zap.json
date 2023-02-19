@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 12 Feb 2023 01:06:36",
+	"@generated": "Sun, 19 Feb 2023 01:04:39",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -46,9 +46,16 @@
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'"
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
@@ -155,7 +162,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10094",
@@ -172,14 +179,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjNjZDQzMWNiMmEyODhkOGNjMDMyYTlmMjM0ZmFkZmJhMjAwNGZlN2YtMTY3NjE2Mzk4ODk3My02MmQ4YjYxNGM2YWVmYTFjNjI0ZWFkOWQifSwiZXhwIjoxNjc4NzU1OTg4LCJuYmYiOjE2NzYxNjM5ODgsImlhdCI6MTY3NjE2Mzk4OH0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjIyMDFlNmI1MDNkMWNiOTUwOGNkMzg1MzEyNTZkYWQ5OGE4M2ZmNTYtMTY3Njc2ODY3MjgxMi05YmMzNjk5NWNkMWMzNDQ5YmU1NjhlOTEifSwiZXhwIjoxNjc5MzYwNjcyLCJuYmYiOjE2NzY3Njg2NzIsImlhdCI6MTY3Njc2ODY3Mn0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjdjY2U5ZTljMWQzNWE3ZWExZmNmYmFmMWQ0NTdiY2JkMmYxNGIxMTMtMTY3NjE2Mzk4OTM3Ni1kMTllZDU3ZTI0MmM2NGE0YzQwODBlMTAifSwiZXhwIjoxNjc4NzU1OTg5LCJuYmYiOjE2NzYxNjM5ODksImlhdCI6MTY3NjE2Mzk4OX0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6ImEwNmM2ZmMyYjE2OTUxOGJmZDlmMTIzNjFkYjc1ZWI5MjZmN2UzOWItMTY3Njc2ODY3MzExNy1iZTNhNjkxNzc4NTZjM2FlMTc4NWZlZjgifSwiZXhwIjoxNjc5MzYwNjczLCJuYmYiOjE2NzY3Njg2NzMsImlhdCI6MTY3Njc2ODY3M30"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -207,12 +214,12 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3NjE2Mzk5MywiaWF0IjoxNjc2MTYzOTkzfQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY3Njc2ODY3NSwiaWF0IjoxNjc2NzY4Njc1fQ"
 						}
 					],
 					"count": "6",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"3cd431cb2a288d8cc032a9f234fadfba2004fe7f-1676163988973-62d8b614c6aefa1c624ead9d\"},\"exp\":1678755988,\"nbf\":1676163988,\"iat\":1676163988}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"2201e6b503d1cb9508cd38531256dad98a83ff56-1676768672812-9bc36995cd1c3449be568e91\"},\"exp\":1679360672,\"nbf\":1676768672,\"iat\":1676768672}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -282,7 +289,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10015",
@@ -322,7 +329,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -418,7 +425,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				}
 			]
 		}

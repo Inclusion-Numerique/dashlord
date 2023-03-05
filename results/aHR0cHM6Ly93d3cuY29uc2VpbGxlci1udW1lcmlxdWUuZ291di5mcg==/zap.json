@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 26 Feb 2023 01:11:54",
+	"@generated": "Sun, 5 Mar 2023 01:13:00",
 	"site":[ 
 		{
 			"@name": "https://www.conseiller-numerique.gouv.fr",
@@ -11,7 +11,7 @@
 			"alerts": [ 
 				{
 					"pluginid": "10038",
-					"alertRef": "10038",
+					"alertRef": "10038-1",
 					"alert": "Content Security Policy (CSP) Header Not Set",
 					"name": "Content Security Policy (CSP) Header Not Set",
 					"riskcode": "2",
@@ -49,7 +49,7 @@
 						}
 					],
 					"count": "4",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
@@ -142,7 +142,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -231,14 +231,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.54cc4b04.css",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.2a7f23c2.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -327,14 +327,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.54cc4b04.css",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.2a7f23c2.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -347,7 +347,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10094",
@@ -360,14 +360,14 @@
 					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.54cc4b04.css",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.2a7f23c2.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAQAAAADQ4RFAAACf0lEQVR4AY1UM3gkARTePdvdoTxXKc+qTl3aU5U6b2Kbkz3Gtq3Zw6ziLGNPzrYx7946Tr6/ee/XeCQ4D3ykPtL5tHno4n0d/h3+xfuWHGLX81cn7r0iTNzjr7LrlxCqPtkbTQEHeqOrTy4Yyt3VCi/IOB0v7rVC7q45Q3Gr5K6jt+3Gl5nCoDD4MtO+j96Wu8atmhGqcNGHObuf8OM/x3AMx38+4Z2sPqzCxRFK2aF2e5Jol56XTLyggAMTL56XOMoS1W4pOyjUcGGQdZxU6qRh7B9Zp+PfpOFlqt0zyDZckPi1ttmIp03jX8gyJ8a/PG2yutpS/Vol7peZIbZcKBAEEheEIAgFbDkz5H6Zrkm2hVWGiXKiF4Ycw0RWKdtC16Q7qe3X4iOMxruonzegJzWaXFrU9utOSsLUmrc0YjeWYjCW4PDMADElpJSSQ0vQvA1Tm6/JlKnqFs1EGyZiFCqnRZTEJJJiKRYzVYzJck2Rm6P4iH+cmSY0YzimYa8l0EtTODFWhcMIMVqdsI2uiTvKmTisIDHJ3od5GILVhBCarCfVRmo4uTjkhrhzkiBV7SsaqS+TzrzM1qpGGUFt28pIySQHR6h7F6KSwGWm97ay+Z+ZqMcEjEWebE7wxCSQwpkhJqoZA5ivCdZDjJepuJ9IQjGGUmuXJdBFUygxVqVsxFsLMbDe8ZbDYVCGKxs+W080max1hFCarCfV+C1KATwcnvE9gRRuMP2prdbWGowm1KB1y+zwMMENkM755cJ2yPDtqhTI6ED1M/82yIDtC/4j4BijjeObflpO9I9MwXTCsSX8jWAFeHr05WoLTJ5G8IQVS/7vwR6ohirYM7f6HzYpogfS3R2OAAAAAElFTkSuQmCC"
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -393,7 +393,7 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -423,28 +423,28 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.f4eda423.js\"></script>"
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.69297501.js\"></script>"
 						},
 						{
 							"uri": "https://www.conseiller-numerique.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.f4eda423.js\"></script>"
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.69297501.js\"></script>"
 						},
 						{
 							"uri": "https://www.conseiller-numerique.gouv.fr/favicon-32*32.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.f4eda423.js\"></script>"
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.69297501.js\"></script>"
 						},
 						{
 							"uri": "https://www.conseiller-numerique.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.f4eda423.js\"></script>"
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.69297501.js\"></script>"
 						}
 					],
 					"count": "4",
@@ -453,7 +453,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -602,14 +602,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.54cc4b04.css",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/css/main.2a7f23c2.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.f4eda423.js",
+							"uri": "https://www.conseiller-numerique.gouv.fr/static/js/main.69297501.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -622,7 +622,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "16"
+					"sourceid": "20"
 				}
 			]
 		}

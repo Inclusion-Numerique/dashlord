@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 26 Feb 2023 01:37:21",
+	"@generated": "Sun, 5 Mar 2023 01:39:51",
 	"site":[ 
 		{
 			"@name": "https://labase.anct.gouv.fr",
@@ -40,11 +40,11 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "66"
+					"sourceid": "77"
 				},
 				{
 					"pluginid": "10038",
-					"alertRef": "10038",
+					"alertRef": "10038-1",
 					"alert": "Content Security Policy (CSP) Header Not Set",
 					"name": "Content Security Policy (CSP) Header Not Set",
 					"riskcode": "2",
@@ -131,7 +131,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
@@ -259,6 +259,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.6575fdc1.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
@@ -267,13 +274,6 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -423,14 +423,14 @@
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.d43f54f6.js",
+							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "nginx/1.18.0 (Ubuntu)"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -519,14 +519,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.d43f54f6.js",
+							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -622,13 +622,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/main.d209f02e.js",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://labase.anct.gouv.fr/_nuxt/textBlock.vue_vue_type_script_setup_true_lang.3f051a98.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -637,6 +630,13 @@
 						},
 						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -711,14 +711,14 @@
 							"evidence": "Logiciel_00ApacheLicenseVersion2"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/entry.746824f3.js",
+							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5"
+							"evidence": "Logiciel_00ApacheLicenseVersion2"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -807,14 +807,14 @@
 							"evidence": "db"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/_nuxt/index.d43f54f6.js",
+							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "query"
+							"evidence": "db"
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/a-propos",
+							"uri": "https://labase.anct.gouv.fr/page/charte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -992,6 +992,20 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/textBlock.vue_vue_type_script_setup_true_lang.3f051a98.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://labase.anct.gouv.fr/_nuxt/useFullWidth.6575fdc1.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://labase.anct.gouv.fr/page/a-propos",
 							"method": "GET",
 							"param": "",
@@ -999,21 +1013,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://labase.anct.gouv.fr/page/contact",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://labase.anct.gouv.fr/page/label",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://labase.anct.gouv.fr/page/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",

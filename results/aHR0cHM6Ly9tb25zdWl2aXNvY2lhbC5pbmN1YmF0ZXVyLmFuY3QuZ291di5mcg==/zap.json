@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 5 Mar 2023 01:05:01",
+	"@generated": "Sun, 12 Mar 2023 00:59:23",
 	"site":[ 
 		{
 			"@name": "https://monsuivisocial.incubateur.anct.gouv.fr",
@@ -33,7 +33,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "234"
+					"sourceid": "236"
 				},
 				{
 					"pluginid": "10038",
@@ -47,6 +47,13 @@
 					"instances":[ 
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -88,7 +95,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
@@ -459,7 +466,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "234"
+					"sourceid": "236"
 				},
 				{
 					"pluginid": "10021",
@@ -486,14 +493,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/08ef092.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/043f66c.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/0fdec10.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/08ef092.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -658,7 +665,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "234"
+					"sourceid": "236"
 				},
 				{
 					"pluginid": "10027",
@@ -855,7 +862,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "209"
+					"sourceid": "176"
 				},
 				{
 					"pluginid": "10015",
@@ -869,6 +876,13 @@
 					"instances":[ 
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -910,13 +924,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -950,7 +964,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/9c369e9.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/4f29531.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",

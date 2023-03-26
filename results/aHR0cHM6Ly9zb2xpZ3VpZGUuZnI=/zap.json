@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 19 Mar 2023 01:00:03",
+	"@generated": "Sun, 26 Mar 2023 00:57:35",
 	"site":[ 
 		{
 			"@name": "https://soliguide.fr",
@@ -47,7 +47,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10020",
@@ -67,6 +67,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://soliguide.fr/",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://soliguide.fr/sitemap.xml",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -74,13 +81,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
 					"cweid": "1021",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "90003",
@@ -120,7 +127,7 @@
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10017",
@@ -160,7 +167,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10110",
@@ -180,7 +187,7 @@
 							"evidence": "eval"
 						},
 						{
-							"uri": "https://soliguide.fr/main.7c98c97634484e2c.js",
+							"uri": "https://soliguide.fr/main.72dc896e60f57260.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -193,7 +200,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "54"
+					"sourceid": "53"
 				},
 				{
 					"pluginid": "10063",
@@ -241,7 +248,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/main.7c98c97634484e2c.js",
+							"uri": "https://soliguide.fr/main.72dc896e60f57260.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -255,7 +262,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/runtime.30ccaeae41a11000.js",
+							"uri": "https://soliguide.fr/runtime.c02b3ef8e97eb5a4.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -275,7 +282,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10035",
@@ -309,7 +316,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-120x120.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -405,7 +412,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-120x120.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -487,7 +494,7 @@
 							"evidence": "iVBORw0KGgoAAAANSUhEUgAAAHcAAAAeCAYAAAAWwoEYAAADl0lEQVRoge1Y0W3bQAx9CjKARlC+9GVUmqDJBHEmiDyB6wkcTxBngtgTxJ0gzgQW4C/9aYOmE6g4lTQo+k6y3Rb94QOERNQd+cjj8XiGwWAwGAwGg8FgMBgMBoPB8F8RNRXe+whEKe7c36ZCAeCRxC9Rig2PUd8kPgAsoxSfQ3YAzAA8D/HwYYCb05kBKKO0teFkmbC1jlKsAnq/Abjn+QBqAIsoRS30ttwG/HNz1wH/XIxWTicLdvtW7xTAGEAMtP685CNsBTe2d/BLydfXAG57SEnMAST0zgYZSUCPk02bCvkJduIzuJzDLfPolbY+tLKmar+/8+IRePy4qdpE03qHuH8fipFb4N2+XdA3AJ/0vaQxt7s9FvkIS2XvtqnwM0rxpOQfbnE5G2LhTCmUO2fHIngOmcv+KG3HafDchB6ntwjYqenR2PqC7sOZ3E7FXHB0vqxoFyUyLh7OEH7LOGouvhhN3eIBeKXv0n5MsufdHqXcwYR5U2EbpV35lSspVPJmQj4TcgRK7jTg5IzmPUhhwM5a2WHUFCx+NgiDucmgh7idikLovHFlL0pxQ9xzX+IIP9Y6FrJsqhjlQpZRAkFVDCjZfcCHt6bqJDmuh5ylCWx0RVnk3oumaknqTH5sqrY0fBWyULaHUIgAgxb46MxV3DbieAhxOxUxjSuljig9lMQ/Bcfoi9BTEv9aLORSndVxYOH525sUDC6u2gWxcNzBNRxPanyh3ktKinOgy3WoxPbtUM0t6RkbQnzBnFPgi9GCOEubY9UffIryz9iKRe8s/FUfEWosJJGxagp85bpUO3VywQ46lOtAWfNxKwa4JXQ+628+bpxYGXXMzp5rXH401VEyXwIdowXFaKWSMFHvMTVmGnc+P3oXV2QOiBCfgex8QtcQCbcQE/H+eoHzrkFo1KM7zVO4jVVj5s6lRiWF7zyXyfRMc97J3tzj87mYqZ7E2YjzUct9GUi4tjHLR8dVkBLjQcuHFleWvQfRNEhFR7uX7pkctOwvZXsft7sAtyldEUIN2UTeLxnEfxKYswzdi88BdbZ8hifUoSMftQvP+muRwN6+Q3DeqqRExP9QmTtcheiHh0Ot1x2i2km1bP9pbufw5zZdyWsOrh7vQae5OZWbsMv30pi7cd/CKj3coPEVaCP4Zhx4eQWhOZ1Y9MTXGyP8/iGjEyfa1T4fO/4Lea9vBoPBYDAYDAaDwWAwGAwGwz8GgF8siXCCbrSRhgAAAABJRU5ErkJggg=="
 						},
 						{
-							"uri": "https://soliguide.fr/main.7c98c97634484e2c.js",
+							"uri": "https://soliguide.fr/main.72dc896e60f57260.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -507,7 +514,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "54"
+					"sourceid": "53"
 				},
 				{
 					"pluginid": "10027",
@@ -569,7 +576,7 @@
 							"evidence": "user"
 						},
 						{
-							"uri": "https://soliguide.fr/main.7c98c97634484e2c.js",
+							"uri": "https://soliguide.fr/main.72dc896e60f57260.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -643,7 +650,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -724,6 +731,13 @@
 							"evidence": "max-age=62208000"
 						},
 						{
+							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-144x144.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=62208000"
+						},
+						{
 							"uri": "https://soliguide.fr/assets/images/icones/apple-icon-57x57.png",
 							"method": "GET",
 							"param": "",
@@ -752,7 +766,7 @@
 							"evidence": "max-age=62208000"
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",

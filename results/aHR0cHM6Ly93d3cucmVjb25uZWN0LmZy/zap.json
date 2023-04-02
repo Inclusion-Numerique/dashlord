@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 26 Mar 2023 00:57:22",
+	"@generated": "Sun, 2 Apr 2023 00:55:30",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -184,6 +184,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/login",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -228,13 +235,6 @@
 						{
 							"uri": "https://www.reconnect.fr/reset-password/sms",
 							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
-							"method": "POST",
 							"param": "X-Frame-Options",
 							"attack": "",
 							"evidence": ""
@@ -333,7 +333,7 @@
 					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "152"
+					"sourceid": "153"
 				},
 				{
 					"pluginid": "10017",
@@ -427,7 +427,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "150"
+					"sourceid": "149"
 				},
 				{
 					"pluginid": "10063",
@@ -757,7 +757,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "159"
+					"sourceid": "156"
 				},
 				{
 					"pluginid": "10021",
@@ -1093,15 +1093,50 @@
 							"param": "",
 							"attack": "",
 							"evidence": "where"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where"
 						}
 					],
-					"count": "19",
+					"count": "24",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected 6 times, the first in the element starting with: \"  // this prevents the handler from being dispatched the same way as mouseover or mouseout does\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "153"
+					"sourceid": "152"
 				},
 				{
 					"pluginid": "10109",
@@ -1129,6 +1164,13 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>"
+						},
+						{
+							"uri": "https://www.reconnect.fr/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1182,13 +1224,6 @@
 							"param": "",
 							"attack": "",
 							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>"
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
-							"method": "POST",
-							"param": "",
-							"attack": "",
-							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>"
 						}
 					],
 					"count": "11",
@@ -1238,13 +1273,6 @@
 							"evidence": "private"
 						},
 						{
-							"uri": "https://www.reconnect.fr/faq-rgpd",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private"
-						},
-						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "",
@@ -1287,7 +1315,7 @@
 							"evidence": "private"
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
@@ -1448,7 +1476,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "250"
+					"sourceid": "252"
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 30 Apr 2023 00:57:06",
+	"@generated": "Sun, 7 May 2023 00:57:14",
 	"site":[ 
 		{
 			"@name": "https://monsuivisocial.incubateur.anct.gouv.fr",
@@ -9,33 +9,6 @@
 			"@port": "443",
 			"@ssl": "true",
 			"alerts": [ 
-				{
-					"pluginid": "90022",
-					"alertRef": "90022",
-					"alert": "Application Error Disclosure",
-					"name": "Application Error Disclosure",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p>",
-					"instances":[ 
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/error-component.df7c7dbf.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Internal Server Error",
-							"otherinfo": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p>",
-					"otherinfo": "",
-					"reference": "",
-					"cweid": "200",
-					"wascid": "13",
-					"sourceid": "779"
-				},
 				{
 					"pluginid": "10038",
 					"alertRef": "10038-1",
@@ -125,7 +98,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10063",
@@ -162,6 +135,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fc8fbef5.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/routes.aece4106.js",
 							"method": "GET",
 							"param": "",
@@ -179,14 +160,6 @@
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -232,7 +205,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10037",
@@ -323,7 +296,7 @@
 					"reference": "<p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10096",
@@ -358,7 +331,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "611"
+					"sourceid": "792"
 				},
 				{
 					"pluginid": "10021",
@@ -465,11 +438,11 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10094",
-					"alertRef": "10094",
+					"alertRef": "10094-3",
 					"alert": "Base64 Disclosure",
 					"name": "Base64 Disclosure",
 					"riskcode": "0",
@@ -580,7 +553,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "426"
+					"sourceid": "424"
 				},
 				{
 					"pluginid": "10027",
@@ -599,6 +572,22 @@
 							"attack": "",
 							"evidence": "from",
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.f916bdac.js\";const A={_\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/can-access-stats.7e9041ed.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{bJ as e,l as t,m as o,s as a}from\"./entry.f916bdac.js\";import{R as i}from\"./routes.aece4106.js\";const m=e(()=>{const{$pin\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/can-add-users.bfe79b7b.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{bJ as e,l as o,m as r,s as t}from\"./entry.f916bdac.js\";import{R as i}from\"./routes.aece4106.js\";const m=e(()=>{const{$pin\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.f916bdac.js",
@@ -633,14 +622,6 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"  */let Vf;const ur=t=>Vf=t,Uf=Symbol();function Ka(t){return t&&typeof t==\"object\"&&Object.prototype.toString.call(t)===\"[objec\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/error-404.eef2c266.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as a}from\"./nuxt-link.fc8fbef5.js\";import{ao as n,bX as r,o as d,e as l,h as e,T as s,f as c,w as p,j as f,am as m,an a\", see evidence field for the suspicious comment/snippet."
-						},
-						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/index.2b27708c.js",
 							"method": "GET",
 							"param": "",
@@ -663,14 +644,6 @@
 							"attack": "",
 							"evidence": "query",
 							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"import{l as b,bL as P,a as q,b as x,bM as k,r as C,I as R,aN as T,bN as _,bO as A,bP as N,bQ as w,bR as L,bS as B,s as E}from\"./\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/register.7900a543.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as n}from\"./nuxt-link.fc8fbef5.js\";import{_ as l}from\"./TheLandingVideo.4f20696f.js\";import{a as _,o as f,e as d,h as e\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/TheLandingVideo.4f20696f.js",
@@ -762,7 +735,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -799,6 +772,22 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fc8fbef5.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=31536000",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/routes.aece4106.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=31536000",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite",
 							"method": "GET",
 							"param": "",
@@ -808,22 +797,6 @@
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -869,7 +842,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				}
 			]
 		}

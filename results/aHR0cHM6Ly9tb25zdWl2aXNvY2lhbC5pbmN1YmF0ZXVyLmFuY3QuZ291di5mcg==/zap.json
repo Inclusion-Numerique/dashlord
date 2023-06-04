@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 28 May 2023 00:59:17",
+	"@generated": "Sun, 4 Jun 2023 01:07:18",
 	"site":[ 
 		{
 			"@name": "https://monsuivisocial.incubateur.anct.gouv.fr",
@@ -127,7 +127,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ecf58cb4.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -135,7 +135,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.2f941aea.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fe97fda6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -152,14 +160,6 @@
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -309,7 +309,23 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/register.b4dfe9cf.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/register.f270a1e8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1675077455",
+							"otherinfo": "1675077455, which evaluates to: 2023-01-30 11:17:35"
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/register.f270a1e8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1685106308",
+							"otherinfo": "1685106308, which evaluates to: 2023-05-26 13:05:08"
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/register",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -321,17 +337,17 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1675077455",
-							"otherinfo": "1675077455, which evaluates to: 2023-01-30 11:17:35"
+							"evidence": "1685106308",
+							"otherinfo": "1685106308, which evaluates to: 2023-05-26 13:05:08"
 						}
 					],
-					"count": "2",
+					"count": "4",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>1675077455, which evaluates to: 2023-01-30 11:17:35</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "707"
+					"sourceid": "791"
 				},
 				{
 					"pluginid": "10021",
@@ -360,7 +376,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.aeebcec2.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -368,7 +384,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/index.57c8ac2d.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -376,15 +392,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ecf58cb4.js",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.2f941aea.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fe97fda6.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -440,7 +448,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
@@ -561,7 +569,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "425"
+					"sourceid": "423"
 				},
 				{
 					"pluginid": "10027",
@@ -574,15 +582,31 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.aeebcec2.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.20feb52f.js\";const A={_\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.67b6e6fc.js\";const A={_\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.20feb52f.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/auth.43cb3a99.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"import{bJ as a,l as o,y as r,s as u}from\"./entry.67b6e6fc.js\";import{R as s}from\"./routes.aece4106.js\";const p=a(t=>{const{$pini\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/default.6fdd4871.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"import{_ as M}from\"./nuxt-link.fe97fda6.js\";import{l as E,r as m,bT as N,I as A,aN as B,o as _,e as p,h as e,j as b,T as $,u as \", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -590,7 +614,7 @@
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 2 times, the first in the element starting with: \" */function fr(t){return t+.5|0}const Yn=(t,e,n)=>Math.max(Math.min(t,n),e);function Oi(t){return Yn(fr(t*2.55),0,255)}function \", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.20feb52f.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -598,7 +622,7 @@
 							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 3 times, the first in the element starting with: \"function Il(t,e){const n=Object.create(null),s=t.split(\",\");for(let i=0;i<s.length;i++)n[s[i]]=!0;return e?i=>!!n[i.toLowerCase(\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.20feb52f.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -606,7 +630,7 @@
 							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"${Pe.header.doc}`);break;default:this.menuLinks.innerHTML=i}}},RT=class extends Pe.core.Instance{constructor(){super(),this._cli\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.20feb52f.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -614,31 +638,31 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"  */let Vf;const ur=t=>Vf=t,Uf=Symbol();function Ka(t){return t&&typeof t==\"object\"&&Object.prototype.toString.call(t)===\"[objec\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/error-404.1070e821.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/error-404.d16042b2.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as a}from\"./nuxt-link.2f941aea.js\";import{ao as n,bX as r,o as d,e as l,h as e,T as s,f as c,w as p,j as f,am as m,an a\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as a}from\"./nuxt-link.fe97fda6.js\";import{ao as n,bX as r,o as d,e as l,h as e,T as s,f as c,w as p,j as f,am as m,an a\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/index.57c8ac2d.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/index.0cefecf3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as u}from\"./nuxt-link.2f941aea.js\";import{_ as f}from\"./TheLandingVideo.2aa3acf1.js\";import{ao as v,o as m,e as p,h as \", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as u}from\"./nuxt-link.fe97fda6.js\";import{_ as f}from\"./TheLandingVideo.57f8526c.js\";import{ao as v,o as m,e as p,h as \", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ecf58cb4.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as m}from\"./nuxt-link.2f941aea.js\";import{ao as d,o as f,e as u,h as e,f as t,w as n,j as s,u as a,am as h,an as p,k,aY\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as m}from\"./nuxt-link.fe97fda6.js\";import{ao as d,o as f,e as u,h as e,f as t,w as n,j as s,u as a,am as h,an as p,k,aY\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.2f941aea.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fe97fda6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -646,20 +670,12 @@
 							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"import{l as b,bL as P,a as q,b as x,bM as k,r as C,I as R,aN as T,bN as _,bO as A,bP as N,bQ as w,bR as L,bS as B,s as E}from\"./\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/register.b4dfe9cf.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/TheLandingVideo.57f8526c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as n}from\"./nuxt-link.2f941aea.js\";import{_ as l}from\"./TheLandingVideo.2aa3acf1.js\";import{a as _,o as f,e as d,h as e\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/TheLandingVideo.2aa3acf1.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as n}from\"./nuxt-link.2f941aea.js\";import{ao as a,o as r,e as l,h as e,j as i,f as t,w as o,bB as c}from\"./entry.20feb5\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{_ as n}from\"./nuxt-link.fe97fda6.js\";import{ao as a,o as r,e as l,h as e,j as i,f as t,w as o,bB as c}from\"./entry.67b6e6\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
@@ -670,9 +686,9 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script>window.__NUXT__=(function(a){return {data:{},state:{},_errors:{},serverRendered:true,pinia:{auth:{user:a,accessToken:a}}\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "12",
+					"count": "13",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.20feb52f.js\";const A={_\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.67b6e6fc.js\";const A={_\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
@@ -772,7 +788,7 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ecf58cb4.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -780,7 +796,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.2f941aea.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.fe97fda6.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=31536000",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/routes.aece4106.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -797,14 +821,6 @@
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",

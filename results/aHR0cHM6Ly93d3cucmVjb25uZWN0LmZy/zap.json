@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 28 May 2023 00:59:08",
+	"@generated": "Sun, 4 Jun 2023 01:06:27",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -58,7 +58,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "242"
+					"sourceid": "240"
 				},
 				{
 					"pluginid": "10038",
@@ -202,6 +202,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/login",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -252,14 +260,6 @@
 						{
 							"uri": "https://www.reconnect.fr/reset-password/sms",
 							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "POST",
 							"param": "X-Frame-Options",
 							"attack": "",
 							"evidence": "",
@@ -366,7 +366,7 @@
 					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "151"
+					"sourceid": "153"
 				},
 				{
 					"pluginid": "10017",
@@ -468,7 +468,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "150"
+					"sourceid": "147"
 				},
 				{
 					"pluginid": "10063",
@@ -604,7 +604,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/api/docs.jsonld",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -612,7 +612,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"uri": "https://www.reconnect.fr/api/docs.jsonld",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -829,15 +829,23 @@
 							"attack": "",
 							"evidence": "1921234567",
 							"otherinfo": "1921234567, which evaluates to: 2030-11-18 12:16:07"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2001234567",
+							"otherinfo": "2001234567, which evaluates to: 2033-06-01 10:29:27"
 						}
 					],
-					"count": "17",
+					"count": "18",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>1409305260, which evaluates to: 2014-08-29 09:41:00</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "168"
+					"sourceid": "156"
 				},
 				{
 					"pluginid": "10021",
@@ -989,12 +997,12 @@
 							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\\x0002\u01A9\uFFFDI\u0721\u0627\uFFFD\uFFFD\uFFFD\uFFFD\t\uFFFDI\u0721\u0627\uFFFD\uFFFDh\uFFFD\uFFFD\u07B1\uFFFD\uFFFD\uFFFD+"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
+							"uri": "https://www.reconnect.fr/build/images/favIcons/safari-pinned-tab.37d4fd63.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Calibri/Encoding/WinAnsiEncoding/FontDescriptor",
-							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\t\uFFFDbn\uFFFD\uFFFD\\x0012w(v)\uFFFD\uFFFDh\uFFFD\\x0002{\"\\x0012w(v)\uFFFD\uFFFDZ'\uFFFD7\uFFFDr\uFFFD\uFFFD\uFFFD\uFFFD"
+							"evidence": "org/TR/2001/REC-SVG-20010904/DTD/svg10",
+							"otherinfo": "\uFFFD\uFFFD?M\\x001f\uFFFD\uFFFDMD@\uFFFDIQ\uFFFD\uFFFDM5\uFFFD\uFFFD8\uFFFD4\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
@@ -1064,38 +1072,6 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 6 times, the first in the element starting with: \"  // this prevents the handler from being dispatched the same way as mouseover or mouseout does\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later",
-							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected in the element starting with: \"    // can be removed later when multiple key/instances are fine to be used\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 2 times, the first in the element starting with: \"const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouse\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"        // would stop cycling until user tapped out of it;\", see evidence field for the suspicious comment/snippet."
-						},
-						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-function_js-node_modules_core-js_internals_export_js.e8692464.js",
 							"method": "GET",
 							"param": "",
@@ -1104,100 +1080,12 @@
 							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 11 times, the first in the element starting with: \"var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ \"./node_modules/core-js/internals/enum-bug-keys.js\");\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs",
-							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected 7 times, the first in the element starting with: \"\t\t\t// Http://bugs.jquery.com/ticket/8235\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 116 times, the first in the element starting with: \"// getting tag from ES6+ `Object.prototype.toString`\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later",
-							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 7 times, the first in the element starting with: \"\t\t// redefine the widget later\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 37 times, the first in the element starting with: \"\t\t\t\t// Select the wrapper - make it overflow: hidden and absolute positioned based on\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "TODO",
-							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 24 times, the first in the element starting with: \"\t\t// TODO: remove support for widgetEventPrefix\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 15 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/engine-user-agent.js\":\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where",
-							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t\t\t\t\t// This is the only case where we allow nulls for ALL properties.\", see evidence field for the suspicious comment/snippet."
-						},
-						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_engine-v8-version_js-node_modules_core-js_internals_se-a098b2.ea2112d8.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user",
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.js\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"// nonparticipating capturing group, copied from es5-shim's String#split patch.\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "TODO",
-							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where",
-							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
@@ -1278,55 +1166,15 @@
 							"attack": "",
 							"evidence": "where",
 							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t// For CommonJS and CommonJS-like environments where a proper `window`\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"  // Popper 1 is broken in this case and never had a bug report so let's assume\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs",
-							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected 2 times, the first in the element starting with: \"          // cause bugs with positioning, so we'll warn the consumer\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 3 times, the first in the element starting with: \"// clipping (or hiding) overflowing elements with a position different from\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later",
-							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected in the element starting with: \"    // `2` may be desired in some cases \u2013 research later\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_popperjs_core_lib_popper_js.d7e17069.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where",
-							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 2 times, the first in the element starting with: \"      // is useful for low frequency updates where sync behavior simplifies the\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "32",
+					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected 6 times, the first in the element starting with: \"  // this prevents the handler from being dispatched the same way as mouseover or mouseout does\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "154"
+					"sourceid": "149"
 				},
 				{
 					"pluginid": "10109",
@@ -1356,6 +1204,14 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.reconnect.fr/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1417,14 +1273,6 @@
 							"attack": "",
 							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "POST",
-							"param": "",
-							"attack": "",
-							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
-							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						}
 					],
 					"count": "11",
@@ -1462,7 +1310,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/api/docs.jsonld",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1470,7 +1318,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"uri": "https://www.reconnect.fr/api/docs.jsonld",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1701,7 +1549,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "248"
+					"sourceid": "249"
 				}
 			]
 		}

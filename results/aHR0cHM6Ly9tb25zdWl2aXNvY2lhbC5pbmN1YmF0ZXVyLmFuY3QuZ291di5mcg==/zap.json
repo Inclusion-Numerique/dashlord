@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 4 Jun 2023 01:07:18",
+	"@generated": "Sun, 11 Jun 2023 01:04:27",
 	"site":[ 
 		{
 			"@name": "https://monsuivisocial.incubateur.anct.gouv.fr",
@@ -98,7 +98,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10063",
@@ -205,7 +205,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10037",
@@ -296,7 +296,7 @@
 					"reference": "<p>http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</p><p>http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10096",
@@ -347,7 +347,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "791"
+					"sourceid": "622"
 				},
 				{
 					"pluginid": "10021",
@@ -454,7 +454,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10094",
@@ -590,20 +590,12 @@
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.67b6e6fc.js\";const A={_\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/auth.43cb3a99.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "query",
-							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"import{bJ as a,l as o,y as r,s as u}from\"./entry.67b6e6fc.js\";import{R as s}from\"./routes.aece4106.js\";const p=a(t=>{const{$pini\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/default.6fdd4871.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"import{_ as M}from\"./nuxt-link.fe97fda6.js\";import{l as E,r as m,bT as N,I as A,aN as B,o as _,e as p,h as e,j as b,T as $,u as \", see evidence field for the suspicious comment/snippet."
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"`):t}function hC(t,e){const{element:n,datasetIndex:s,index:i}=e,r=t.getDatasetMeta(s).controller,{label:o,value:a}=r.getLabelAnd\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.67b6e6fc.js",
@@ -686,7 +678,7 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script>window.__NUXT__=(function(a){return {data:{},state:{},_errors:{},serverRendered:true,pinia:{auth:{user:a,accessToken:a}}\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "13",
+					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"import{ao as f,l as i,r as a,I as k,o as p,e as b,h as x,u as s,c as d,q as C,N as g,x as y}from\"./entry.67b6e6fc.js\";const A={_\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -759,7 +751,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -786,6 +778,14 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=31536000",
+							"otherinfo": ""
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
@@ -860,13 +860,13 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				}
 			]
 		}

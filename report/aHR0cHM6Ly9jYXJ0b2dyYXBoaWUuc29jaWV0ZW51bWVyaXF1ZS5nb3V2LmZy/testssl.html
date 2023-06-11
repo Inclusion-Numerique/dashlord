@@ -21,24 +21,24 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-bad (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az507-828:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az795-417:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Sep  1 14:03:44 2022&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>65.8.158.101 65.8.158.25 65.8.158.20 65.8.158.17
+<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>108.138.246.2 108.138.246.75 108.138.246.73 108.138.246.14
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2023-06-04 01:51:47                --&gt;&gt; 65.8.158.101:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2023-06-11 01:40:05                --&gt;&gt; 108.138.246.2:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   65.8.158.17 65.8.158.25 65.8.158.20
-                         2600:9000:2146:a400:9:a5c:7dc0:93a1
-                         2600:9000:2146:5000:9:a5c:7dc0:93a1
-                         2600:9000:2146:8e00:9:a5c:7dc0:93a1
-                         2600:9000:2146:5c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:7c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:c000:9:a5c:7dc0:93a1
-                         2600:9000:2146:200:9:a5c:7dc0:93a1
-                         2600:9000:2146:8800:9:a5c:7dc0:93a1 
- rDNS (65.8.158.101):    server-65-8-158-101.sfo53.r.cloudfront.net.
+ Further IP addresses:   108.138.246.75 108.138.246.14 108.138.246.73
+                         2600:9000:2146:8800:9:a5c:7dc0:93a1
+                         2600:9000:2146:d600:9:a5c:7dc0:93a1
+                         2600:9000:2146:c600:9:a5c:7dc0:93a1
+                         2600:9000:2146:1e00:9:a5c:7dc0:93a1
+                         2600:9000:2146:cc00:9:a5c:7dc0:93a1
+                         2600:9000:2146:6000:9:a5c:7dc0:93a1
+                         2600:9000:2146:e200:9:a5c:7dc0:93a1
+                         2600:9000:2146:1800:9:a5c:7dc0:93a1 
+ rDNS (108.138.246.2):   server-108-138-246-2.sfo5.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -117,7 +117,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">84 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.r2m01.amazontrust.com/r2m01.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.r2m01.amazontrust.com
@@ -137,7 +137,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
 <span style="font-weight:bold;"> HTTP clock skew              </span>+1 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          530
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          200
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">730 days</span>=63072000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>AmazonS<span style="color:#8a7237;">3</span>
@@ -148,7 +148,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               <span style="color:#008817;">Content-Security-Policy</span>: default-src &apos;self&apos; data:
                                 https://*.data.gouv.fr
                                 https://openmaptiles.github.io
-                                http://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
+                                https://cdn.jsdelivr.net
+                                https://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
                                 ont-src &apos;self&apos; https://cdn.jsdelivr.net;
                                 img-src &apos;self&apos; data: https://*.data.gouv.fr;
                                 object-src &apos;none&apos;; script-src &apos;self&apos;
@@ -162,7 +163,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               X-XSS-Protection: 1; mode=block
                               Referrer-Policy: same-origin
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Hit from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">9</span>d<span style="color:#8a7237;">4</span><span style="color:#8a7237;">7</span>bedfe<span style="color:#8a7237;">2</span>d<span style="color:#8a7237;">8</span><span style="color:#8a7237;">3</span>b<span style="color:#8a7237;">5</span>ed<span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span>a<span style="color:#8a7237;">7</span>d<span style="color:#8a7237;">0</span><span style="color:#8a7237;">2</span>ea<span style="color:#8a7237;">9</span>ca<span style="color:#8a7237;">9</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">2</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> b<span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">0</span>b<span style="color:#8a7237;">7</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span>a<span style="color:#8a7237;">6</span>da<span style="color:#8a7237;">9</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">1</span>a<span style="color:#8a7237;">9</span><span style="color:#8a7237;">9</span>c<span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">0</span>ae<span style="color:#8a7237;">2</span>.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -241,21 +242,21 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2023-06-04 01:53:08 [  84s] --&gt;&gt; 65.8.158.101:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2023-06-11 01:41:24 [  82s] --&gt;&gt; 108.138.246.2:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2023-06-04 01:53:08                --&gt;&gt; 65.8.158.25:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2023-06-11 01:41:24                --&gt;&gt; 108.138.246.75:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   65.8.158.17 65.8.158.101 65.8.158.20
-                         2600:9000:2146:a400:9:a5c:7dc0:93a1
-                         2600:9000:2146:5000:9:a5c:7dc0:93a1
-                         2600:9000:2146:8e00:9:a5c:7dc0:93a1
-                         2600:9000:2146:5c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:7c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:c000:9:a5c:7dc0:93a1
-                         2600:9000:2146:200:9:a5c:7dc0:93a1
-                         2600:9000:2146:8800:9:a5c:7dc0:93a1 
- rDNS (65.8.158.25):     server-65-8-158-25.sfo53.r.cloudfront.net.
+ Further IP addresses:   108.138.246.14 108.138.246.2 108.138.246.73
+                         2600:9000:2146:8800:9:a5c:7dc0:93a1
+                         2600:9000:2146:d600:9:a5c:7dc0:93a1
+                         2600:9000:2146:c600:9:a5c:7dc0:93a1
+                         2600:9000:2146:1e00:9:a5c:7dc0:93a1
+                         2600:9000:2146:cc00:9:a5c:7dc0:93a1
+                         2600:9000:2146:6000:9:a5c:7dc0:93a1
+                         2600:9000:2146:e200:9:a5c:7dc0:93a1
+                         2600:9000:2146:1800:9:a5c:7dc0:93a1 
+ rDNS (108.138.246.75):  server-108-138-246-75.sfo5.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -334,7 +335,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">84 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.r2m01.amazontrust.com/r2m01.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.r2m01.amazontrust.com
@@ -354,7 +355,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
 <span style="font-weight:bold;"> HTTP clock skew              </span>+1 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          610
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          279
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">730 days</span>=63072000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>AmazonS<span style="color:#8a7237;">3</span>
@@ -365,7 +366,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               <span style="color:#008817;">Content-Security-Policy</span>: default-src &apos;self&apos; data:
                                 https://*.data.gouv.fr
                                 https://openmaptiles.github.io
-                                http://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
+                                https://cdn.jsdelivr.net
+                                https://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
                                 ont-src &apos;self&apos; https://cdn.jsdelivr.net;
                                 img-src &apos;self&apos; data: https://*.data.gouv.fr;
                                 object-src &apos;none&apos;; script-src &apos;self&apos;
@@ -379,7 +381,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               X-XSS-Protection: 1; mode=block
                               Referrer-Policy: same-origin
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Hit from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">8</span>c<span style="color:#8a7237;">0</span>e<span style="color:#8a7237;">1</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span>c<span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">3</span>fbfb<span style="color:#8a7237;">8</span>c<span style="color:#8a7237;">1</span>b<span style="color:#8a7237;">2</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">6</span>e<span style="color:#8a7237;">5</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">1</span>f<span style="color:#8a7237;">3</span><span style="color:#8a7237;">6</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span>c<span style="color:#8a7237;">4</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">4</span>a<span style="color:#8a7237;">6</span><span style="color:#8a7237;">0</span>d<span style="color:#8a7237;">8</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">2</span>f<span style="color:#8a7237;">2</span>ad<span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">8</span>fc<span style="color:#8a7237;">5</span><span style="color:#8a7237;">8</span>f<span style="color:#8a7237;">6</span>fa.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -458,21 +460,21 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2023-06-04 01:54:29 [ 165s] --&gt;&gt; 65.8.158.25:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2023-06-11 01:42:43 [ 161s] --&gt;&gt; 108.138.246.75:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2023-06-04 01:54:29                --&gt;&gt; 65.8.158.20:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2023-06-11 01:42:43                --&gt;&gt; 108.138.246.73:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   65.8.158.17 65.8.158.25 65.8.158.101
-                         2600:9000:2146:a400:9:a5c:7dc0:93a1
-                         2600:9000:2146:5000:9:a5c:7dc0:93a1
-                         2600:9000:2146:8e00:9:a5c:7dc0:93a1
-                         2600:9000:2146:5c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:7c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:c000:9:a5c:7dc0:93a1
-                         2600:9000:2146:200:9:a5c:7dc0:93a1
-                         2600:9000:2146:8800:9:a5c:7dc0:93a1 
- rDNS (65.8.158.20):     server-65-8-158-20.sfo53.r.cloudfront.net.
+ Further IP addresses:   108.138.246.75 108.138.246.14 108.138.246.2
+                         2600:9000:2146:8800:9:a5c:7dc0:93a1
+                         2600:9000:2146:d600:9:a5c:7dc0:93a1
+                         2600:9000:2146:c600:9:a5c:7dc0:93a1
+                         2600:9000:2146:1e00:9:a5c:7dc0:93a1
+                         2600:9000:2146:cc00:9:a5c:7dc0:93a1
+                         2600:9000:2146:6000:9:a5c:7dc0:93a1
+                         2600:9000:2146:e200:9:a5c:7dc0:93a1
+                         2600:9000:2146:1800:9:a5c:7dc0:93a1 
+ rDNS (108.138.246.73):  server-108-138-246-73.sfo5.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -527,9 +529,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;status request/#5&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
+                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;extended master secret/#23&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
@@ -551,11 +553,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">84 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.r2m01.amazontrust.com/r2m01.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.r2m01.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -571,7 +573,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
 <span style="font-weight:bold;"> HTTP clock skew              </span>+1 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          691
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          359
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">730 days</span>=63072000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>AmazonS<span style="color:#8a7237;">3</span>
@@ -582,7 +584,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               <span style="color:#008817;">Content-Security-Policy</span>: default-src &apos;self&apos; data:
                                 https://*.data.gouv.fr
                                 https://openmaptiles.github.io
-                                http://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
+                                https://cdn.jsdelivr.net
+                                https://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
                                 ont-src &apos;self&apos; https://cdn.jsdelivr.net;
                                 img-src &apos;self&apos; data: https://*.data.gouv.fr;
                                 object-src &apos;none&apos;; script-src &apos;self&apos;
@@ -596,7 +599,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               X-XSS-Protection: 1; mode=block
                               Referrer-Policy: same-origin
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Hit from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> ca<span style="color:#8a7237;">3</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">2</span><span style="color:#8a7237;">6</span>a<span style="color:#8a7237;">6</span>de<span style="color:#8a7237;">2</span>ccb<span style="color:#8a7237;">3</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">4</span>aed<span style="color:#8a7237;">4</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">9</span>dff<span style="color:#8a7237;">3</span>d<span style="color:#8a7237;">0</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> d<span style="color:#8a7237;">1</span><span style="color:#8a7237;">2</span>bde<span style="color:#8a7237;">5</span>a<span style="color:#8a7237;">2</span>ea<span style="color:#8a7237;">0</span>d<span style="color:#8a7237;">1</span><span style="color:#8a7237;">0</span>baee<span style="color:#8a7237;">0</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">4</span>a.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -675,21 +678,21 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2023-06-04 01:55:52 [ 248s] --&gt;&gt; 65.8.158.20:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2023-06-11 01:44:04 [ 242s] --&gt;&gt; 108.138.246.73:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2023-06-04 01:55:52                --&gt;&gt; 65.8.158.17:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2023-06-11 01:44:04                --&gt;&gt; 108.138.246.14:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   65.8.158.25 65.8.158.101 65.8.158.20
-                         2600:9000:2146:a400:9:a5c:7dc0:93a1
-                         2600:9000:2146:5000:9:a5c:7dc0:93a1
-                         2600:9000:2146:8e00:9:a5c:7dc0:93a1
-                         2600:9000:2146:5c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:7c00:9:a5c:7dc0:93a1
-                         2600:9000:2146:c000:9:a5c:7dc0:93a1
-                         2600:9000:2146:200:9:a5c:7dc0:93a1
-                         2600:9000:2146:8800:9:a5c:7dc0:93a1 
- rDNS (65.8.158.17):     server-65-8-158-17.sfo53.r.cloudfront.net.
+ Further IP addresses:   108.138.246.75 108.138.246.2 108.138.246.73
+                         2600:9000:2146:8800:9:a5c:7dc0:93a1
+                         2600:9000:2146:d600:9:a5c:7dc0:93a1
+                         2600:9000:2146:c600:9:a5c:7dc0:93a1
+                         2600:9000:2146:1e00:9:a5c:7dc0:93a1
+                         2600:9000:2146:cc00:9:a5c:7dc0:93a1
+                         2600:9000:2146:6000:9:a5c:7dc0:93a1
+                         2600:9000:2146:e200:9:a5c:7dc0:93a1
+                         2600:9000:2146:1800:9:a5c:7dc0:93a1 
+ rDNS (108.138.246.14):  server-108-138-246-14.sfo5.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -744,9 +747,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;status request/#5&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
+                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;extended master secret/#23&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
@@ -768,11 +771,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">84 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 60 days</span> (2023-03-01 00:00 --&gt; 2023-08-27 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.r2m01.amazontrust.com/r2m01.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.r2m01.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -788,7 +791,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
 <span style="font-weight:bold;"> HTTP clock skew              </span>+1 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          773
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          439
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">730 days</span>=63072000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>AmazonS<span style="color:#8a7237;">3</span>
@@ -799,7 +802,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               <span style="color:#008817;">Content-Security-Policy</span>: default-src &apos;self&apos; data:
                                 https://*.data.gouv.fr
                                 https://openmaptiles.github.io
-                                http://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
+                                https://cdn.jsdelivr.net
+                                https://anct-carto-client-feature-les-assembleurs.s3.eu-west-3.amazonaws.com; 
                                 ont-src &apos;self&apos; https://cdn.jsdelivr.net;
                                 img-src &apos;self&apos; data: https://*.data.gouv.fr;
                                 object-src &apos;none&apos;; script-src &apos;self&apos;
@@ -813,7 +817,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               X-XSS-Protection: 1; mode=block
                               Referrer-Policy: same-origin
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Hit from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> bd<span style="color:#8a7237;">4</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span>f<span style="color:#8a7237;">5</span>f<span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span>d<span style="color:#8a7237;">6</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">8</span>dff<span style="color:#8a7237;">6</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">9</span>c<span style="color:#8a7237;">5</span>ff<span style="color:#8a7237;">1</span>fe<span style="color:#8a7237;">6</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">5</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">9</span>a<span style="color:#8a7237;">5</span>eaa<span style="color:#8a7237;">2</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">4</span>d<span style="color:#8a7237;">3</span>b<span style="color:#8a7237;">9</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">7</span>d<span style="color:#8a7237;">6</span>acfdba<span style="color:#8a7237;">7</span><span style="color:#8a7237;">2</span>f<span style="color:#8a7237;">5</span><span style="color:#8a7237;">6</span>d<span style="color:#8a7237;">0</span>.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -892,10 +896,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2023-06-04 01:57:13 [ 329s] --&gt;&gt; 65.8.158.17:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2023-06-11 01:45:23 [ 321s] --&gt;&gt; 108.138.246.14:443 (cartographie.societenumerique.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>65.8.158.101 65.8.158.25 65.8.158.20 65.8.158.17
+<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>108.138.246.2 108.138.246.75 108.138.246.73 108.138.246.14
 
 </pre>
 </body>

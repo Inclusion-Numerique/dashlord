@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln coop.conseiller-numerique.gouv.fr</pre>
-<p class="lead">Sun Jun  4 01:37:05 2023 – Sun Jun  4 01:39:50 2023<br>1 hosts scanned.
+<p class="lead">Sun Jun 11 01:33:32 2023 – Sun Jun 11 01:36:23 2023<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.42.117.108</td>
+<td>185.42.117.109</td>
 <td>coop.conseiller-numerique.gouv.fr</td>
-<td>11</td>
+<td>14</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-108"><h3 class="panel-title">185.42.117.108 - coop.conseiller-numerique.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="185-42-117-108">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-109"><h3 class="panel-title">185.42.117.109 - coop.conseiller-numerique.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="185-42-117-109">
 <h4>Hostnames</h4>
 <ul><li>coop.conseiller-numerique.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -143,14 +143,14 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
+<h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe, tor-versions: 
     HTTP/1.1 400 Bad Request
     Cache-Control: no-cache
     Connection: close</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
 <tr class="warning">
 <td>1080</td>
@@ -183,17 +183,19 @@
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   Kerberos: 
-    5Iux
-    &lt;ArW
-    |&gt;-N`
-    6Ygs
-    ENy/+*
-    \xb2
-    \xd9"
-    l-mN
+    6R@9
+    8[wr2
+    T@IF
+    4s'eH
+    ,SO'
+    #\x8cf
+    Vgb9
+    0G~w
   TLSSessionReq: 
-    $%&gt;UEP
-    &amp;/K=M</pre>
+    \x0e
+    \x05
+    \x9e3
+    /p##z</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5002</td>
@@ -257,18 +259,38 @@
     authentication_failure_close: YES
     per_consumer_qos: YES
     direct_reply_to: YES
-  cluster_name: rabbit@44b5a639de80
+  cluster_name: rabbit@0c4f4b113eab
   copyright: Copyright (c) 2007-2020 Pivotal Software, Inc.
   information: Licensed under the MPL.  See https://www.rabbitmq.com/
   platform: Erlang/OTP 22.3.4.7
   product: RabbitMQ
   version: 3.7.28
-  mechanisms: PLAIN AMQPLAIN
+  mechanisms: AMQPLAIN PLAIN
   locales: en_US
 </pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5811</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">5901</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">5910</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">tcpwrapped</td>
@@ -292,6 +314,16 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">unknown</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">5999</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
@@ -325,7 +357,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -335,7 +367,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
@@ -345,7 +377,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>3000</td>
 <td>tcp</td>
 <td>ppp</td>
@@ -355,7 +387,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5002</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -365,7 +397,7 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5225</td>
 <td>tcp</td>
 <td>tcpwrapped</td>
@@ -375,7 +407,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5357</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -385,7 +417,7 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5800</td>
 <td>tcp</td>
 <td>amqp</td>
@@ -395,7 +427,7 @@
 <td>0-9</td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5811</td>
 <td>tcp</td>
 <td>tcpwrapped</td>
@@ -405,7 +437,27 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
+<td>5901</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
+<td>5910</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5911</td>
 <td>tcp</td>
 <td>http</td>
@@ -415,7 +467,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>5962</td>
 <td>tcp</td>
 <td>unknown</td>
@@ -425,7 +477,17 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.108 - coop.conseiller-numerique.gouv.fr</td>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
+<td>5999</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>185.42.117.109 - coop.conseiller-numerique.gouv.fr</td>
 <td>9999</td>
 <td>tcp</td>
 <td>tcpwrapped</td>

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 11 Jun 2023 01:12:00",
+	"@generated": "Sun, 18 Jun 2023 01:11:39",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -50,9 +50,17 @@
 							"attack": "",
 							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'",
 							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "img-src 'self' data: stats.data.gouv.fr; connect-src 'self' https://stats.data.gouv.fr; form-action 'self'; frame-src 'self' https://www.dailymotion.com; style-src 'self' 'unsafe-inline' stats.data.gouv.fr; object-src 'none'; default-src 'none'; base-uri 'none'; script-src 'self' stats.data.gouv.fr; font-src 'self'; frame-ancestors 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
@@ -85,7 +93,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "47"
+					"sourceid": "33"
 				},
 				{
 					"pluginid": "10011",
@@ -219,7 +227,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10094",
@@ -236,16 +244,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjBiMDJiZDkxMDNjZWIzOGU2NjAyZGViYjk0MDNkM2I5NzNhNmU0NDktMTY4NjQ0NTkxMzA4Ny03Y2RlMTkwOGUyOTBmODdmOGI3YTMxOTEifSwiZXhwIjoxNjg5MDM3OTEzLCJuYmYiOjE2ODY0NDU5MTMsImlhdCI6MTY4NjQ0NTkxM30",
-							"otherinfo": "{\"data\":{\"csrfToken\":\"0b02bd9103ceb38e6602debb9403d3b973a6e449-1686445913087-7cde1908e290f87f8b7a3191\"},\"exp\":1689037913,\"nbf\":1686445913,\"iat\":1686445913}"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6ImJhNWYzYWI3NmQ2MTZhY2Y5N2UzZTE0Yzk0YTk1NzA3OTYzNjQ2OTQtMTY4NzA1MDY5MjU4MS03ZDRjODllZjg5OGM0Nzk5ZWZmZGMzYjgifSwiZXhwIjoxNjg5NjQyNjkyLCJuYmYiOjE2ODcwNTA2OTIsImlhdCI6MTY4NzA1MDY5Mn0",
+							"otherinfo": "{\"data\":{\"csrfToken\":\"ba5f3ab76d616acf97e3e14c94a9570796364694-1687050692581-7d4c89ef898c4799effdc3b8\"},\"exp\":1689642692,\"nbf\":1687050692,\"iat\":1687050692}"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6ImYzNDhlZjRiMDMwMWNlYmI1Zjc5NGY5NGY5NTEzMzE2NDAwYTBjMGUtMTY4NjQ0NTkxMjU0Ny05OTBmZjFlZmMzNGJiZDY1NTQ3MjNjZjIifSwiZXhwIjoxNjg5MDM3OTEyLCJuYmYiOjE2ODY0NDU5MTIsImlhdCI6MTY4NjQ0NTkxMn0",
-							"otherinfo": "{\"data\":{\"csrfToken\":\"f348ef4b0301cebb5f794f94f9513316400a0c0e-1686445912547-990ff1efc34bbd6554723cf2\"},\"exp\":1689037912,\"nbf\":1686445912,\"iat\":1686445912}"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6ImM4NmEwYTQ4MGIwN2NkNGY4MTcyZmZhMWQ3NGRiYjViZTE0OTExYTctMTY4NzA1MDY5MTc4OC0zODZmZGY4ZDk1ODE5ZjI0MTc4NzU5Y2EifSwiZXhwIjoxNjg5NjQyNjkxLCJuYmYiOjE2ODcwNTA2OTEsImlhdCI6MTY4NzA1MDY5MX0",
+							"otherinfo": "{\"data\":{\"csrfToken\":\"c86a0a480b07cd4f8172ffa1d74dbb5be14911a7-1687050691788-386fdf8d95819f24178759ca\"},\"exp\":1689642691,\"nbf\":1687050691,\"iat\":1687050691}"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -292,17 +300,17 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJ6YXByb3h5QGV4YW1wbGUuY29tIn0sIm5iZiI6MTY4NjQ0NTkxNSwiaWF0IjoxNjg2NDQ1OTE1fQ",
-							"otherinfo": "{\"data\":{\"error\":\"Aucun compte actif n\u2019est associ\u00E9 \u00E0 cette adresse e-mail.\\nMerci de v\u00E9rifier qu\u2019il s\u2019agit bien de votre adresse professionnelle et nominative.\",\"email-value\":\"zaproxy@example.com\"},\"nbf\":1686445915,\"iat\":1686445915}"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJ6YXByb3h5QGV4YW1wbGUuY29tIn0sIm5iZiI6MTY4NzA1MDY5NCwiaWF0IjoxNjg3MDUwNjk0fQ",
+							"otherinfo": "{\"data\":{\"error\":\"Aucun compte actif n\u2019est associ\u00E9 \u00E0 cette adresse e-mail.\\nMerci de v\u00E9rifier qu\u2019il s\u2019agit bien de votre adresse professionnelle et nominative.\",\"email-value\":\"zaproxy@example.com\"},\"nbf\":1687050694,\"iat\":1687050694}"
 						}
 					],
 					"count": "8",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"0b02bd9103ceb38e6602debb9403d3b973a6e449-1686445913087-7cde1908e290f87f8b7a3191\"},\"exp\":1689037913,\"nbf\":1686445913,\"iat\":1686445913}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"ba5f3ab76d616acf97e3e14c94a9570796364694-1687050692581-7d4c89ef898c4799effdc3b8\"},\"exp\":1689642692,\"nbf\":1687050692,\"iat\":1687050692}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10027",
@@ -345,7 +353,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "71"
+					"sourceid": "70"
 				},
 				{
 					"pluginid": "10109",
@@ -388,7 +396,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -460,15 +468,7 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
-						},
-						{
-							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c9e2b2d0fb7004fdc3df09922c23c75f-index.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -476,7 +476,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/javascripts/bc48bc5b8f6cee02ed1dc6331eeff3c3-stats.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -506,14 +506,6 @@
 							"attack": "",
 							"evidence": "max-age=31536000",
 							"otherinfo": ""
-						},
-						{
-							"uri": "https://aplus.beta.gouv.fr/jsRoutes",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/robots.txt",
@@ -556,13 +548,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "13",
+					"count": "11",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "8"
 				}
 			]
 		}

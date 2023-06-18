@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 11 Jun 2023 01:04:27",
+	"@generated": "Sun, 18 Jun 2023 01:04:18",
 	"site":[ 
 		{
 			"@name": "https://monsuivisocial.incubateur.anct.gouv.fr",
@@ -127,14 +127,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
 							"method": "GET",
 							"param": "",
@@ -151,7 +143,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/routes.aece4106.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -160,6 +152,14 @@
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -347,7 +347,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "622"
+					"sourceid": "628"
 				},
 				{
 					"pluginid": "10021",
@@ -491,7 +491,7 @@
 							"otherinfo": "\u05D1\uFFFD\uFFFDxu\uFFFD\uFFFD\uFFFDfm>\uFFFD~/\uFFFD\\x001dzW\uFFFDf\uFFFD"
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.4c39653a.css",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/calendar-line.921b0cc4.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -569,7 +569,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "423"
+					"sourceid": "424"
 				},
 				{
 					"pluginid": "10027",
@@ -684,7 +684,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "418"
+					"sourceid": "417"
 				},
 				{
 					"pluginid": "10015",
@@ -780,14 +780,6 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/AtomSnackbar.cbd0a423.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=31536000",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.ec3dedee.js",
 							"method": "GET",
 							"param": "",
@@ -804,12 +796,12 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/routes.aece4106.js",
+							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=31536000",
-							"otherinfo": ""
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
 							"uri": "https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico",
@@ -860,7 +852,7 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",

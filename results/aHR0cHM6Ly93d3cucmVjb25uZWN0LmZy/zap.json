@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 25 Jun 2023 01:09:42",
+	"@generated": "Sun, 2 Jul 2023 01:06:43",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -20,7 +20,7 @@
 					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -28,15 +28,15 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_email\" ]."
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form name=\"reset_password_request_form\" method=\"post\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_telephone\" ]."
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_phone\" ]."
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
 							"method": "POST",
 							"param": "",
 							"attack": "",
@@ -44,12 +44,12 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_email\" ]."
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
 							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": "<form name=\"reset_password_request_form\" method=\"post\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_telephone\" ]."
+							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"reset_password_request_form__token\" \"reset_password_request_form_phone\" ]."
 						}
 					],
 					"count": "4",
@@ -58,7 +58,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "227"
+					"sourceid": "247"
 				},
 				{
 					"pluginid": "10038",
@@ -103,6 +103,30 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/reconnect-accompagnement-numerique",
 							"method": "GET",
 							"param": "",
@@ -120,30 +144,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -202,7 +202,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/login",
+							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -210,7 +210,23 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/nous-contacter",
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -242,24 +258,8 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
-							"method": "GET",
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
+							"method": "POST",
 							"param": "X-Frame-Options",
 							"attack": "",
 							"evidence": "",
@@ -339,34 +339,7 @@
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "1"
-				},
-				{
-					"pluginid": "10003",
-					"alertRef": "10003",
-					"alert": "Vulnerable JS Library",
-					"name": "Vulnerable JS Library",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>The identified library jquery-ui, version 1.12.1 is vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_a-6fddef.01232773.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/*! jQuery UI - v1.12.1",
-							"otherinfo": "CVE-2021-41184\nCVE-2021-41183\nCVE-2021-41182\nCVE-2022-31160\n"
-						}
-					],
-					"count": "1",
-					"solution": "<p>Please upgrade to the latest version of jquery-ui.</p>",
-					"otherinfo": "<p>CVE-2021-41184</p><p>CVE-2021-41183</p><p>CVE-2021-41182</p><p>CVE-2022-31160</p><p></p>",
-					"reference": "<p>https://github.com/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://bugs.jqueryui.com/ticket/15284</p><p>https://github.com/jquery/jquery-ui/commit/8cc5bae1caa1fcf96bf5862c5646c787020ba3f9</p><p>https://nvd.nist.gov/vuln/detail/CVE-2022-31160</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-h6gj-6jjq-h8g9</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-gpqq-952q-5327</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41184</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41183</p><p>https://github.com/jquery/jquery-ui/security/advisories/GHSA-9gj3-hwp5-pmwc</p><p>https://nvd.nist.gov/vuln/detail/CVE-2021-41182</p><p>https://github.com/jquery/jquery-ui/issues/2101</p><p></p>",
-					"cweid": "829",
-					"wascid": "-1",
-					"sourceid": "152"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10017",
@@ -433,7 +406,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10110",
@@ -446,7 +419,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.d1048d2a.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -454,7 +427,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -468,7 +441,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "149"
+					"sourceid": "159"
 				},
 				{
 					"pluginid": "10063",
@@ -497,7 +470,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-function_js-node_modules_core-js_internals_export_js.e8692464.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -505,7 +478,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_engine-v8-version_js-node_modules_core-js_internals_se-a098b2.ea2112d8.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_modules_es_reg-a87f45.926ccbf3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -522,6 +495,14 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -553,14 +534,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -575,7 +548,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10035",
@@ -604,14 +577,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/api/docs.jsonld",
 							"method": "GET",
 							"param": "",
@@ -620,7 +585,23 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/build/images/favIcons/favicon-16x16.ec99cabd.png",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -645,14 +626,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -682,7 +655,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10096",
@@ -695,7 +668,7 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -703,7 +676,7 @@
 							"otherinfo": "1409305260, which evaluates to: 2014-08-29 09:41:00"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -711,7 +684,7 @@
 							"otherinfo": "1481256789, which evaluates to: 2016-12-09 04:13:09"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -719,7 +692,7 @@
 							"otherinfo": "1520123456, which evaluates to: 2018-03-04 00:30:56"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -727,7 +700,7 @@
 							"otherinfo": "1523456789, which evaluates to: 2018-04-11 14:26:29"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -735,7 +708,7 @@
 							"otherinfo": "1534456789, which evaluates to: 2018-08-16 21:59:49"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -743,7 +716,7 @@
 							"otherinfo": "1546012345, which evaluates to: 2018-12-28 15:52:25"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -751,7 +724,7 @@
 							"otherinfo": "1599123456, which evaluates to: 2020-09-03 08:57:36"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -759,7 +732,7 @@
 							"otherinfo": "1600123456, which evaluates to: 2020-09-14 22:44:16"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -767,7 +740,7 @@
 							"otherinfo": "1624756789, which evaluates to: 2021-06-27 01:19:49"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -775,7 +748,7 @@
 							"otherinfo": "1700123456, which evaluates to: 2023-11-16 08:30:56"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -783,7 +756,7 @@
 							"otherinfo": "1781234567, which evaluates to: 2026-06-12 03:22:47"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -791,7 +764,7 @@
 							"otherinfo": "1800123456, which evaluates to: 2027-01-16 18:17:36"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -799,7 +772,7 @@
 							"otherinfo": "1812345678, which evaluates to: 2027-06-07 05:21:18"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -807,7 +780,7 @@
 							"otherinfo": "1850123456, which evaluates to: 2028-08-17 11:10:56"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -815,7 +788,7 @@
 							"otherinfo": "1900123456, which evaluates to: 2030-03-19 04:04:16"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -823,7 +796,7 @@
 							"otherinfo": "1919123456, which evaluates to: 2030-10-25 01:50:56"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -831,7 +804,7 @@
 							"otherinfo": "1921234567, which evaluates to: 2030-11-18 12:16:07"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-dbddfb.d65b6aae.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-a8059f.a6297397.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -845,7 +818,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "168"
+					"sourceid": "173"
 				},
 				{
 					"pluginid": "10021",
@@ -874,7 +847,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"uri": "https://www.reconnect.fr/build/images/favIcons/favicon-16x16.ec99cabd.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -882,7 +855,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"uri": "https://www.reconnect.fr/build/images/favIcons/site.webmanifest.41ab413f.json",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -890,7 +863,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.78dac4db.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -899,6 +872,14 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -930,14 +911,6 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
 							"uri": "https://www.reconnect.fr/robots.txt",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -952,7 +925,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10094",
@@ -981,28 +954,28 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"uri": "https://www.reconnect.fr/build/homeV2.b6e7447b.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor",
-							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\\x0002\u01A9\uFFFDI\u0721\u0627\uFFFD\uFFFD\uFFFD\uFFFD\t\uFFFDI\u0721\u0627\uFFFD\uFFFDh\uFFFD\uFFFD\u07B1\uFFFD\uFFFD\uFFFD+"
+							"evidence": "bootstrap_next__WEBPACK_IMPORTED_MODULE_0__",
+							"otherinfo": "n\uFFFD-\uFFFD\uFFFD\u06A7\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDX@O\\x0000\"\uFFFD \uFFFD\uFFFDE1\\x0003\uFFFD\u00C3P\uFFFD?\uFFFD\uFFFD"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
+							"uri": "https://www.reconnect.fr/build/images/favIcons/safari-pinned-tab.37d4fd63.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor",
-							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\\x0002\u01A9\uFFFDI\u0721\u0627\uFFFD\uFFFD\uFFFD\uFFFD\t\uFFFDI\u0721\u0627\uFFFD\uFFFDh\uFFFD\uFFFD\u07B1\uFFFD\uFFFD\uFFFD+"
+							"evidence": "org/TR/2001/REC-SVG-20010904/DTD/svg10",
+							"otherinfo": "\uFFFD\uFFFD?M\\x001f\uFFFD\uFFFDMD@\uFFFDIQ\uFFFD\uFFFDM5\uFFFD\uFFFD8\uFFFD4\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD"
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-reconnect",
+							"uri": "https://www.reconnect.fr/build/shared_node_modules_symfony_stimulus-bridge_dist_webpack_loader_js_assets_controllers_json-as-ea1d6b.ee516737.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Calibri/Encoding/WinAnsiEncoding/FontDescriptor",
-							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\t\uFFFDbn\uFFFD\uFFFD\\x0012w(v)\uFFFD\uFFFDh\uFFFD\\x0002{\"\\x0012w(v)\uFFFD\uFFFDZ'\uFFFD7\uFFFDr\uFFFD\uFFFD\uFFFD\uFFFD"
+							"evidence": "_symfony_ux_live_component_dist_live_controller_js__WEBPACK_IMPORTED_MODULE_0__",
+							"otherinfo": "\uFFFD\u0326~\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD+\uFFFD\uFFFD\uFFFD&\uFFFD\uFFFD\u079E\uFFFD\u074A\uFFFD\uFFFD+\uFFFD\uFFFD\uFFFD'\uFFFD\uFFFD%\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDX@O\\x0000\"\uFFFD \uFFFD\uFFFDE1\\x0003\uFFFD\u00C3P\uFFFD?\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
@@ -1014,6 +987,14 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/build/images/favIcons/favicon-32x32",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1043,14 +1024,6 @@
 							"attack": "",
 							"evidence": "/build/images/favIcons/favicon-32x32",
 							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/build/images/favIcons/favicon-32x32",
-							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
 						}
 					],
 					"count": "11",
@@ -1059,7 +1032,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10027",
@@ -1072,63 +1045,39 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 6 times, the first in the element starting with: \"  // this prevents the handler from being dispatched the same way as mouseover or mouseout does\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later",
-							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected in the element starting with: \"    // can be removed later when multiple key/instances are fine to be used\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 2 times, the first in the element starting with: \"const nativeEvents = new Set(['click', 'dblclick', 'mouseup', 'mousedown', 'contextmenu', 'mousewheel', 'DOMMouseScroll', 'mouse\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_bootstrap-next_dist_js_bootstrap_esm_js.d860beb5.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"        // would stop cycling until user tapped out of it;\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-function_js-node_modules_core-js_internals_export_js.e8692464.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-constructor_js-node_modules_core-js_internals_set-sp-1dbe3a.3954f581.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_engine-v8-version_js-node_modules_core-js_internals_se-a098b2.ea2112d8.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.js\", see evidence field for the suspicious comment/snippet."
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"  // Nashorn bug:\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "debug",
-							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.\", see evidence field for the suspicious comment/snippet."
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"// getting tag from ES6+ `Object.prototype.toString`\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_modules_es_reg-a87f45.926ccbf3.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// UC Browser bug\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_modules_es_reg-a87f45.926ccbf3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1136,7 +1085,23 @@
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"// nonparticipating capturing group, copied from es5-shim's String#split patch.\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 4 times, the first in the element starting with: \"  // should have correct order of operations (Edge bug)\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"// https://bugs.chromium.org/p/v8/issues/detail?id=12681\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1144,101 +1109,69 @@
 							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.dce19e89.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 9 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/enum-bug-keys.js\":\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"// https://bugs.chromium.org/p/v8/issues/detail?id=3334\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 2 times, the first in the element starting with: \"// additional protection from minified / mangled / dropped function names\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 3 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/engine-user-agent.js\":\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "debug",
+							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "where",
 							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 7 times, the first in the element starting with: \"\t// We allow this because of a bug in IE8/9 that throws an error\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs",
-							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected 9 times, the first in the element starting with: \"\t// https://bugs.jquery.com/ticket/4833\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 53 times, the first in the element starting with: \"\t\t// Return just the one element from the set\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "later",
-							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 8 times, the first in the element starting with: \"\t\t\t// IE8 throws error here and will not see later tests\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "query",
-							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected 3 times, the first in the element starting with: \"\t\t\t// IE 11/Edge don't find elements on a `[name='']` query in some cases.\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 19 times, the first in the element starting with: \"\tselect,\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "TODO",
-							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 4 times, the first in the element starting with: \"\t\t\t\t\t\t\t// TODO: identify versions\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 9 times, the first in the element starting with: \"\t// Can be adjusted by the user\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "username",
-							"otherinfo": "The following pattern was used: \\bUSERNAME\\b and was detected 2 times, the first in the element starting with: \"\t\tusername: null,\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.88a1df66.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where",
-							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t// For CommonJS and CommonJS-like environments where a proper `window`\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "20",
+					"count": "15",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected 6 times, the first in the element starting with: \"  // this prevents the handler from being dispatched the same way as mouseover or mouseout does\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "153"
+					"sourceid": "155"
 				},
 				{
 					"pluginid": "10109",
@@ -1275,7 +1208,7 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
-							"uri": "https://www.reconnect.fr/login",
+							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1283,7 +1216,23 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
-							"uri": "https://www.reconnect.fr/nous-contacter",
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1315,24 +1264,8 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
-							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
-							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
-							"method": "GET",
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
+							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
@@ -1345,7 +1278,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10049",
@@ -1374,7 +1307,23 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/annexe/cgs-cs",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1398,14 +1347,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/reconnect-accompagnement-numerique",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/reconnect-la-solution-pro",
 							"method": "GET",
 							"param": "",
@@ -1415,14 +1356,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1444,7 +1377,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10015",
@@ -1505,6 +1438,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "max-age=0, must-revalidate, private",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/reconnect-accompagnement-numerique",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -1522,14 +1463,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "max-age=0, must-revalidate, private",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/reset-password/choose",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1591,29 +1524,29 @@
 					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/reset-password/email",
+							"uri": "https://www.reconnect.fr/public/reset-password/email",
 							"method": "POST",
 							"param": "reset_password_request_form[email]",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.reconnect.fr/reset-password/email\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nreset_password_request_form[email]=foo-bar@example.com\r\n\r\nThe user-controlled value was:\r\nfoo-bar@example.com"
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.reconnect.fr/public/reset-password/email\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nreset_password_request_form[email]=foo-bar@example.com\r\n\r\nThe user-controlled value was:\r\nfoo-bar@example.com"
 						},
 						{
-							"uri": "https://www.reconnect.fr/reset-password/sms",
+							"uri": "https://www.reconnect.fr/public/reset-password/sms",
 							"method": "POST",
-							"param": "reset_password_request_form[telephone]",
+							"param": "reset_password_request_form[phone]",
 							"attack": "",
 							"evidence": "",
-							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.reconnect.fr/reset-password/sms\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nreset_password_request_form[telephone]=9999999999\r\n\r\nThe user-controlled value was:\r\n9999999999"
+							"otherinfo": "User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:\r\n\r\nhttps://www.reconnect.fr/public/reset-password/sms\r\n\r\nappears to include user input in: \r\n\r\na(n) [input] tag [value] attribute \r\n\r\nThe user input found was:\r\nreset_password_request_form[phone]=9999999999\r\n\r\nThe user-controlled value was:\r\n9999999999"
 						}
 					],
 					"count": "2",
 					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
-					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.reconnect.fr/reset-password/email</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>reset_password_request_form[email]=foo-bar@example.com</p><p></p><p>The user-controlled value was:</p><p>foo-bar@example.com</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.reconnect.fr/public/reset-password/email</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>reset_password_request_form[email]=foo-bar@example.com</p><p></p><p>The user-controlled value was:</p><p>foo-bar@example.com</p>",
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "247"
+					"sourceid": "253"
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 2 Jul 2023 01:06:43",
+	"@generated": "Sun, 9 Jul 2023 01:10:01",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -165,7 +165,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10020",
@@ -195,6 +195,14 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/login",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -252,14 +260,6 @@
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
 							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/public/reset-password/email",
-							"method": "POST",
 							"param": "X-Frame-Options",
 							"attack": "",
 							"evidence": "",
@@ -339,7 +339,7 @@
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10017",
@@ -406,7 +406,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10110",
@@ -441,7 +441,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "159"
+					"sourceid": "158"
 				},
 				{
 					"pluginid": "10063",
@@ -548,7 +548,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10035",
@@ -585,7 +585,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/images/favIcons/favicon-16x16.ec99cabd.png",
+							"uri": "https://www.reconnect.fr/faq-rgpd",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -655,7 +655,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10096",
@@ -818,7 +818,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "173"
+					"sourceid": "175"
 				},
 				{
 					"pluginid": "10021",
@@ -847,6 +847,14 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
+							"uri": "https://www.reconnect.fr/build/images/favIcons/apple-touch-icon.65f19580.png",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
 							"uri": "https://www.reconnect.fr/build/images/favIcons/favicon-16x16.ec99cabd.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -855,7 +863,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/images/favIcons/site.webmanifest.41ab413f.json",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.78dac4db.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -863,7 +871,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_intl-tel-input_build_css_intlTelInput_css.78dac4db.css",
+							"uri": "https://www.reconnect.fr/faq-rgpd",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -919,13 +927,13 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10094",
@@ -954,7 +962,7 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/homeV2.b6e7447b.js",
+							"uri": "https://www.reconnect.fr/build/homeV2.c2d973ff.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -970,12 +978,12 @@
 							"otherinfo": "\uFFFD\uFFFD?M\\x001f\uFFFD\uFFFDMD@\uFFFDIQ\uFFFD\uFFFDM5\uFFFD\uFFFD8\uFFFD4\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD"
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/shared_node_modules_symfony_stimulus-bridge_dist_webpack_loader_js_assets_controllers_json-as-ea1d6b.ee516737.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.d1048d2a.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "_symfony_ux_live_component_dist_live_controller_js__WEBPACK_IMPORTED_MODULE_0__",
-							"otherinfo": "\uFFFD\u0326~\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD+\uFFFD\uFFFD\uFFFD&\uFFFD\uFFFD\u079E\uFFFD\u074A\uFFFD\uFFFD+\uFFFD\uFFFD\uFFFD'\uFFFD\uFFFD%\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDX@O\\x0000\"\uFFFD \uFFFD\uFFFDE1\\x0003\uFFFD\u00C3P\uFFFD?\uFFFD\uFFFD"
+							"evidence": "org/TR/2011/REC-css3-selectors-20110929/",
+							"otherinfo": "\uFFFD\uFFFD?M\\x001f\uFFFD\uFFFD]D@\uFFFDr\uFFFD7\uFFFD\u01E5y\uFFFDh\uFFFD\u03F6\uFFFD]t\uFFFDo"
 						},
 						{
 							"uri": "https://www.reconnect.fr/faq-rgpd",
@@ -1032,7 +1040,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10027",
@@ -1083,30 +1091,6 @@
 							"attack": "",
 							"evidence": "from",
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"// nonparticipating capturing group, copied from es5-shim's String#split patch.\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 4 times, the first in the element starting with: \"  // should have correct order of operations (Edge bug)\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bugs",
-							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected in the element starting with: \"// https://bugs.chromium.org/p/v8/issues/detail?id=12681\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-method-has-species-support_js-node_modules_core--780a53.893d941b.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "TODO",
-							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
@@ -1165,7 +1149,7 @@
 							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "15",
+					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -1278,7 +1262,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -1315,22 +1299,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.reconnect.fr/api/docs.jsonld",
 							"method": "GET",
 							"param": "",
@@ -1340,6 +1308,22 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/public/reset-password/choose",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.reconnect.fr/reconnect-accompagnement-numerique",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1377,7 +1361,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -1484,7 +1468,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -1546,7 +1530,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "253"
+					"sourceid": "256"
 				}
 			]
 		}

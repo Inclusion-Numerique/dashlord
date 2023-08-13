@@ -1,7 +1,7 @@
-# Nmap 7.92 scan initiated Sun Aug  6 01:18:41 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln admin.conseiller-numerique.gouv.fr
+# Nmap 7.92 scan initiated Sun Aug 13 01:11:34 2023 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln admin.conseiller-numerique.gouv.fr
 Nmap scan report for admin.conseiller-numerique.gouv.fr (185.42.117.109)
-Host is up (0.15s latency).
-Other addresses for admin.conseiller-numerique.gouv.fr (not scanned): 185.42.117.108 46.252.181.103 46.252.181.104
+Host is up (0.12s latency).
+Other addresses for admin.conseiller-numerique.gouv.fr (not scanned): 46.252.181.103 185.42.117.108 46.252.181.104
 Not shown: 986 closed tcp ports (reset)
 PORT     STATE    SERVICE    VERSION
 22/tcp   filtered ssh
@@ -23,21 +23,18 @@ PORT     STATE    SERVICE    VERSION
 3000/tcp open     ppp?
 | fingerprint-strings: 
 |   Kerberos: 
-|     a|=}+
-|     aqE{X:
-|     F])c
-|     CfFz
-|     J+8T
-|     NWeug
-|     ;lNQ
+|     I2bV
+|     p1sz
+|     *Ws2TJ
+|     L$'lJ
 |   TLSSessionReq: 
-|     :V,vP
-|     i$o7
-|     N$rn
-|     9fNI
-|     sv@o
-|     |TPL3
-|_    _%t=
+|     0jth
+|     d;Yr
+|     \xfd
+|     22L>
+|     t>^Y
+|     _E")
+|_    edVc
 5002/tcp open     ssh        (protocol 2.0)
 | fingerprint-strings: 
 |   NULL: 
@@ -70,111 +67,107 @@ PORT     STATE    SERVICE    VERSION
 9999/tcp open     tcpwrapped
 4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.92%I=7%D=8/6%Time=64CEF4FC%P=x86_64-alpine-linux-musl%r(
-SF:GetRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20
-SF:no-cache\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,48,"HTTP/1\.1\
-SF:x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x
-SF:20close\r\n\r\n")%r(RTSPRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request\
-SF:r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(X11Pr
-SF:obe,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cach
-SF:e\r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,48,"HTTP/1\.1\x
-SF:20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x2
-SF:0close\r\n\r\n")%r(GenericLines,48,"HTTP/1\.1\x20400\x20Bad\x20Request\
-SF:r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(RPCCh
-SF:eck,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cach
-SF:e\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,48,"HTTP/1\.
-SF:1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:
-SF:\x20close\r\n\r\n")%r(DNSStatusRequestTCP,48,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n
-SF:")%r(Help,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20n
-SF:o-cache\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,48,"HTTP/1\.1
+SF-Port80-TCP:V=7.92%I=7%D=8/13%Time=64D82DD1%P=x86_64-alpine-linux-musl%r
+SF:(GetRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x2
+SF:0no-cache\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,48,"HTTP/1\.1
 SF:\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\
-SF:x20close\r\n\r\n")%r(TerminalServerCookie,48,"HTTP/1\.1\x20400\x20Bad\x
-SF:20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n
-SF:")%r(TLSSessionReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Cont
-SF:rol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,48,"HTTP/
-SF:1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnecti
-SF:on:\x20close\r\n\r\n")%r(SMBProgNeg,48,"HTTP/1\.1\x20400\x20Bad\x20Requ
-SF:est\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(L
-SF:PDString,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no
-SF:-cache\r\nConnection:\x20close\r\n\r\n")%r(LDAPSearchReq,48,"HTTP/1\.1\
+SF:x20close\r\n\r\n")%r(RTSPRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(X11P
+SF:robe,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cac
+SF:he\r\nConnection:\x20close\r\n\r\n")%r(FourOhFourRequest,48,"HTTP/1\.1\
 SF:x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x
-SF:20close\r\n\r\n")%r(LDAPBindReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request\
-SF:r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/6%Time=64CEF503%P=x86_64-alpine-linux-
-SF:musl%r(GetRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Contr
-SF:ol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,48,"HTT
-SF:P/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnec
-SF:tion:\x20close\r\n\r\n")%r(FourOhFourRequest,48,"HTTP/1\.1\x20400\x20Ba
-SF:d\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\
-SF:r\n")%r(tor-versions,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Co
-SF:ntrol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(GenericLines,48,
-SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nCo
-SF:nnection:\x20close\r\n\r\n")%r(RTSPRequest,48,"HTTP/1\.1\x20400\x20Bad\
+SF:20close\r\n\r\n")%r(GenericLines,48,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(RPCC
+SF:heck,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cac
+SF:he\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,48,"HTTP/1\
+SF:.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection
+SF::\x20close\r\n\r\n")%r(DNSStatusRequestTCP,48,"HTTP/1\.1\x20400\x20Bad\
 SF:x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\
-SF:n")%r(RPCCheck,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:
-SF:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,4
-SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\n
-SF:Connection:\x20close\r\n\r\n")%r(DNSStatusRequestTCP,48,"HTTP/1\.1\x204
-SF:00\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20cl
-SF:ose\r\n\r\n")%r(Help,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Co
-SF:ntrol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,48
-SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nC
-SF:onnection:\x20close\r\n\r\n")%r(TerminalServerCookie,48,"HTTP/1\.1\x204
-SF:00\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20cl
-SF:ose\r\n\r\n")%r(TLSSessionReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
-SF:nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(Kerbero
-SF:s,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\
-SF:r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,48,"HTTP/1\.1\x20400\x20
-SF:Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\
-SF:n\r\n")%r(X11Probe,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Cont
-SF:rol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(LPDString,48,"HTTP
+SF:n")%r(Help,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20
+SF:no-cache\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,48,"HTTP/1\.
+SF:1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:
+SF:\x20close\r\n\r\n")%r(TerminalServerCookie,48,"HTTP/1\.1\x20400\x20Bad\
+SF:x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\
+SF:n")%r(TLSSessionReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Con
+SF:trol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,48,"HTTP
 SF:/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnect
-SF:ion:\x20close\r\n\r\n");
+SF:ion:\x20close\r\n\r\n")%r(SMBProgNeg,48,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(
+SF:LPDString,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20n
+SF:o-cache\r\nConnection:\x20close\r\n\r\n")%r(LDAPSearchReq,48,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\
+SF:x20close\r\n\r\n")%r(LDAPBindReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port3000-TCP:V=7.92%I=7%D=8/6%Time=64CEF53C%P=x86_64-alpine-linux-musl%
-SF:r(TLSSessionReq,135,"X\x9f%F1\xbf\xd3\xe6;3\x92\xd2m\xd9\$\x95\x86\)\xd
-SF:c\x9d\0\x0f\$\$A\xbf\x94\x80\0ph\xa69\xc3\xcf\x13jc\xff\xdfE\xfb\xd9\xa
-SF:d\xb6Wv\xc8:V,vP\xe5\x91\x80NF\x9f\x968\xd0\xdboK\xa4\xdd\x17Z\^}\xcdTg
-SF:\$\xb6\x88vW\t\xfa\xca\xb4\x08\\3\xa0\x01\xb6\x83Q\0hm\xaf\xf5\x7f3\xb5
-SF:%a\xb6\xf7fp\xe6S\+\x82\xaaDv\.\x98\x94\xca3~\x1d\"G\x82\xce\x19\xd1bE\
-SF:xa7\xa03\xe6\xe7\[\x87\x1b\xb9\$\x8f/\x07\xb5\xa8\xba\"\xf8_\x0e6\x94\x
-SF:e6\xc9\xbd\x0cI\?\xc0\x97\xc8\xff\xa4y\x06\x97,\xaa\xe2\xec\xb0\x106\xb
-SF:8\xc4\xaf\r\x16ZtY\x1b\x10\xe9\xa3\xcf\x10kt\xed\xb7\xa3\xa3B<y\x8c\xbd
-SF:\r\xbdj\xd7i\$o7\xa5\x84\xb5\xa7\x1cx\x86\xa8\x18j\xc1\x02N\$rn\x83\xf0
-SF:\x0b\xe0\x1d\x1f\xb9\x87\xea\x89\x04\x9b\xe0Z\xc69fNI\xe9\x9as\xf7\xe4\
-SF:]\.8\x81\xb1ta\xda\x8f9\xc6sv@o\xcb\xe5\rc\x06\xc2\xe4\x14f\x9c'w\xce\|
-SF:TPL3\xf5x\)I\x9be4\xf7\x90\xe0_%t=\xcf\xdb\xe8\xc0\xaf\xf3\xd1\*\[A\xd6
-SF:\xd5\x94\xbb\x7fw\xa2\xa12")%r(Kerberos,25F,"\xc1\x93\xce\x97\x15V\xe5\
-SF:xa08\xe6\x05\x01S\x8ai8\x11#\x14\x02\xad\xaf\xc2\x19F\xbe\x0f\x83\x86\.
-SF:\x12q/\xef\xe8_\xc3\xb7\x1d\xa5\xcdY\x84\xc9>&\x1c\xad\xfe\x20\x8a\?\xd
-SF:a\xb5}\xa82\xd6m\xe1\xfdDD\x856\xf2ZUM\x0e\x95\xd0j\x10\xef\xb8\xbe2/\x
-SF:1aa\|=}\+\xa4\(T\x9f!\xa0\xec\xbb\x1c\xbf\x08\xf8\xec\x01\(\x15\*\xd8\x
-SF:8cm\xf0\x1c\xc34\x03\x84&0\xe9\0\+\xb3\xffz\xc4\xf0\x19Q\xd3c\x12\[\xc3
-SF:\xc2;&\x1ap\x96\xc8\x11g\xc2\xfd\xf6\x8d\xbco\xd2\x19T\x9a\x20;\xafEK\]
-SF:\xe5I\x15:\x16r\xe8\xda\x0b\x17\xf2Y\xc2\xa6\x07\xcd\xe6\xf6\x9f\xd7aqE
-SF:{X:\xfb\xb2\x1cL-W\xc4\xcb\xc5\xc2\x80V\x0c@T\x04\x88~\xe6\xb8>&\xad\x8
-SF:0\xa0F\]\)c\xa6\xec>\xfd@!\xd6\)\xccv\nr\xbe\xc8\]\xc2\|\xfcq\xae4\x96\
-SF:x1e\xe4\xb9r\xbe\xccF\(\xc2\x96\x0e\x16Z\x87\x80q\xb2N\xbc\xac\x7f\xfe\
-SF:x85\xc7\xc6\xaa\x20\xbc\xd4\+\x89\x8a\xd5y/\xb3\xe6v\xd78=\xfd\xf5\xb0n
-SF:\*\x8c\xde3\xee\)\x85\xe8\x1f\xbc\xb8\xac\xc7\x16\x9d\xa6&#Z\xbb\xe7\xc
-SF:d\xdcN\xe0\xaa\x05\xb4&J<\x9c-_,\x9d\xbb\x83m7v\xba\xe6\xf8\xdb\t\xe5U5
-SF:\xec\xa6i\x14CfFz\xb8\x9b&=\^\xa3\x07\xe3\xa3z\x941\xe3\x01\xd3Q\xbd\xd
-SF:5\xa7C:\xe7\x98\xdcsv\nmn\x87>,\xc6\xba\xea\xf4\"\xca\x16Kx\xe4\?\x0b\x
-SF:c3Q-\x10\xd5I\xf5\xfa\x85\x1e\xf3\x13z\xd4\xe5\xb5\xa80\x918\x0f\xa2f\x
-SF:f2\x8dr:\xd3i\xcdS\xc9\x08#\xfe\x87\xd5\x80\xa2\xf4\[\xf5\[\xb1z\x1b\x0
-SF:1\xd1\x85\x03\x0e\x98\xc5:\xe3c\x87\x84\xca\xcbC\xbc\x1ap\]c\x97\"\x15\
-SF:xd6\xd1\xdb\x7f\xbaz\x93\x89\xb9-h\xb3J\+8T\x06bh\x9bh;\?\xc6\x8d:\x1cN
-SF:\x04\x14Km\xfbBGM\xea\xf7s\xa7\x99\^\x9f\xcf\xce!\x93\x1b~\x86\x98NWeug
-SF:\xcb\?\x98F\xfcuK\xd1\)\xcaY\xaf\xb4\xea\xea\x10ry9\xec\|\xc5\x93\xe9\x
-SF:a5\xf7\xfc\xc3;lNQ\x01\xe7\t8\xf3\xda\xaa\x89\xd2\xa3\xfe\$\x8b\xd2\x89
-SF:\xe4\xe2>\x8cU\x1f=\xb5\xe9\x8e\xd6N\xfc\xc7\x80h\x20\xef\xb4B\x20\x04\
-SF:x97\xc3\x9e\x9f\xb9N\x8f~Y2\x0e\"\xc1rSP\x8a\xf3\xf3\x1c\xe3@i\n@\x1d/Q
-SF:\xd1L\xb5kF\xfc\x14\x7f\xda");
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=8/13%Time=64D82DD8%P=x86_64-alpine-linux
+SF:-musl%r(GetRequest,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Cont
+SF:rol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,48,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(FourOhFourRequest,48,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n
+SF:\r\n")%r(tor-versions,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-C
+SF:ontrol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(GenericLines,48
+SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nC
+SF:onnection:\x20close\r\n\r\n")%r(RTSPRequest,48,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r
+SF:\n")%r(RPCCheck,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control
+SF::\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,
+SF:48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\
+SF:nConnection:\x20close\r\n\r\n")%r(DNSStatusRequestTCP,48,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20c
+SF:lose\r\n\r\n")%r(Help,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-C
+SF:ontrol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(SSLSessionReq,4
+SF:8,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\n
+SF:Connection:\x20close\r\n\r\n")%r(TerminalServerCookie,48,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20c
+SF:lose\r\n\r\n")%r(TLSSessionReq,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r
+SF:\nCache-Control:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(Kerber
+SF:os,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache
+SF:\r\nConnection:\x20close\r\n\r\n")%r(SMBProgNeg,48,"HTTP/1\.1\x20400\x2
+SF:0Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnection:\x20close\r
+SF:\n\r\n")%r(X11Probe,48,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCache-Con
+SF:trol:\x20no-cache\r\nConnection:\x20close\r\n\r\n")%r(LPDString,48,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nCache-Control:\x20no-cache\r\nConnec
+SF:tion:\x20close\r\n\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5002-TCP:V=7.92%I=7%D=8/6%Time=64CEF4FC%P=x86_64-alpine-linux-musl%
-SF:r(NULL,1A,"SSH-2\.0-SFTPGo_2\.4\.4-dev\r\n");
+SF-Port3000-TCP:V=7.92%I=7%D=8/13%Time=64D82E11%P=x86_64-alpine-linux-musl
+SF:%r(TLSSessionReq,19D,"\xbe\xcbR\xaf\x96\)\xa2\xa0\x88\$\xec\0\x93\xa1\x
+SF:e83\xd2\x10\xda\xdc\t\xac0jth\r\xe1\0\xda\xe4\x84\xa2\xaf\xf3\xe8\xe4\x
+SF:d1\x0c\xf7\xbe\^{\xd0d;Yr\xf1p\xeb\x81\x03M\x88H&!\xdfv\xa8'\xb9\xd6HTD
+SF:\xf4\x1fg\xdb\x942\x1f\t\x145\0\.C\+\xd9\xbeZ\xa4\xc7\xd2S\xeb\xe7\xfdx
+SF:1\x1a\x05\?\x1c\x87\xe3\x0e\xc7R\xd3\x8ci\xa09\x8d\x8aQ\xd7\x06\xe0\\\x
+SF:fd\x96\xfb\xa2\xb6\$`E\xaf~\rb\xcf\xb5a\xfe\x81\xa8\x99\x9522L>\xa7\xe0
+SF:%r\xcfD\x80\xc7\xe1}2\x9be\xb9t>\^Y\xd1f\xa5\xb4E\xc0A\xcc\xb7\xc2\)cO\
+SF:xd2\xe2\xfet\xe54\x16\xa9\x08\xd0\"\x200\xe1#\x04\r\x10Q\0h{n\xb5\xcfRn
+SF:\xcb\xaf\x15\xf1\[{\xde3\xe4\xbc\x15\xa3\xfd_\x05-\x9f\xe6\xc8/:\x02\xc
+SF:4\x88\xa7\^\x0f\xaf\x8f\xf6\x85\x19\xf88\xfa\x12\x8b\x98\xab\x8b#\xf2\x
+SF:01\x0f\xf2m\xc6\xa0\xbc\x94\(\xc8<\xa1\xf8P\xbe\xad`\xe5\x0e\x84\x1b\x0
+SF:b\xc99eC\xe1\x80\[\x86\xc5\x81vF\x96\?\xb3\x98\x0f\)8\x9d\x8fp\x1e\xdf\
+SF:x1b\xaa\xf8_E\"\)\xf7=\xd8C9\xca\xe7\xb8\xcf\xee\*L\x8b\xeb\x17\x0b!\xa
+SF:2\x8e&\xd7\x0e\x06\xddJd\r\x03\x87\xe1Y\xcdnf\xf2\x89\xe9\xd9\xca\xcc\x
+SF:f6\x17\xbf\x06>o\x1d\|\x200\x9a\xa2\x8a\xb8\xebU\xfe\xb5\x1d\xaa\xa7\xe
+SF:9d\x19'\x8b\xe9\xeaE&\xe5\xa8\x95Prg\xfeWG\xcd;\xd0%\xb8\x18\x8e\xffD\x
+SF:a3\xbe\xcf\xd6V\xc8JGH\xa5\xeb0\xe7\xa1\x98\xc1\x83\x83edVc\xdc\x9c\xd8
+SF:\x96\x11\x13<c\xb6\xd9\xee\xf8")%r(Kerberos,17F,"e\x0e\xb2\x8e\x9f\x14h
+SF:\xa5RB\xf4\x02\xed\xee\x1dwj\xb1\xd8!\xa2\$\)\xb3\x94\xdf`{\x81\xf2%\x8
+SF:2B\x10\xa6\*2\xa4\x91S\xe6\xdclt\xf2\xf1H\x10C\x9aj\xbe\xeb\xec\xe5\x91
+SF::\xd1\xad\xc7\x0b\xe8>T\xc9V\xf5\xf6\xa0_\xd3\xe1I2bV\xa7\x82\x07\x03\x
+SF:f2\x91T\xd0\xf2I\x1f\x86M\x83&\t<\x9e\x12\xee\x01p1sz\xb4\xaa\x8b\xa8g\
+SF:x1f\x93:T\xda\*\r\x94\t0\x8b\x16\x89\0w\x8a\xf4\xdb\x06\xe1\xff\x94q\xc
+SF:0\xdc\x94\xf2,\xac\xf4\xda\x20\(g\xa5=\x06\xbfH\xbfT\xe7\xf5\xc2\xe3R\x
+SF:16\x80z\x91\x8c\xa8e5\x1e\x8f\x0c}\xa3\x1a\x99\x02\x99#\xbd\n\xe1\x83\)
+SF:CO\xe1C\x16\xe0\x0fQ%\xf7Y\xcca\x95\xf2\x08\xed'\xb5\xe7\xe2LC\xdb\x11T
+SF:N\xe5_\x1cG\xd8V8\x94\xa3\xd2\xd8\x81\xb8>\xe3\xcd\x1e\xe7\x95JU\xee\(\
+SF:xdbc\xf3\xef@\x0b\+\n\xd5\x9d\x15\*Ws2TJ\x9a4\xe1\x1a\xe6\x11n#\)\xa7\x
+SF:1ap<\xc9\x9a\xbeg}\x97T\x03\x83\xc3f\xfe1i\xb6\x18\0\x80\x99\xc4\xa7}q=
+SF:\xc1i\x17'NZ\xc5\xfa;\xbc\xf8\xfe{\x86\xbc\r\x80X@=\x01\xfd\xec\nf\|\xf
+SF:e\xc0\xf9\xd2\xf6\"#\xc9\xde\x99\xbb\xccH{\x9c2\xf8\xbfK\x9c\xe4\xbb\xc
+SF:c\x85\xc2\xa2s'\xb7\x83\xc1\xe2q\xc7u{t\r\x0c}\|\xa4N\x80h\x0b\r\xa5\xd
+SF:f/\xd88&\xa2'\xdb\*w>\xaf\x05\xee\x92f\x03\x90<\xa5\x0f\xe0\xec\x87\x8e
+SF:L\$'lJ");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5002-TCP:V=7.92%I=7%D=8/13%Time=64D82DD1%P=x86_64-alpine-linux-musl
+SF:%r(NULL,1A,"SSH-2\.0-SFTPGo_2\.4\.4-dev\r\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Aug  6 01:21:30 2023 -- 1 IP address (1 host up) scanned in 168.38 seconds
+# Nmap done at Sun Aug 13 01:14:44 2023 -- 1 IP address (1 host up) scanned in 190.03 seconds

@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.13.0",
-	"@generated": "Sun, 6 Aug 2023 00:48:01",
+	"@generated": "Sun, 13 Aug 2023 00:45:20",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -202,6 +202,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.reconnect.fr/login",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "x-frame-options",
@@ -256,14 +264,6 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.reconnect.fr/public/reset-password/sms",
-							"method": "POST",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
 						}
 					],
 					"count": "11",
@@ -272,7 +272,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
 					"cweid": "1021",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90003",
@@ -470,7 +470,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_modules_es_reg-a87f45.926ccbf3.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -818,7 +818,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "161"
+					"sourceid": "163"
 				},
 				{
 					"pluginid": "10021",
@@ -1013,6 +1013,14 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u2668\\x001e\uFFFD\uFFFD\u06BC\uFFFD(\uFFFD\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001d\uFFFD"
 						},
 						{
+							"uri": "https://www.reconnect.fr/annexe/cgs-cs",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Calibri/Encoding/WinAnsiEncoding/FontDescriptor",
+							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\t\uFFFDbn\uFFFD\uFFFD\\x0012w(v)\uFFFD\uFFFDh\uFFFD\\x0002{\"\\x0012w(v)\uFFFD\uFFFDZ'\uFFFD7\uFFFDr\uFFFD\uFFFD\uFFFD\uFFFD"
+						},
+						{
 							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "",
@@ -1022,14 +1030,6 @@
 						},
 						{
 							"uri": "https://www.reconnect.fr/annexe/confidentialite-cs",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/Type/Font/Subtype/TrueType/Name/F1/BaseFont/ABCDEE+Asap/Encoding/WinAnsiEncoding/FontDescriptor",
-							"otherinfo": "\uFFFD<\uFFFD{\uFFFDh\uFFFD\uFFFD\u04B9\uFFFDr\uFFFD\uFFFD\u04EE\uFFFD\u0297\uFFFD5\uFFFD\uFFFD\uFFFD]\\x0005\uFFFD\\x001e\\x0016\uFFFD\uFFFD\uFFFD\\x0000B\\x000cA>\\x0002\u01A9\uFFFDI\u0721\u0627\uFFFD\uFFFD\uFFFD\uFFFD\t\uFFFDI\u0721\u0627\uFFFD\uFFFDh\uFFFD\uFFFD\u07B1\uFFFD\uFFFD\uFFFD+"
-						},
-						{
-							"uri": "https://www.reconnect.fr/annexe/mentions-legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1323,6 +1323,14 @@
 							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
 						},
 						{
+							"uri": "https://www.reconnect.fr/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
+							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
+						},
+						{
 							"uri": "https://www.reconnect.fr/nous-contacter",
 							"method": "GET",
 							"param": "",
@@ -1373,14 +1381,6 @@
 						{
 							"uri": "https://www.reconnect.fr/reconnect-le-coffre-fort-numerique",
 							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
-							"otherinfo": "Links have been found with a target of '_self' - this is often used by modern frameworks to force a full page reload."
-						},
-						{
-							"uri": "https://www.reconnect.fr/public/reset-password/sms",
-							"method": "POST",
 							"param": "",
 							"attack": "",
 							"evidence": "<a target=\"_self\" href=\"/\">\n                <img id=\"logo-header-reconnect\" src=\"/build/images/homeV2/logo_reconnect_simple.734dda2e.png\"\n                     alt=\"logo association reconnect\">\n            </a>",
@@ -1788,7 +1788,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "8ce82ead61bc60ce57a0f79289a6ee39",
+							"evidence": "423df1812ef2f2fb83afe85d20483199",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1796,7 +1796,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "ee9b2f7e9ecc61179b920db5f6930d9e",
+							"evidence": "dcf5b5159f2aae7dc2a573b2ed4f52c7",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1804,7 +1804,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "ee9b2f7e9ecc61179b920db5f6930d9e",
+							"evidence": "dcf5b5159f2aae7dc2a573b2ed4f52c7",
 							"otherinfo": "\ncookie:PHPSESSID"
 						}
 					],

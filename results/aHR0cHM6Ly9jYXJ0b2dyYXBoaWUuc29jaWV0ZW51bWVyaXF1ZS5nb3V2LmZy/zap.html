@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 13 Aug 2023 01:23:25
+		Generated on Sun, 20 Aug 2023 01:19:35
 	</h3>
 
 	<h3>
@@ -200,22 +200,22 @@ td {
 			<tr>
 				<td><a href="#10055">CSP: Wildcard Directive</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: script-src unsafe-eval</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: script-src unsafe-inline</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: style-src unsafe-inline</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10036">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a></td>
@@ -225,7 +225,7 @@ td {
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">13</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10027">Information Disclosure - Suspicious Comments</a></td>
@@ -245,7 +245,7 @@ td {
 			<tr>
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">5</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
@@ -322,6 +322,48 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+frame-ancestors, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+frame-ancestors, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -348,10 +390,18 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+frame-ancestors, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -442,6 +492,42 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-eval.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-eval.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -468,10 +554,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-eval.</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -562,6 +653,42 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -588,10 +715,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -682,6 +814,42 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -708,10 +876,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src &#39;self&#39; data: https://*.gouv.fr https://openmaptiles.github.io ; font-src &#39;self&#39; https://cdn.jsdelivr.net; img-src &#39;self&#39; data: https://*.gouv.fr; object-src &#39;none&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; https://*.gouv.fr blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -802,6 +975,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -827,6 +1005,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -854,6 +1037,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -879,6 +1067,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-120x120.png">https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-120x120.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">AmazonS3</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -906,6 +1130,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -932,31 +1161,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png">https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">AmazonS3</td>
 					</tr>
 				
 					<tr>
@@ -984,6 +1192,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1009,6 +1222,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -1036,6 +1254,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1061,6 +1284,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">AmazonS3</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 				<tr>
@@ -1148,7 +1376,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">lk8x4fGb10gAUh24pgyPHEBVUURIVZTI_vpR_UvaK5ixbwy2nwfd-A==</td>
+						<td width="80%">TI0aY7y0uVtl_8wIvV723xIaSFLNzWK25kZYeQmVx9wdOvHYpYt8PA==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">L�c���[e���^��HR��b��FXy	���:�إ�|&lt;</td>
 					</tr>
 				
 					<tr>
@@ -1174,7 +1407,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">xO3fRqe3J5CN-0oYeC9aYt7eRYo5GTF3H7Jro0uppntvtRvUczr5hw==</td>
+						<td width="80%">T5lXaEBK9HWRSZAwFNY5xtgPFikKnSTcOG-FyiqhNayP8Yvjt3rZuA==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">O�Wh@J�u�I�0�9��)
+�$�8o��*�5����zٸ</td>
 					</tr>
 				
 					<tr>
@@ -1200,7 +1439,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eCRKxSMLTAaNgxmgApCHNbIXgBnp7Ta4TTSebS6FeJjsIZnzUwy8Jw==</td>
+						<td width="80%">CiaQ9vpw_i0Hue6VlxKaQxi10yN3y953vNp0rso8lcG9JBCjZbFpGA==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+&amp;���p�-��C��#w��w��t��&lt;���$�e�i</td>
 					</tr>
 				
 					<tr>
@@ -1226,7 +1471,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">YGmIpeOgNvz_p2W8txGKwwWrCGP_-y0h1N_RtwFkFG0wl_r5tiVTQw==</td>
+						<td width="80%">M8kT3yBgaTDDBTMKSvFaBbqJuLCAURxY8kYOJkC1spPLZbWHBwfVTQ==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">3�� `i0�3
+J�Z�����QX�F&amp;@����e���M</td>
 					</tr>
 				
 					<tr>
@@ -1252,7 +1503,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">NgeDQ_GU1lvMmgnhOZHXPrgmjVAef4FIHh5ZiYa6_mrfDf5mUeTh1A==</td>
+						<td width="80%">0JRQC3C7xiTUgMatmE6MW5nfXhMTmtRccjukHELN88z7pD9cf2JNfA==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">ДPp��$Ԁƭ�N�[��^��\r;�B�����?\bM|</td>
 					</tr>
 				
 					<tr>
@@ -1278,7 +1534,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">qLH3E8SL_RGMxZKIqGuE9gX7aPM_t-j2s18vNXkfmzUln9vyB1Nsow==</td>
+						<td width="80%">-dLBecw1rZLJ-G7immqDf5dbiSUMx2dOmCqk6K4CMzXcvcMR3OnQyw==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���y�5����n�j��[�%�gN�*��35ܽ�����</td>
 					</tr>
 				
 					<tr>
@@ -1304,7 +1565,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">R_coP9bkHiK6ufjwS5fjQgqKxyhzhnxV44KsHILREKJV3UHfiWdVAw==</td>
+						<td width="80%">cTFluGzd4pAmWR6G4O2qpaCRWoyNeKWbT6SW8pLGWFEgAtqVQkrVAg==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">q1e�l��&amp;Y�����Z��x��O����XQ ڕBJ�</td>
 					</tr>
 				
 					<tr>
@@ -1330,33 +1596,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">WuR57Kdze95R1W1x9lj6S-yS-CQNtdDAI34Ugr-_Njt_TM65lp2uuw==</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png">https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png</a></td>
+						<td width="80%">c2DOczMALNugcx-diI1XVF7IR_wJtf-PDGFsjnRRsg-rgrbBPA_3Cg==</td>
 					</tr>
 					<tr>
 						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">WLpuE4VWNxwFG0e_YpcNqFQI_x4Bc4deG8GnZ8ch0mIb5WOfemIlmg==</td>
+							class="indent2">Other Info</td>
+						<td width="80%">s`�s3 ,۠s���WT^�G�	���al�tQ�����&lt;�
+</td>
 					</tr>
 				
 					<tr>
@@ -1382,7 +1628,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">gY7nCL7ZcYDk3OJ-FXgHHptUmST6KnApQJHxypmhUAVfuCAju0v3tw==</td>
+						<td width="80%">4A9put-2dGA1G1yAHzTopmhNp-sHlDh1PlLP4wTo1YZe_v0cp5gH2w==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�i�߶t`5\�4�hM���8u&gt;R���Ն^�����</td>
 					</tr>
 				
 					<tr>
@@ -1408,7 +1659,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">yIi7ybisnzhea9ft6hYAHE5kAt-6sP0Pbi8lLaAPdWdeoK0GlXNu2A==</td>
+						<td width="80%">JMH-UjioVv3SMHaCwPWlpZROULIxoMRb2LrlLC5P9EuWKyqMLcDy-w==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">$��R8�V��0v������NP�1��[غ�,.O�K�+*�-���</td>
 					</tr>
 				
 					<tr>
@@ -1434,7 +1690,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">PuahQ6_sYmBUiND2vplwD7KlFTP9ow3NMV9y5hAlLyQ1NSZ_GeelMA==</td>
+						<td width="80%">uoz0sAXvsFpD1WHYELyhM1nC8_ycZtkODoedhvv4XY6FL2fi2zjjQg==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�����ZC�a���3Y����f������]��/g��8�B</td>
 					</tr>
 				
 					<tr>
@@ -1460,12 +1721,17 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Q6t_gV9e0kyHLFhn8rM9OByq6NoshVlDkDstuEH3ut50SzWlkiccJQ==</td>
+						<td width="80%">AFmHHhlE9xTteio02A4ihKZwWBsv47HSrYzJCCqoOVGyc-maAYUaSw==</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"> Y�D��z*4�&quot;��pX/�ҭ��*�9Q�s��K</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">13</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1519,7 +1785,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/main.5cf729af1455683d.js">https://cartographie.societenumerique.gouv.fr/main.5cf729af1455683d.js</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/main.6478ed0e1bdb6187.js">https://cartographie.societenumerique.gouv.fr/main.6478ed0e1bdb6187.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1540,6 +1806,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">FIXME</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bFIXME\b and was detected in the element starting with: &quot;(self.webpackChunkclient_application=self.webpackChunkclient_application||[]).push([[179],{5:(Ie,ye,C)=&gt;{&quot;use strict&quot;;C.d(ye,{aw&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 				<tr>
@@ -1615,7 +1886,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.a7752bfeb4701270.css&quot;&gt;&lt;/noscript&gt;</td>
+						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.8c71c5ba29cb6afa.css&quot;&gt;&lt;/noscript&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</td>
 					</tr>
 				
 					<tr>
@@ -1641,7 +1917,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.a7752bfeb4701270.css&quot;&gt;&lt;/noscript&gt;</td>
+						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.8c71c5ba29cb6afa.css&quot;&gt;&lt;/noscript&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</td>
 					</tr>
 				
 					<tr>
@@ -1667,7 +1948,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.a7752bfeb4701270.css&quot;&gt;&lt;/noscript&gt;</td>
+						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.8c71c5ba29cb6afa.css&quot;&gt;&lt;/noscript&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</td>
 					</tr>
 				
 					<tr>
@@ -1693,7 +1979,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.a7752bfeb4701270.css&quot;&gt;&lt;/noscript&gt;</td>
+						<td width="80%">&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.8c71c5ba29cb6afa.css&quot;&gt;&lt;/noscript&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</td>
 					</tr>
 				
 				<tr>
@@ -1770,6 +2061,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1794,6 +2090,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1822,6 +2123,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1848,6 +2154,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1872,6 +2183,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1959,6 +2275,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Hit from cloudfront</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1985,6 +2306,42 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Hit from cloudfront</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/main.6478ed0e1bdb6187.js">https://cartographie.societenumerique.gouv.fr/main.6478ed0e1bdb6187.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Hit from cloudfront</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2009,7 +2366,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 90</td>
+						<td width="80%">Age: 118</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that that a HTTP/1.1 compliant caching server is in use.</td>
 					</tr>
 				
 					<tr>
@@ -2035,13 +2397,18 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 91</td>
+						<td width="80%">Age: 119</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The presence of the &#39;Age&#39; header indicates that that a HTTP/1.1 compliant caching server is in use.</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/styles.a7752bfeb4701270.css">https://cartographie.societenumerique.gouv.fr/styles.a7752bfeb4701270.css</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/styles.8c71c5ba29cb6afa.css">https://cartographie.societenumerique.gouv.fr/styles.8c71c5ba29cb6afa.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2063,10 +2430,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Hit from cloudfront</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2159,11 +2531,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/robots.txt">https://cartographie.societenumerique.gouv.fr/robots.txt</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2183,6 +2560,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -2264,11 +2646,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/robots.txt">https://cartographie.societenumerique.gouv.fr/robots.txt</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2288,6 +2675,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -2369,11 +2761,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/robots.txt">https://cartographie.societenumerique.gouv.fr/robots.txt</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2393,6 +2790,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -2474,11 +2876,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/robots.txt">https://cartographie.societenumerique.gouv.fr/robots.txt</a></td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/">https://cartographie.societenumerique.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2498,6 +2905,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -2579,6 +2991,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2604,6 +3021,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
 					</tr>
 				
 					<tr>
@@ -2631,6 +3053,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2656,6 +3083,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-120x120.png">https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-120x120.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
 					</tr>
 				
 					<tr>
@@ -2683,6 +3146,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2709,31 +3177,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png">https://cartographie.societenumerique.gouv.fr/assets/favicon/apple-touch-icon-72x72.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
 					</tr>
 				
 					<tr>
@@ -2761,6 +3208,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2786,6 +3238,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
 					</tr>
 				
 					<tr>
@@ -2813,6 +3270,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2838,6 +3300,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
 					</tr>
 				
 				<tr>

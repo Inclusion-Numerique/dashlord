@@ -1,7 +1,7 @@
 {
-	"@programName": "OWASP ZAP",
+	"@programName": "ZAP",
 	"@version": "2.13.0",
-	"@generated": "Sun, 13 Aug 2023 00:45:20",
+	"@generated": "Sun, 20 Aug 2023 00:46:01",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -58,7 +58,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "247"
+					"sourceid": "245"
 				},
 				{
 					"pluginid": "10038",
@@ -818,7 +818,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "163"
+					"sourceid": "165"
 				},
 				{
 					"pluginid": "10021",
@@ -967,7 +967,7 @@
 							"param": "_username",
 							"attack": "",
 							"evidence": "_password",
-							"otherinfo": "userParam=_username\nuserValue=ZAP\npasswordParam=_password\nreferer=https://www.reconnect.fr/login\ncsrfToken=_csrf_token"
+							"otherinfo": "userParam=_username\nuserValue=ZAP\npasswordParam=_password\nreferer=https://www.reconnect.fr/login"
 						},
 						{
 							"uri": "https://www.reconnect.fr/login",
@@ -984,7 +984,7 @@
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "257"
+					"sourceid": "254"
 				},
 				{
 					"pluginid": "10094",
@@ -1104,14 +1104,6 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-constructor_js-node_modules_core-js_internals_set-sp-1dbe3a.3954f581.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet."
-						},
-						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
 							"param": "",
@@ -1174,30 +1166,6 @@
 							"attack": "",
 							"evidence": "user",
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 3 times, the first in the element starting with: \"/***/ \"./node_modules/core-js/internals/engine-user-agent.js\":\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "debug",
-							"otherinfo": "The following pattern was used: \\bDEBUG\\b and was detected in the element starting with: \"        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "TODO",
-							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_modules_es_string_replace_js.36612309.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "where",
-							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_jquery_dist_jquery_js.d1048d2a.js",
@@ -1280,13 +1248,13 @@
 							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t// For CommonJS and CommonJS-like environments where a proper `window`\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "22",
+					"count": "18",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"  // Nashorn bug:\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "155"
+					"sourceid": "152"
 				},
 				{
 					"pluginid": "10109",
@@ -1788,7 +1756,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "423df1812ef2f2fb83afe85d20483199",
+							"evidence": "315f476498f4ceb3390020ad872038f8",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1796,7 +1764,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "dcf5b5159f2aae7dc2a573b2ed4f52c7",
+							"evidence": "655b99f2b69d415757c2cc36c8db1c3d",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1804,7 +1772,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "dcf5b5159f2aae7dc2a573b2ed4f52c7",
+							"evidence": "655b99f2b69d415757c2cc36c8db1c3d",
 							"otherinfo": "\ncookie:PHPSESSID"
 						}
 					],
@@ -1876,7 +1844,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "257"
+					"sourceid": "254"
 				}
 			]
 		}

@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
-	"@version": "2.13.0",
-	"@generated": "Sun, 8 Oct 2023 01:10:29",
+	"@version": "2.14.0",
+	"@generated": "Sun, 15 Oct 2023 01:32:56",
 	"site":[ 
 		{
 			"@name": "https://coop.conseiller-numerique.gouv.fr",
@@ -176,7 +176,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.e94c790d3e29ec1bb490.css",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.a6c4ae6d247db61080d0.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -254,7 +254,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10021",
@@ -275,7 +275,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.e94c790d3e29ec1bb490.css",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.a6c4ae6d247db61080d0.css",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -353,7 +353,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10094",
@@ -366,7 +366,7 @@
 					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
 					"instances":[ 
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.e94c790d3e29ec1bb490.css",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.a6c4ae6d247db61080d0.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -573,6 +573,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/favicon-64.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://coop.conseiller-numerique.gouv.fr/pwaIcons/favicon-144.png",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
@@ -581,7 +589,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
@@ -608,6 +616,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/favicon-64.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://coop.conseiller-numerique.gouv.fr/pwaIcons/favicon-144.png",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
@@ -616,7 +632,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
@@ -643,6 +659,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/favicon-64.png",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://coop.conseiller-numerique.gouv.fr/pwaIcons/favicon-144.png",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
@@ -651,7 +675,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
@@ -678,6 +702,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/favicon-64.png",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://coop.conseiller-numerique.gouv.fr/pwaIcons/favicon-144.png",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
@@ -686,13 +718,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -705,7 +737,7 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
 					"instances":[ 
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.e94c790d3e29ec1bb490.css",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/css/bundle.a6c4ae6d247db61080d0.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",

@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 15 Oct 2023 00:49:03
+		Generated on Sun, 22 Oct 2023 00:50:13
 	</h3>
 
 	<h3>
@@ -156,7 +156,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>1</div>
+					<div>4</div>
 				</td>
 			</tr>
 			<tr>
@@ -164,7 +164,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>2</div>
 				</td>
 			</tr>
 			<tr>
@@ -198,29 +198,34 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
-				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
+				<td><a href="#10055">CSP: Wildcard Directive</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">9</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
-				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
-				<td align="center" class="risk-1">Low</td>
+				<td><a href="#10055">CSP: script-src unsafe-inline</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10055">CSP: style-src unsafe-inline</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10098">Cross-Domain Misconfiguration</a></td>
+				<td align="center" class="risk-2">Medium</td>
 				<td align="center">11</td>
 			</tr>
 			<tr>
-				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
+				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">9</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">29</td>
-			</tr>
-			<tr>
-				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
@@ -272,14 +277,14 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
-						id="10038"></a>
+						id="10055"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+					<th class="risk-2">CSP: Wildcard Directive</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -300,7 +305,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%"></td>
+						<td width="80%">content-security-policy</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -310,12 +315,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, connect-src, frame-src, font-src, media-src, manifest-src, worker-src</td>
 					</tr>
 				
 					<tr>
@@ -331,7 +337,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%"></td>
+						<td width="80%">content-security-policy</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -341,136 +347,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/auth/login">https://monsuivisocial.incubateur.anct.gouv.fr/auth/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite">https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales">https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/register">https://monsuivisocial.incubateur.anct.gouv.fr/register</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, connect-src, frame-src, font-src, media-src, manifest-src, worker-src</td>
 					</tr>
 				
 					<tr>
@@ -486,7 +369,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%"></td>
+						<td width="80%">content-security-policy</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -496,109 +379,45 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/~/assets/video/presentation.webm">https://monsuivisocial.incubateur.anct.gouv.fr/~/assets/video/presentation.webm</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, connect-src, frame-src, font-src, media-src, manifest-src, worker-src</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</div>
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">Reference</td>
 					<td width="80%">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
-							<br />
-						
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a>
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
 							<br />
 						
 							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
 							<br />
 						
-							<a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a>
-							<br />
-						
-							<a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a>
-							<br />
-						
-							<a href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a>
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
 							<br />
 						
 							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
 							
 						</td>
 				</tr>
@@ -614,22 +433,344 @@ td {
 				<tr>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
 		
 			<table class="results">
 				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10063"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Permissions Policy Header Not Set</th>
+					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: script-src unsafe-inline</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr">https://monsuivisocial.incubateur.anct.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt">https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: style-src unsafe-inline</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr">https://monsuivisocial.incubateur.anct.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt">https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">content-security-policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">base-uri &#39;self&#39;; font-src &#39;self&#39; https: data:; form-action &#39;self&#39;; frame-ancestors &#39;self&#39;; img-src &#39;self&#39; data:; object-src &#39;none&#39;; script-src-attr &#39;none&#39;; style-src &#39;self&#39; https: &#39;unsafe-inline&#39;; upgrade-insecure-requests</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10098"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Cross-Domain Misconfiguration</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server</div>
 							
 						</td>
 				</tr>
@@ -660,12 +801,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -691,18 +832,18 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/api/keycloak/signin">https://monsuivisocial.incubateur.anct.gouv.fr/api/keycloak/signin</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -722,43 +863,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -784,12 +894,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -815,12 +925,43 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico">https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">access-control-allow-origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -846,12 +987,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -877,12 +1018,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -908,12 +1049,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -939,12 +1080,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -970,12 +1111,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">access-control-allow-origin: *</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"></td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 				<tr>
@@ -985,42 +1126,33 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</div>
+							<div>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</div>
+							<br />
+						
+							<div>Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</div>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">Reference</td>
 					<td width="80%">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</a>
-							<br />
-						
-							<a href="https://developer.chrome.com/blog/feature-policy/">https://developer.chrome.com/blog/feature-policy/</a>
-							<br />
-						
-							<a href="https://scotthelme.co.uk/a-new-security-header-feature-policy/">https://scotthelme.co.uk/a-new-security-header-feature-policy/</a>
-							<br />
-						
-							<a href="https://w3c.github.io/webappsec-feature-policy/">https://w3c.github.io/webappsec-feature-policy/</a>
-							<br />
-						
-							<a href="https://www.smashingmagazine.com/2018/12/feature-policy/">https://www.smashingmagazine.com/2018/12/feature-policy/</a>
+							<a href="https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy">https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</a>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">CWE Id</td>
 					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+						href="https://cwe.mitre.org/data/definitions/264.html">264</a></td>
 				</tr>
 				<tr>
 					<td width="20%">WASC Id</td>
-					<td width="80%">15</td>
+					<td width="80%">14</td>
 				</tr>
 				<tr>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
+						href="https://www.zaproxy.org/docs/alerts/10098/">10098</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1028,14 +1160,14 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10037"></a>
+						id="10110"></a>
 						<div>Low</div></th>
-					<th class="risk-1">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</th>
+					<th class="risk-1">Dangerous JS Functions</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</div>
+							<div>A dangerous JS function seems to be in use that would leave the site vulnerable.</div>
 							
 						</td>
 				</tr>
@@ -1046,7 +1178,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr">https://monsuivisocial.incubateur.anct.gouv.fr</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1066,255 +1198,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/auth/login">https://monsuivisocial.incubateur.anct.gouv.fr/auth/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite">https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales">https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/register">https://monsuivisocial.incubateur.anct.gouv.fr/register</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt">https://monsuivisocial.incubateur.anct.gouv.fr/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/~/assets/video/presentation.webm">https://monsuivisocial.incubateur.anct.gouv.fr/~/assets/video/presentation.webm</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">x-powered-by: Nuxt</td>
+						<td width="80%">eval</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1324,38 +1208,35 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">1</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</div>
+							<div>See the references for security advice on the use of these functions.</div>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">Reference</td>
 					<td width="80%">
-							<a href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a>
-							<br />
-						
-							<a href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a>
+							<a href="https://angular.io/guide/security">https://angular.io/guide/security</a>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">CWE Id</td>
 					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+						href="https://cwe.mitre.org/data/definitions/749.html">749</a></td>
 				</tr>
 				<tr>
 					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
+					<td width="80%"></td>
 				</tr>
 				<tr>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10037/">10037</a></td>
+						href="https://www.zaproxy.org/docs/alerts/10110/">10110</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1381,7 +1262,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1412,7 +1293,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1443,7 +1324,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1474,7 +1355,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1505,7 +1386,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1536,7 +1417,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1567,7 +1448,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1598,7 +1479,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1629,7 +1510,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1660,7 +1541,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1691,7 +1572,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1722,7 +1603,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1753,7 +1634,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1784,7 +1665,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1815,7 +1696,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1846,7 +1727,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1877,7 +1758,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1908,7 +1789,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1939,7 +1820,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1970,7 +1851,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2001,7 +1882,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2032,7 +1913,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2063,7 +1944,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2094,7 +1975,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2125,7 +2006,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2156,7 +2037,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2187,7 +2068,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.003f82e3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2314,449 +2195,6 @@ td {
 		
 			<table class="results">
 				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10021"></a>
-						<div>Low</div></th>
-					<th class="risk-1">X-Content-Type-Options Header Missing</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr">https://monsuivisocial.incubateur.anct.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/_plugin-vue_export-helper.c27b6911.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/_plugin-vue_export-helper.c27b6911.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.8a61f557.css">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.8a61f557.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.dd3b73bc.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.dd3b73bc.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/auth/login">https://monsuivisocial.incubateur.anct.gouv.fr/auth/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite">https://monsuivisocial.incubateur.anct.gouv.fr/declaration-accessibilite</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico">https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales">https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/register">https://monsuivisocial.incubateur.anct.gouv.fr/register</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">x-content-type-options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
-At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">12</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</div>
-							<br />
-						
-							<div>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a>
-							<br />
-						
-							<a href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">15</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10021/">10021</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
 					<th width="20%" class="risk-0"><a
 						id="10094"></a>
 						<div>Informational</div></th>
@@ -2838,7 +2276,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/entry.45f0ce47.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/logo.b8f9235c.svg">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/logo.b8f9235c.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2858,12 +2296,43 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</td>
+						<td width="80%">Page-1_00000178178204201232521590000016678567363722804100_</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%"> �Q� ��0ӏA�QU�a��qן���Y�����ۯ���]�㞻�</td>
+						<td width="80%">=��_��M4׿5�ʹ�m5�}��^}�M4�^���z�~��m�Ӎt�</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/api/keycloak/signin">https://monsuivisocial.incubateur.anct.gouv.fr/api/keycloak/signin</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">fCiExvSl5vRNV5O1ZtUfd2KuYQgS_swoTYRMi1uqxKw</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">|(������MW��f�wb�a��(M�L�[�Ĭ</td>
 					</tr>
 				
 					<tr>
@@ -2926,37 +2395,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<td width="20%"
 							class="indent2">Other Info</td>
 						<td width="80%">�o�~��~/�zW�~����ey�n</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico">https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">GIF89a  �     ���!�    ,       D ;</td>
 					</tr>
 				
 					<tr>
@@ -3232,7 +2670,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.988d7fbe.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/nuxt-link.988d7fbe.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3252,12 +2690,12 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">from</td>
+						<td width="80%">query</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bFROM\b and was detected in the element starting with: &quot;import{_ as m}from&quot;./nuxt-link.dd3b73bc.js&quot;;import{o as d,c as f,a as e,b as t,w as n,i as _,l as a,d as s,p,e as h,j as k,M as &quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bQUERY\b and was detected in the element starting with: &quot;import{a7 as y,N as q,f as S,q as x,a8 as k,r as C,A as T,a9 as A,aa as _,B as R,ab as N,ac as w,ad as B,ae as E,n as L}from&quot;./e&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -3837,7 +3275,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3952,7 +3390,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4067,7 +3505,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4182,7 +3620,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml">https://monsuivisocial.incubateur.anct.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/">https://monsuivisocial.incubateur.anct.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4359,37 +3797,6 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js">https://monsuivisocial.incubateur.anct.gouv.fr/_nuxt/landing.5ae5f46a.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=31536000</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/auth/login">https://monsuivisocial.incubateur.anct.gouv.fr/auth/login</a></td>
 					</tr>
 					<tr>
@@ -4453,6 +3860,37 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico">https://monsuivisocial.incubateur.anct.gouv.fr/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales">https://monsuivisocial.incubateur.anct.gouv.fr/mentions-legales</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

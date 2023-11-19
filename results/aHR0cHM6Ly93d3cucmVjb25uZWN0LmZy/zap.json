@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 12 Nov 2023 00:49:20",
+	"@generated": "Sun, 19 Nov 2023 00:51:24",
 	"site":[ 
 		{
 			"@name": "https://www.reconnect.fr",
@@ -58,7 +58,7 @@
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "214"
+					"sourceid": "222"
 				},
 				{
 					"pluginid": "10038",
@@ -339,7 +339,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10017",
@@ -441,7 +441,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "163"
+					"sourceid": "158"
 				},
 				{
 					"pluginid": "10063",
@@ -478,7 +478,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_array-iteration_js-node_modules_core-js_modules_es_reg-a87f45.926ccbf3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -548,7 +548,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10035",
@@ -655,7 +655,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10096",
@@ -818,15 +818,23 @@
 							"attack": "",
 							"evidence": "2012345678",
 							"otherinfo": "2012345678, which evaluates to: 2033-10-08 00:54:38"
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_symfony_ux-live-compo-afb022.856ec41c.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2015550123",
+							"otherinfo": "2015550123, which evaluates to: 2033-11-14 03:02:03"
 						}
 					],
-					"count": "19",
+					"count": "20",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>1409305260, which evaluates to: 2014-08-29 09:41:00</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "174"
+					"sourceid": "181"
 				},
 				{
 					"pluginid": "10021",
@@ -855,7 +863,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.reconnect.fr/build/images/favIcons/apple-touch-icon.65f19580.png",
+							"uri": "https://www.reconnect.fr/annexe/cgu-reconnect",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -1107,7 +1115,7 @@
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10027",
@@ -1119,6 +1127,14 @@
 					"riskdesc": "Informational (Low)",
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_a-constructor_js-node_modules_core-js_internals_set-sp-1dbe3a.3954f581.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet."
+						},
 						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_add-to-unscopables_js-node_modules_core-js_internals_f-62eea4.c48be58f.js",
 							"method": "GET",
@@ -1174,6 +1190,70 @@
 							"attack": "",
 							"evidence": "TODO",
 							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected in the element starting with: \"// TODO: Remove from `core-js@4` since it's moved to entry points\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected 7 times, the first in the element starting with: \"\t\t// it causes a very odd bug in IE 8 (see #6720)\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bugs",
+							"otherinfo": "The following pattern was used: \\bBUGS\\b and was detected 6 times, the first in the element starting with: \"\t\t// see: http://jsfiddle.net/JZSMt/3/ https://bugs.webkit.org/show_bug.cgi?id=107380\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected 121 times, the first in the element starting with: \"\t\t// Track widgets that inherit from this widget in case this widget is\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later",
+							"otherinfo": "The following pattern was used: \\bLATER\\b and was detected 7 times, the first in the element starting with: \"\t\t// redefine the widget later\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected 39 times, the first in the element starting with: \"\t\t\t\t// Select the wrapper - make it overflow: hidden and absolute positioned based on\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO",
+							"otherinfo": "The following pattern was used: \\bTODO\\b and was detected 26 times, the first in the element starting with: \"// TODO: Remove from `core-js@4`\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected 12 times, the first in the element starting with: \"var USER_AGENT = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.j\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_define-built-in-accessor_js-node_modules_core-js_modul-bdc748.d09be08a.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where",
+							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected 10 times, the first in the element starting with: \"\t\t\t\t\t\t// this is the only case where we allow nulls for ALL properties.\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://www.reconnect.fr/build/vendors-node_modules_core-js_internals_export_js.9d61d043.js",
@@ -1232,13 +1312,13 @@
 							"otherinfo": "The following pattern was used: \\bWHERE\\b and was detected in the element starting with: \"// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string\", see evidence field for the suspicious comment/snippet."
 						}
 					],
-					"count": "14",
+					"count": "23",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected 6 times, the first in the element starting with: \"  // Nashorn bug:\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bBUG\\b and was detected in the element starting with: \"// V8 ~ Chrome 45- bug\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "150"
+					"sourceid": "153"
 				},
 				{
 					"pluginid": "10109",
@@ -1345,7 +1425,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "10049",
@@ -1444,7 +1524,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -1551,7 +1631,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "9"
 				},
 				{
 					"pluginid": "90005",
@@ -1594,7 +1674,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1637,7 +1717,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1680,7 +1760,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1723,7 +1803,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "9"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10112",
@@ -1740,7 +1820,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "4f9387ef054087dc32ba6f2a084d00bc",
+							"evidence": "b4e3febeafc255f963a493989669d09f",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1748,7 +1828,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "f8d5b28894a91d47b5c4293567a21ca7",
+							"evidence": "bdb3508559383d1ed8a6081b9c58d123",
 							"otherinfo": "\ncookie:PHPSESSID"
 						},
 						{
@@ -1756,7 +1836,7 @@
 							"method": "GET",
 							"param": "PHPSESSID",
 							"attack": "",
-							"evidence": "4f9387ef054087dc32ba6f2a084d00bc",
+							"evidence": "b4e3febeafc255f963a493989669d09f",
 							"otherinfo": "\ncookie:PHPSESSID"
 						}
 					],

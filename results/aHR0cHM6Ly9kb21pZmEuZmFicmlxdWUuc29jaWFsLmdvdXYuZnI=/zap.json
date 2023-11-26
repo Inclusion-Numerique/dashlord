@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 19 Nov 2023 01:42:00",
+	"@generated": "Sun, 26 Nov 2023 01:35:05",
 	"site":[ 
 		{
 			"@name": "https://domifa.fabrique.social.gouv.fr",
@@ -50,7 +50,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10055",
@@ -93,7 +93,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10055",
@@ -136,7 +136,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10110",
@@ -163,7 +163,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "63"
+					"sourceid": "47"
 				},
 				{
 					"pluginid": "10063",
@@ -216,7 +216,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://domifa.fabrique.social.gouv.fr/faq",
+							"uri": "https://domifa.fabrique.social.gouv.fr/manage",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -449,7 +449,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "63"
+					"sourceid": "47"
 				},
 				{
 					"pluginid": "10094",
@@ -548,17 +548,9 @@
 							"attack": "",
 							"evidence": "snKhzjeGyAFbfjnqc2BFFmpC3m230MuTzKgxayer-fI",
 							"otherinfo": "\uFFFDr\uFFFD\uFFFD7\uFFFD\uFFFD\\x0001[~9\uFFFDs`E\\x0016jB\uFFFDm\uFFFD\uFFFD\u02D3\u03281k'\uFFFD\uFFFD\uFFFD"
-						},
-						{
-							"uri": "https://domifa.fabrique.social.gouv.fr/users/comptes",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "snKhzjeGyAFbfjnqc2BFFmpC3m230MuTzKgxayer-fI",
-							"otherinfo": "\uFFFDr\uFFFD\uFFFD7\uFFFD\uFFFD\\x0001[~9\uFFFDs`E\\x0016jB\uFFFDm\uFFFD\uFFFD\u02D3\u03281k'\uFFFD\uFFFD\uFFFD"
 						}
 					],
-					"count": "12",
+					"count": "11",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>\uFFFDr\uFFFD\uFFFD7\uFFFD\uFFFD\\x0001[~9\uFFFDs`E\\x0016jB\uFFFDm\uFFFD\uFFFD\u02D3\u03281k'\uFFFD\uFFFD\uFFFD</p>",
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -660,6 +652,14 @@
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
+							"uri": "https://domifa.fabrique.social.gouv.fr/import",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"runtime.a7ed3af4ec9fcb85.js\" type=\"module\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
 							"uri": "https://domifa.fabrique.social.gouv.fr/manage",
 							"method": "GET",
 							"param": "",
@@ -690,14 +690,6 @@
 							"attack": "",
 							"evidence": "<script src=\"runtime.a7ed3af4ec9fcb85.js\" type=\"module\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://domifa.fabrique.social.gouv.fr/users/comptes",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"runtime.a7ed3af4ec9fcb85.js\" type=\"module\"></script>",
-							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						}
 					],
 					"count": "11",
@@ -706,7 +698,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10049",
@@ -920,7 +912,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",

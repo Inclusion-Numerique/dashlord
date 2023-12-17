@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Tue, 12 Dec 2023 16:25:17
+		Generated on Sun, 17 Dec 2023 01:53:19
 	</h3>
 
 	<h3>
@@ -220,7 +220,7 @@ td {
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
@@ -275,22 +275,22 @@ td {
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#10112">Session Management Response Identified</a></td>
@@ -626,7 +626,41 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+frame-ancestors, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -660,41 +694,7 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
-frame-ancestors, form-action
-
-The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/presentation_agent">https://www.rdv-solidarites.fr/presentation_agent</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -796,7 +796,38 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -827,38 +858,7 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">script-src includes unsafe-inline.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/presentation_agent">https://www.rdv-solidarites.fr/presentation_agent</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -957,7 +957,38 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -988,38 +1019,7 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">style-src includes unsafe-inline.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/presentation_agent">https://www.rdv-solidarites.fr/presentation_agent</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
+						<td width="80%">default-src &#39;self&#39;; font-src &#39;self&#39; data: github.com; object-src &#39;none&#39;; worker-src blob:; child-src blob: &#39;self&#39;; frame-src &#39;self&#39; *.instatus.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src &#39;self&#39; stats.data.gouv.fr api-adresse.data.gouv.fr cdnjs.cloudflare.com etalab-tiles.fr; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; img-src &#39;self&#39; data: blob: stats.data.gouv.fr voxusagers.numerique.gouv.fr</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1188,40 +1188,9 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 						<td width="80%"></td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/users">https://www.rdv-solidarites.fr/users</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1743,68 +1712,6 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/application-5ea6e741eb49437c8370bf1f0a8bf11c22597de250144bed862ab6ffc28bc021.js">https://www.rdv-solidarites.fr/assets/application-5ea6e741eb49437c8370bf1f0a8bf11c22597de250144bed862ab6ffc28bc021.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/cgu">https://www.rdv-solidarites.fr/cgu</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/contact">https://www.rdv-solidarites.fr/contact</a></td>
 					</tr>
 					<tr>
@@ -1898,6 +1805,37 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/mds">https://www.rdv-solidarites.fr/mds</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/mentions_legales">https://www.rdv-solidarites.fr/mentions_legales</a></td>
 					</tr>
 					<tr>
@@ -1961,6 +1899,37 @@ The directive(s): frame-ancestors, form-action are among the directives that do 
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/presentation_agent">https://www.rdv-solidarites.fr/presentation_agent</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats">https://www.rdv-solidarites.fr/stats</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2311,7 +2280,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/welcome/agent-2627671eb6dbc317b42ed496fb81c4ff5cb8e62834f076b55f06a5e9815707fc.svg">https://www.rdv-solidarites.fr/assets/welcome/agent-2627671eb6dbc317b42ed496fb81c4ff5cb8e62834f076b55f06a5e9815707fc.svg</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/logos/republique-francaise-logo-038a8ba865041ec37227d7f248b56813726136c242d3c43975c590a22dfd0993.svg">https://www.rdv-solidarites.fr/assets/logos/republique-francaise-logo-038a8ba865041ec37227d7f248b56813726136c242d3c43975c590a22dfd0993.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2343,7 +2312,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/welcome/motif-e0824fc5fe94be252697c569127e3799d79987a897b4a81b90a855314663c01a.svg">https://www.rdv-solidarites.fr/assets/welcome/motif-e0824fc5fe94be252697c569127e3799d79987a897b4a81b90a855314663c01a.svg</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/welcome/creneau-bbedf5b8b29b2bd432eff94112a3a2b60e8682cf9e6cbe56c05f4dfe908eff8c.svg">https://www.rdv-solidarites.fr/assets/welcome/creneau-bbedf5b8b29b2bd432eff94112a3a2b60e8682cf9e6cbe56c05f4dfe908eff8c.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2375,7 +2344,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/welcome/service-42e8a58467cba0cc897ebbb8798a927154cacdf38abd7bcf068e4c7992e0e2e3.svg">https://www.rdv-solidarites.fr/assets/welcome/service-42e8a58467cba0cc897ebbb8798a927154cacdf38abd7bcf068e4c7992e0e2e3.svg</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/welcome/location-3dce7ec10d8302774e6bd55d5d3233e3aad1da953d988f13951dcc45fabf86ef.svg">https://www.rdv-solidarites.fr/assets/welcome/location-3dce7ec10d8302774e6bd55d5d3233e3aad1da953d988f13951dcc45fabf86ef.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2672,12 +2641,12 @@ csrfToken=authenticity_token</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">CSzqabgYANyeKySHjwHms4Qt4vgksEOZvE9DF70jj_ZbNIrMZVR4f2RgWvc_4NgmfX_Zh__d5T8hOpEtKhlATw</td>
+						<td width="80%">Fc8crVOHwHnU6dNPalb-5d8U8ydl5CiNkjStQFQ6k8nOqhO3FSp50oDeAgaexN-rFvMw-NaScnxJGeHtisd9yw</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">	,�i� ܞ+$��泄-��$�C��OC�#��[4��eTxd`Z�?��&amp;}ه���?!:�-*@O</td>
+						<td width="80%">��S��y���OjV����&#39;e�(��4�@T:��Ϊ�*yҀ���߫�0�֒r|I���}�</td>
 					</tr>
 				
 					<tr>
@@ -2703,12 +2672,12 @@ csrfToken=authenticity_token</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">jcJ4sCHozZ5SL7F0Fn9xsLC8wKXjvr7dGytyBy0JG-jG0iMQWH6lfEMoWyTqjWnAj49GdV_TFQ8zt43Irktv9w</td>
+						<td width="80%">e3kBcFxry_zyvdgJJ_o5iFZ1diOfij7nwv-TinCfcgzAZes-sCRtaCrSJS3bbs-fa1SFwhFQL8ChrtlG3u7yJQ</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">��x�!�͞R/�tq�����㾾�+r-	���#X~�|C([$�i���Fu_�3��ȮKo�</td>
+						<td width="80%">{yp\k����	&#39;�9�Vuv#��&gt;�����p�r�e�&gt;�$mh*�%-�nϟkT��P/����F���%</td>
 					</tr>
 				
 					<tr>
@@ -2734,74 +2703,12 @@ csrfToken=authenticity_token</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bh-VsBZLC0VD4U0gZPuWFzmb6JbvILQrrCAXV3CKcNAlD84Qb91jp1Lmp3CYCY5nBqhuRlNNH_mEvOiY88gEzw</td>
+						<td width="80%">E1hiGRW0GsncpDEcO7Npy_Np-c5ZFlfp2pqVVM3jqX3IPW0DUxmjYoiT4FXPIUiFOo46EepgDRgBt9n5Ex5Hfw</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">n��KEC�M d��9��� �+� Wp�p�%�o�c�R�p�	�g�nFSM�������</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/assets/application-5ea6e741eb49437c8370bf1f0a8bf11c22597de250144bed862ab6ffc28bc021.js">https://www.rdv-solidarites.fr/assets/application-5ea6e741eb49437c8370bf1f0a8bf11c22597de250144bed862ab6ffc28bc021.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">GIF89a  �     ���!�    ,       D ;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/cgu">https://www.rdv-solidarites.fr/cgu</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">jKtVwuak3Yu5wbYoFzUD_6nw679VhY0qopJw_zt6gB7Huw5inzK1aajGXHjrxxuPlsNtb-noJviKDo8wuDj0AQ</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">��U��݋���(5����U��*��p�;z�ǻb�2�i��\x�����mo��&amp;���0�8�</td>
+						<td width="80%">Xb��ܤ1;�i��i��YW�ښ�T��}�=mS�b���U�!H�:�:�`���G</td>
 					</tr>
 				
 					<tr>
@@ -2827,13 +2734,12 @@ csrfToken=authenticity_token</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">9ZGTGxLejRz3iz__Jnh6q_W56nweZEEM_zRxqzxZfkm-gci7a0jl_uaM1a_aimLbyopsrKIJ6t7XqI5kvxsKVg</td>
+						<td width="80%">j_mUTVcoPm8XWAfJ2QxD3H2_FKnu84LJHZQo7Z_A3o9UnJtXEYWHxENv1oAtnmKStFjXdl2F2DjGuWRAQT0wjQ</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">���ލ��?�&amp;xz����|dA�4q�&lt;Y~I��ȻkH���կڊb�ʊl��	��ר�d�
-V</td>
+						<td width="80%">���MW(&gt;oX��C�}������(��ޏT��W���Coր-�b��X�v]��8ƹd@A=0�</td>
 					</tr>
 				
 					<tr>
@@ -2859,12 +2765,12 @@ V</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Mh3-ngu2draLPKDE5zXfXD2sIUCgDdVr7q6JGtMFnQN5DaU-ciAeVJo7SpQbx8csAp-nkBxgfrnGMnbVUEfpHA</td>
+						<td width="80%">pqIQVsJM0arsQ1EZQkdG9wDshriMGFyeEJZ9_7H58MJ9xx9MhOFoAbh0gFC21We5yQtFZz9uBm_LuzFSbwQewA</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">2���v��&lt;���5�\=�!@��k��y�&gt;r T�;J���,���`~��2v�PG�</td>
+						<td width="80%">��V�LѪ�CQBGF� 솸�\��}�����}�L��h�t�P��g��Eg?no˻1Ro�</td>
 					</tr>
 				
 					<tr>
@@ -2901,6 +2807,37 @@ V</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/mds">https://www.rdv-solidarites.fr/mds</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Ya0wubFyVd33cuQG6nk3sOysxmIi2sc0RLkEkXnLjSe6yD-j99_sdqNFNU8e6xb-JUsFvZGsncWflEg8pzZjJQ</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">a�0��rU��r��y7���b&quot;��4D��yˍ&#39;��?����v�E5O��%K����ş�H&lt;�6c%</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/mentions_legales">https://www.rdv-solidarites.fr/mentions_legales</a></td>
 					</tr>
 					<tr>
@@ -2921,14 +2858,12 @@ V</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">8WmH4JRl9r64qjfh8OO4Bgw5q80ZWxCJG48NsWRIiPS6edxA7fOeXKmt3bEMEaB2MwotHaU2u1szE_J-5wr86w</td>
+						<td width="80%">V3dFFcD_XhZcIbnzxw0y61vZ3HKZqqsph5MZbxdxeMiMEkoPhlLnvQgWaLoznxOlkj4frSrc8dhcvlXCyYyWyg</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�i���e����7���9��[���dH���y�@��\��ݱ�v3
--�6�[3�~�
-��</td>
+						<td width="80%">WwE��^\!���2�[��r���)��oqxȌJ�R�h�3���&gt;�*���\�U�Ɍ��</td>
 					</tr>
 				
 					<tr>
@@ -2985,13 +2920,43 @@ V</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">rZKFurwCsL_2K9imcigSKJAZfqt9PzYY5zOXAmvlEErmgt4axZTYXecsMvaO2gpYryr4e8FSncrPr2jN6KdkVQ</td>
+						<td width="80%">ocxEYdI1obyD8vltUiQRQkTfbtaBso-95rtzG-SyERt6qUt7lJgYF9fFKCSmtjAMjTitCTLE1Uw9lj-2Ok__GQ</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">��������+ئr((�~�}?6�3�k�J��Ŕ�]�,2���
-X�*�{�R��ϯh��dU</td>
+						<td width="80%">��Da�5�����mR$BD�nց����s�z�K{����($��0�8�	2��L=�?�:O�</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats">https://www.rdv-solidarites.fr/stats</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">pbprDzDCiak585A32QRa-s-pqCIToMF1pC18_8DmGZd-32QVdm8wAm3EQX4tlnu0Bk5r_aDWm4R_ADBSHhv3lQ</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">��k0�9�7�Z�ϩ�&quot;��u�-|����~�dvo0m�A~-�{�Nk��֛� 0R��</td>
 					</tr>
 				
 					<tr>
@@ -3017,13 +2982,12 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Vi6GcP0OcduRktc2oNjnKHcy44749wr90Cmsd4_Ds6cdPt3QhJgZOYCVPWZcKv9YSAFlXkSaoS_4tVO4DIHHuA</td>
+						<td width="80%">6yB_2QF2qZ6WQ22_QKk913rafPbLN0kIWl2ST4VgkkEwRXDDR9sQNcJ0vPa0OxyZsz2_KXhBE_mBcN7iW518Qw</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">V.�p�qۑ��6���(w2���
-��)�w�ó�&gt;�Є�9��=f\*�XHe^D��/��S��Ǹ</td>
+						<td width="80%">� �v���Cm�@�=�z�|��7IZ]�O�`�A0Ep�G�5�t���;��=�)xA��p��[�|C</td>
 					</tr>
 				
 				<tr>
@@ -3194,6 +3158,37 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/agents/sign_in">https://www.rdv-solidarites.fr/agents/sign_in</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a aria-label=&quot;Close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats/notifications">https://www.rdv-solidarites.fr/stats/notifications</a></td>
 					</tr>
 					<tr>
@@ -3225,43 +3220,12 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/users/sign_up">https://www.rdv-solidarites.fr/users/sign_up</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats/notifications?territory=40">https://www.rdv-solidarites.fr/stats/notifications?territory=40</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Method</td>
 						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a aria-label=&quot;Close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/users">https://www.rdv-solidarites.fr/users</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3398,7 +3362,7 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/contact">https://www.rdv-solidarites.fr/contact</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/mds">https://www.rdv-solidarites.fr/mds</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3676,7 +3640,7 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/cgu">https://www.rdv-solidarites.fr/cgu</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/accessibility">https://www.rdv-solidarites.fr/accessibility</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4045,6 +4009,37 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/prescripteur/">https://www.rdv-solidarites.fr/prescripteur/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/robots.txt">https://www.rdv-solidarites.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4106,7 +4101,7 @@ X�*�{�R��ϯh��dU</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4191,6 +4186,37 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/prescripteur/">https://www.rdv-solidarites.fr/prescripteur/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/robots.txt">https://www.rdv-solidarites.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4252,7 +4278,7 @@ X�*�{�R��ϯh��dU</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4337,6 +4363,37 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/prescripteur/">https://www.rdv-solidarites.fr/prescripteur/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/robots.txt">https://www.rdv-solidarites.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4398,7 +4455,7 @@ X�*�{�R��ϯh��dU</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4483,6 +4540,37 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/prescripteur/">https://www.rdv-solidarites.fr/prescripteur/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/robots.txt">https://www.rdv-solidarites.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4544,7 +4632,7 @@ X�*�{�R��ϯh��dU</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4618,7 +4706,7 @@ X�*�{�R��ϯh��dU</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">7a56cdeb2e8d6d8a120738cfaf65c180</td>
+						<td width="80%">16f66091af377d2639cb1442f7e72642</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4650,7 +4738,7 @@ cookie:_lapin_session_id</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bbf7b9d8ad6f788e01e5c5667c0e58e6</td>
+						<td width="80%">f412ea3a005d979c0ff3456ab0c25435</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4682,7 +4770,7 @@ cookie:_lapin_session_id</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bbf7b9d8ad6f788e01e5c5667c0e58e6</td>
+						<td width="80%">f412ea3a005d979c0ff3456ab0c25435</td>
 					</tr>
 					<tr>
 						<td width="20%"

@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 17 Dec 2023 01:13:57",
+	"@generated": "Sun, 24 Dec 2023 01:07:05",
 	"site":[ 
 		{
 			"@name": "https://pilotage.conseiller-numerique.gouv.fr",
@@ -58,7 +58,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "3"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10020",
@@ -93,9 +93,17 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
@@ -114,7 +122,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.602fdb69.js",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.7d3fb52e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -173,7 +181,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.602fdb69.js",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.7d3fb52e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -187,7 +195,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "3"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10035",
@@ -406,7 +414,7 @@
 							"otherinfo": "\uFFFDo\uFFFD~\uFFFD\uFFFD~/\uFFFD\\x001dzW\uFFFD~\uFFFD\uFFFD\uFFFD\uFFFDey\uFFFDn"
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.602fdb69.js",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.7d3fb52e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -433,7 +441,7 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.602fdb69.js",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/static/js/main.7d3fb52e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -464,7 +472,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.602fdb69.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.7d3fb52e.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
@@ -472,7 +480,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.602fdb69.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.7d3fb52e.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
@@ -480,7 +488,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.602fdb69.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.7d3fb52e.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
@@ -488,7 +496,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.602fdb69.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.7d3fb52e.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						}
 					],
@@ -498,7 +506,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "8"
+					"sourceid": "3"
 				},
 				{
 					"pluginid": "10049",
@@ -549,7 +557,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "3"
+					"sourceid": "8"
 				},
 				{
 					"pluginid": "10015",
@@ -637,7 +645,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/sitemap.xml",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -680,7 +688,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/sitemap.xml",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -694,7 +702,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "3"
 				},
 				{
 					"pluginid": "90005",
@@ -723,7 +731,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/sitemap.xml",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -737,7 +745,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "8"
+					"sourceid": "3"
 				},
 				{
 					"pluginid": "90005",
@@ -766,7 +774,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://pilotage.conseiller-numerique.gouv.fr/sitemap.xml",
+							"uri": "https://pilotage.conseiller-numerique.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -847,7 +855,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "22"
+					"sourceid": "23"
 				}
 			]
 		}

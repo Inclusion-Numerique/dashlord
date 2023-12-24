@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 17 Dec 2023 01:18:31",
+	"@generated": "Sun, 24 Dec 2023 01:13:54",
 	"site":[ 
 		{
 			"@name": "https://coop.conseiller-numerique.gouv.fr",
@@ -90,7 +90,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -141,7 +141,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -155,7 +155,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10035",
@@ -240,7 +240,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -339,7 +339,7 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -382,7 +382,7 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFD)\"\uFFFD\uFFFDZq\uFFFD?\\x000c\\x001f\uFFFDj\\x0007\uFFFD\uFFFDm\uFFFD\uFFFD\uFFFD|\uFFFD\u011F\uFFFD~\uFFFD\uFFFD\uFFFDw\uFFFDu\uFFFD"
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -417,7 +417,7 @@
 							"otherinfo": "The following pattern was used: \\bDB\\b and was detected in the element starting with: \"!function(){var t={289:function(){const t=new class{constructor(){this.modules={}}create(t){const e=new t;this.modules[e.type]=e\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -448,7 +448,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.4ee5587f.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.e48ab842.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
@@ -456,7 +456,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script defer=\"defer\" src=\"/static/js/main.4ee5587f.js\"></script>",
+							"evidence": "<script defer=\"defer\" src=\"/static/js/main.e48ab842.js\"></script>",
 							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						}
 					],
@@ -501,7 +501,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -587,15 +587,23 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -630,15 +638,23 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -673,15 +689,23 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -716,15 +740,23 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://coop.conseiller-numerique.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -793,7 +825,7 @@
 							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
 						},
 						{
-							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.4ee5587f.js",
+							"uri": "https://coop.conseiller-numerique.gouv.fr/static/js/main.e48ab842.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",

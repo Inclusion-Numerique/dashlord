@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 31 Dec 2023 01:51:10",
+	"@generated": "Sun, 7 Jan 2024 01:53:56",
 	"site":[ 
 		{
 			"@name": "https://www.rdv-solidarites.fr",
@@ -222,9 +222,17 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
@@ -447,7 +455,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "15"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10021",
@@ -461,6 +469,14 @@
 					"instances":[ 
 						{
 							"uri": "https://www.rdv-solidarites.fr/assets/application-2cdb3e6e9e0c9c3f5d8714c8dc2556e1bd552a700c004c49899803b98d1831e6.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"uri": "https://www.rdv-solidarites.fr/assets/application-5ea6e741eb49437c8370bf1f0a8bf11c22597de250144bed862ab6ffc28bc021.js",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -500,14 +516,6 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						},
 						{
-							"uri": "https://www.rdv-solidarites.fr/assets/logos/logo-incub-territoire-c5db01cb65864631e22e211d99eae72541f03156c89a8ed5466a3426755e4492.svg",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
 							"uri": "https://www.rdv-solidarites.fr/assets/logos/logo_sombre_solidarites-13b34af5f087eaa4f073a75aaf71c14009a735e9297e18b7d01682f1c675771c.svg",
 							"method": "GET",
 							"param": "x-content-type-options",
@@ -517,14 +525,6 @@
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/assets/logos/republique-francaise-logo-038a8ba865041ec37227d7f248b56813726136c242d3c43975c590a22dfd0993.svg",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						},
-						{
-							"uri": "https://www.rdv-solidarites.fr/assets/welcome/creneau-bbedf5b8b29b2bd432eff94112a3a2b60e8682cf9e6cbe56c05f4dfe908eff8c.svg",
 							"method": "GET",
 							"param": "x-content-type-options",
 							"attack": "",
@@ -564,13 +564,13 @@
 							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
 						}
 					],
-					"count": "13",
+					"count": "12",
 					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
 					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "153"
+					"sourceid": "154"
 				},
 				{
 					"pluginid": "10111",
@@ -605,7 +605,7 @@
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/auth-req-id/</p>",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "374"
+					"sourceid": "373"
 				},
 				{
 					"pluginid": "10094",
@@ -622,48 +622,48 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "4ym_0rORu9RXXuktttBmdHPSfn97WzI2Rxnsl6OuYqMAbOxXg2CpBco6UjrHMsftwyY76Q6sRR4KVtsDxcZ7Hw",
-							"otherinfo": "\uFFFD)\uFFFD\u04B3\uFFFD\uFFFD\uFFFDW^\uFFFD-\uFFFD\uFFFDfts\uFFFD~{[26G\\x0019\uC5E3\uFFFDb\uFFFD\\x0000l\uFFFDW\uFFFD`\uFFFD\\x0005\uFFFD:R:\uFFFD2\uFFFD\uFFFD\uFFFD&;\uFFFD\\x000e\uFFFDE\\x001e\nV\uFFFD\\x0003\uFFFD\uFFFD{\\x001f"
+							"evidence": "FF7iBDs5bGx-tDHQ_P2tX5K87w_gOC03UbBWC1ZyHuSX7nchjLV5o6OaUPQWOMV4RBrrLu_pZRtDJviGbHcGmA",
+							"otherinfo": "\\x0014^\uFFFD\\x0004;9ll~\uFFFD1\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\\x000f\uFFFD8-7Q\uFFFDV\\x000bVr\\x001e\uFFFD\uFFFDw!\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFDP\uFFFD\\x00168\uFFFDxD\\x001a\uFFFD.\uFFFD\uFFFDe\\x001bC&\uFFFD\uFFFDlw\\x0006\uFFFD"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "nFotKew6Wsc0dP2wV9ga4li-9vRWowHXMrkhMWINUwwUKmioWnymWe3JNaWy1zVnIWEWvnMDn9WokrpHz-O48g",
-							"otherinfo": "\uFFFDZ-)\uFFFD:Z\uFFFD4t\uFFFD\uFFFDW\uFFFD\\x001a\uFFFDX\uFFFD\uFFFD\uFFFDV\uFFFD\\x0001\uFFFD2\uFFFD!1b\rS\\x000c\\x0014*h\uFFFDZ|\uFFFDY\uFFFD\uFFFD5\uFFFD\uFFFD\uFFFD5g!a\\x0016\uFFFDs\\x0003\uFFFD\u0568\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD"
+							"evidence": "SmcVLrprjEqpPFtYXz6Hu8c6MWOZmQAGB2SM_pGTd1CxdRKMGa2Ib9J0Bw6hwt4Ku65Z8_Gi3ySUDyFz6MGu3Q",
+							"otherinfo": "Jg\\x0015.\uFFFDk\uFFFDJ\uFFFD<[X_>\uFFFD\uFFFD\uFFFD:1c\uFFFD\uFFFD\\x0000\\x0006\\x0007d\uFFFD\uFFFD\uFFFD\uFFFDwP\uFFFDu\\x0012\uFFFD\\x0019\uFFFD\uFFFDo\uFFFDt\\x0007\\x000e\uFFFD\uFFFD\uFFFD\n\uFFFD\uFFFDY\uFFFD\uFFFD\uFFFD$\uFFFD\\x000f!s\uFFFD\uFFFD\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "emcptABRxvgjja0EBYXl0f_Op1W6RjUiWlr-yJaxUI2ZInoxMKDUKb7pFhN0Z0RITzriw8-xQgoXFclc8NlJMQ",
-							"otherinfo": "zg)\uFFFD\\x0000Q\uFFFD\uFFFD#\uFFFD\uFFFD\\x0004\\x0005\uFFFD\uFFFD\uFFFD\uFFFD\u03A7U\uFFFDF5\"ZZ\uFFFD\u0216\uFFFDP\uFFFD\uFFFD\"z10\uFFFD\uFFFD)\uFFFD\uFFFD\\x0016\\x0013tgDHO:\uFFFD\uFFFD\u03F1B\n\\x0017\\x0015\uFFFD\\\uFFFD\uFFFDI1"
+							"evidence": "3be-35Hyh9CFHUUEfpV_1AVOVJvUF81NC2KL7UlCqw9eByv6Jn6SH1gzJCCUUBfz0-hQutvGhWEZ9CVgc0ezcw",
+							"otherinfo": "\u0777\uFFFD\u07D1\uFFFD\u0405\\x001dE\\x0004~\uFFFD\uFFFD\\x0005NT\uFFFD\uFFFD\\x0017\uFFFDM\\x000bb\uFFFD\uFFFDIB\uFFFD\\x000f^\\x0007+\uFFFD&~\uFFFD\\x001fX3$ \uFFFDP\\x0017\uFFFD\uFFFD\uFFFDP\uFFFD\uFFFD\u0185a\\x0019\uFFFD%`sG\uFFFDs"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/accessibility",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "lUcg0kIgzuBsYkepFyqLzA1JluhiezBWPUIUgZ77NP52AnNXctHcMfEG_L5myCpVvb3TfheMR35wDSMV-JMtQg",
-							"otherinfo": "\uFFFDG \uFFFDB \uFFFD\uFFFDlbG\uFFFD\\x0017*\uFFFD\uFFFD\rI\uFFFD\uFFFDb{0V=B\\x0014\uFFFD\uFFFD\uFFFD4\uFFFDv\\x0002sWr\uFFFD\uFFFD1\uFFFD\\x0006\uFFFD\uFFFDf\uFFFD*U\uFFFD\uFFFD\uFFFD~\\x0017\uFFFDG~p\r#\\x0015\uFFFD\uFFFD-B"
+							"evidence": "QLk36q9rdUyUcRnpdn0ReQmzqyT4dRgq3WFDRoyvps7DCaLPGOdgg0lfeM2cuHle3xWvBfekUAbP9-3Ltqq-sg",
+							"otherinfo": "@\uFFFD7\uFFFDkuL\uFFFDq\\x0019\uFFFDv}\\x0011y\t\uFFFD\uFFFD$\uFFFDu\\x0018*\uFFFDaCF\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\t\uFFFD\uFFFD\\x0018\uFFFD`\uFFFDI_x\u035C\uFFFDy^\uFFFD\\x0015\uFFFD\\x0005\uFFFD\uFFFDP\\x0006\uFFFD\uFFFD\uFFFD\u02F6\uFFFD\uFFFD\uFFFD"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "kzqv_EoVkBhCRwKHCXzUcQjD4hY-VxRFk7_MZfo5OC5wf_x5euSCyd8juZB4nnXouDengEugY23e8PvxnFEhkg",
-							"otherinfo": "\uFFFD:\uFFFD\uFFFDJ\\x0015\uFFFD\\x0018BG\\x0002\uFFFD\t|\uFFFDq\\x0008\uFFFD\uFFFD\\x0016>W\\x0014E\uFFFD\uFFFD\uFFFDe\uFFFD98.p\uFFFDyz\uFFFD\uFFFD\uFFFD#\uFFFD\uFFFDx\uFFFDu\uFFFD7\uFFFD\uFFFDK\uFFFDcm\uFFFD\uFFFD\uFFFD\uFFFDQ!\uFFFD"
+							"evidence": "6D72wjTHOOuD3WaFHgBAoazub-BFIwroWpMPgNKznYZrjmPng0stJF7zB6H0xSiGekhrwUryQsRIBaEN6LaF-g",
+							"otherinfo": "\uFFFD>\uFFFD\uFFFD4\uFFFD8\uFFFD\uFFFDf\uFFFD\\x001e\\x0000@\uFFFD\uFFFD\uFFFDo\uFFFDE#\n\uFFFDZ\uFFFD\\x000f\uFFFD\u04B3\uFFFD\uFFFDk\uFFFDc\uFFFDK-$^\uFFFD\\x0007\uFFFD\uFFFD\uFFFD(\uFFFDzHk\uFFFDJ\uFFFDB\uFFFDH\\x0005\uFFFD\r\u8D85\uFFFD"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/domaines",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "OXmHMTlF6YDjdty9deZkgY3ZGsUDGzNTsftIjt26r-LaPNS0CbT7UX4SZ6oEBMUYPS1fU3bsRHv8tH8au9K2Xg",
-							"otherinfo": "9y\uFFFD19E\uFFFD\uFFFDv\u073Du\uFFFDd\uFFFD\uFFFD\uFFFD\\x001a\uFFFD\\x0003\\x001b3S\uFFFD\uFFFDH\uFFFD\u077A\uFFFD\uFFFD\uFFFD<\u0534\t\uFFFD\uFFFDQ~\\x0012g\uFFFD\\x0004\\x0004\uFFFD\\x0018=-_Sv\uFFFDD{\uFFFD\uFFFD\\x001a\uFFFD\u04B6^"
+							"evidence": "NzJE4pNI2LjtGBkYq-PrtxlrCZC9UfGi5tVkWdaboU-0gtHHJMTNdzA2eDxBJoOQz80NsbKAuY70Q8rU7J65Mw",
+							"otherinfo": "72D\uFFFDH\u0638\uFFFD\\x0018\\x0019\\x0018\uFFFD\uFFFD\uFFFD\\x0019k\t\uFFFD\uFFFDQ\uFFFD\uFFFD\uFFFDdY\u059B\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD$\uFFFD\uFFFDw06x<A&\uFFFD\uFFFD\uFFFD\uFFFD\r\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDC\uFFFD\uFFFD\uC7B93"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/favicon.ico",
@@ -678,8 +678,8 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "F-ESwiA9OtIfYClX58bkMu66f78edXrGqEVvAvJeEVf0pEFHEMwoA4IEkkCWJEWrXk46KWuCDe7lCliWlDYI6w",
-							"otherinfo": "\\x0017\uFFFD\\x0012\uFFFD =:\uFFFD\\x001f`)W\uFFFD\uFFFD\uFFFD2\uFFFD\uFFFD\\x001euz\u01A8Eo\\x0002\uFFFD^\\x0011W\uFFFD\uFFFDAG\\x0010\uFFFD(\\x0003\uFFFD\\x0004\uFFFD@\uFFFD$E\uFFFD^N:)k\uFFFD\r\uFFFD\uFFFD\nX\uFFFD\uFFFD6\\x0008\uFFFD"
+							"evidence": "KRyPrRPkNqp9cPGpo1tPkjmCiHtVJrFtVdrhhRFCGEWqrBqIpGgjZaBekI1Jnie17ySMWlr3-UFHTE8IK0cAOQ",
+							"otherinfo": ")\\x001c\uFFFD\uFFFD\\x0013\uFFFD6\uFFFD}p\uFFFD[O\uFFFD9\uFFFD\uFFFD{U&\uFFFDmU\uFFFD\uFFFD\\x0011B\\x0018E\uFFFD\uFFFD\\x001a\uFFFD\uFFFDh#e\uFFFD^\uFFFD\uFFFDI\uFFFD'\uFFFD\uFFFD$\uFFFDZZ\uFFFD\uFFFDAGLO\\x0008+G\\x00009"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
@@ -694,29 +694,29 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "YhuvWLH_aEMZqiKPGmBspdZVBHfDhuZfxHnnyY_ARkiBXvzdgQ56koTOmZhrgs08ZqFB4bZxkXeJNtBd6ahf9A",
-							"otherinfo": "b\\x001b\uFFFDX\uFFFD\uFFFDhC\\x0019\uFFFD\"\uFFFD\\x001a`l\uFFFD\uFFFDU\\x0004w\u00C6\uFFFD_\uFFFDy\uFFFD\u024F\uFFFDFH\uFFFD^\uFFFD\u0741\\x000ez\uFFFD\uFFFD\u0399\uFFFDk\uFFFD\uFFFD<f\uFFFDA\uFFFDq\uFFFDw\uFFFD6\uFFFD]\uFFFD_\uFFFD"
+							"evidence": "7b9wyyYcUgX75CPuu_tenKx5n-fvA2Z2AnMmssNpQihuD-XukZBHyibKQspRPja7et-bxuDSLloQ5Yg_-WxaVA",
+							"otherinfo": "\uFFFDp\uFFFD&\\x001cR\\x0005\uFFFD\uFFFD#\uFFFD\uFFFD^\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\\x0003fv\\x0002s&\uFFFD\uFFFDiB(n\\x000f\uFFFD\uE450G\uFFFD&\uFFFDB\uFFFDQ>6\uFFFDz\u07DB\uFFFD\uFFFD\uFFFD.Z\\x0010\uFFFD?\uFFFDlZT"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/stats",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "n6l2_S4SVlclGMDh53_EsGr_rfJStb8Hbv9r99w4fiN87CV4HuNEhrh8e_aWnWUp2gvoZCdCyC8jsFxjulBnnw",
-							"otherinfo": "\uFFFD\uFFFDv\uFFFD.\\x0012VW%\\x0018\uFFFD\uFFFD\uFFFD\u0130j\uFFFD\uFFFD\uFFFDR\uFFFD\uFFFD\\x0007n\uFFFDk\uFFFD\uFFFD8~#|\uFFFD%x\\x001e\uFFFDD\uFFFD\uFFFD|{\uFFFD\uFFFD\uFFFDe)\uFFFD\\x000b\uFFFDd'B\uFFFD/#\uFFFD\\c\uFFFDPg\uFFFD"
+							"evidence": "do8w4kiDbSI8i301A3-ut0L3GCBgfbEl4uGNMHXxANn1P6XH_w947eGlHBHpusaQlFEcAW-s-QnwdyO9T_QYpQ",
+							"otherinfo": "v\uFFFD0\uFFFDH\uFFFDm\"<\uFFFD}5\\x0003\uFFFD\uFFFDB\uFFFD\\x0018 `}\uFFFD%\uFFFD\uFFFD0u\uFFFD\\x0000\uFFFD\uFFFD?\uFFFD\uFFFD\uFFFD\\x000fx\uFFFD\uFFFD\\x001c\\x0011\uFFFD\u0190\uFFFDQ\\x001c\\x0001o\uFFFD\uFFFD\t\uFFFDw#\uFFFDO\uFFFD\\x0018\uFFFD"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/users/sign_in",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Edbv7B1xZLBCRP3mmPvtW6yL1Nn6syfhcPZ2qWoczL7yk7xpLYB2Yd8gRvHpGUzCHH-RT49EUMk9uUE9DHTVAg",
-							"otherinfo": "\\x0011\uFFFD\uFFFD\uFFFD\\x001dqd\uFFFDBD\uFFFD\uFFFD\uFFFD\uFFFD[\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD'\uFFFDp\uFFFDv\uFFFDj\\x001c\u033E\uFFFDi-\uFFFDva\uFFFD F\uFFFD\uFFFD\\x0019L\uFFFD\\x001c\uFFFDO\uFFFDDP\uFFFD=\uFFFDA=\\x000ct\uFFFD\\x0002"
+							"evidence": "fOoCk8pkoqZhotXWRoMZEK86_jzEenLfgG948VWLcqb_Wpe2fei3abyMtPKsRnE3eZz6HcurOvOS-dZ8b45q2g",
+							"otherinfo": "|\uFFFD\\x0002\uFFFD\uFFFDd\uFFFD\uFFFDa\uFFFD\uFFFD\uFFFDF\uFFFD\\x0019\\x0010\uFFFD:\uFFFD<\uFFFDzr\u07C0ox\uFFFDU\uFFFDr\uFFFD\uFFFDZ\uFFFD\uFFFD}\uFFFDi\uFFFD\uFFFD\uFFFD\uFFFDFq7y\uFFFD\uFFFD\\x001d\u02EB:\uFFFD\uFFFD\uFFFD|o\uFFFDj\uFFFD"
 						}
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD)\uFFFD\u04B3\uFFFD\uFFFD\uFFFDW^\uFFFD-\uFFFD\uFFFDfts\uFFFD~{[26G\\x0019\uC5E3\uFFFDb\uFFFD\\x0000l\uFFFDW\uFFFD`\uFFFD\\x0005\uFFFD:R:\uFFFD2\uFFFD\uFFFD\uFFFD&;\uFFFD\\x000e\uFFFDE\\x001e</p><p>V\uFFFD\\x0003\uFFFD\uFFFD{\\x001f</p>",
+					"otherinfo": "<p>\\x0014^\uFFFD\\x0004;9ll~\uFFFD1\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\\x000f\uFFFD8-7Q\uFFFDV\\x000bVr\\x001e\uFFFD\uFFFDw!\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFDP\uFFFD\\x00168\uFFFDxD\\x001a\uFFFD.\uFFFD\uFFFDe\\x001bC&\uFFFD\uFFFDlw\\x0006\uFFFD</p>",
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -768,7 +768,15 @@
 					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr/stats/notifications?territory=36",
+							"uri": "https://www.rdv-solidarites.fr/stats/notifications?territory=43",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a aria-label=\"Close\" class=\"close\" data-dismiss=\"alert\" href=\"#\"><i class=\"fa fa-times\"></i></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.rdv-solidarites.fr/users/password/new",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -776,13 +784,13 @@
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "376"
+					"sourceid": "374"
 				},
 				{
 					"pluginid": "10049",
@@ -811,14 +819,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.rdv-solidarites.fr/domaines",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "private",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.rdv-solidarites.fr/mds",
 							"method": "GET",
 							"param": "",
@@ -832,6 +832,14 @@
 							"param": "",
 							"attack": "",
 							"evidence": "302",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.rdv-solidarites.fr/presentation_agent",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "private",
 							"otherinfo": ""
 						},
 						{
@@ -849,7 +857,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "15"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -926,6 +934,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.rdv-solidarites.fr/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.rdv-solidarites.fr/stats",
 							"method": "GET",
 							"param": "cache-control",
@@ -942,7 +958,7 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "10",
+					"count": "11",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
@@ -961,7 +977,7 @@
 					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr",
+							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
 							"attack": "",
@@ -991,7 +1007,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "15"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "90005",
@@ -1004,7 +1020,7 @@
 					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr",
+							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
 							"attack": "",
@@ -1034,7 +1050,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "15"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "90005",
@@ -1047,7 +1063,7 @@
 					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr",
+							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
 							"attack": "",
@@ -1077,7 +1093,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "15"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "90005",
@@ -1090,7 +1106,7 @@
 					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr",
+							"uri": "https://www.rdv-solidarites.fr/prescripteur/",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
 							"attack": "",
@@ -1120,7 +1136,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "15"
+					"sourceid": "10"
 				},
 				{
 					"pluginid": "10112",
@@ -1137,7 +1153,7 @@
 							"method": "GET",
 							"param": "_lapin_session_id",
 							"attack": "",
-							"evidence": "6014e3e70f98fed14522719f4e8475b2",
+							"evidence": "5decd994f1c019bc128d274ba06adf8a",
 							"otherinfo": "\ncookie:_lapin_session_id"
 						},
 						{
@@ -1145,7 +1161,7 @@
 							"method": "GET",
 							"param": "_lapin_session_id",
 							"attack": "",
-							"evidence": "b48e31eb048b520b628e74947a592cff",
+							"evidence": "b9e16932f4926894a7e8f66124690015",
 							"otherinfo": "\ncookie:_lapin_session_id"
 						},
 						{
@@ -1153,7 +1169,7 @@
 							"method": "GET",
 							"param": "_lapin_session_id",
 							"attack": "",
-							"evidence": "6014e3e70f98fed14522719f4e8475b2",
+							"evidence": "b9e16932f4926894a7e8f66124690015",
 							"otherinfo": "\ncookie:_lapin_session_id"
 						}
 					],
@@ -1163,7 +1179,7 @@
 					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "15"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -1377,7 +1393,7 @@
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "365"
+					"sourceid": "371"
 				}
 			]
 		}

@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.92</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.conseiller-numerique.gouv.fr</pre>
-<p class="lead">Thu Feb  1 16:23:50 2024 – Thu Feb  1 16:26:40 2024<br>1 hosts scanned.
+<p class="lead">Sun Feb  4 01:01:41 2024 – Sun Feb  4 01:04:28 2024<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>91.208.207.217</td>
+<td>91.208.207.214</td>
 <td>www.conseiller-numerique.gouv.fr</td>
-<td>13</td>
+<td>11</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#91-208-207-217"><h3 class="panel-title">91.208.207.217 - www.conseiller-numerique.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="91-208-207-217">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#91-208-207-214"><h3 class="panel-title">91.208.207.214 - www.conseiller-numerique.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="91-208-207-214">
 <h4>Hostnames</h4>
 <ul><li>www.conseiller-numerique.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -107,6 +107,21 @@
 <th>Extra Info</th>
 </tr></thead>
 <tbody>
+<tr class="success">
+<td title="Port">22</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product">OpenSSH</td>
+<td title="Version">9.4</td>
+<td title="Extra Info">protocol 2.0</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openbsd:openssh:9.4">cpe:/a:openbsd:openssh:9.4</a><h5>vulners</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  cpe:/a:openbsd:openssh:9.4: 
+    	CVE-2023-51385	6.4	https://vulners.com/cve/CVE-2023-51385</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
@@ -124,6 +139,16 @@
     Cache-Control: no-cache
     Connection: close</pre>
 </td></tr>
+<tr class="success">
+<td title="Port">179</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
@@ -170,13 +195,20 @@
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   Kerberos: 
-    u\xaf
-  SMBProgNeg: 
-    A\xed
+    (SS^h
+    }$uC
+    c]9-(u
+    BP=&lt;r 
+    5.}m
+    \x0b
+    Cj9d2
+    w,Gm
+    ]OfwL
   TLSSessionReq: 
-    2xYDC
-    pc|u
-    \xcc4</pre>
+    0RS*
+    q+r5
+    g2k2
+    r&amp;\xc8</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5002</td>
@@ -194,32 +226,12 @@
     SSH-2.0-SFTPGo_2.4.4-dev</pre>
 </td></tr>
 <tr class="success">
-<td title="Port">5225</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">hp-server</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">5357</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">wsdapi</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
 <td title="Port">5800</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">amqp</td>
 <td title="Product">RabbitMQ</td>
-<td title="Version">3.12.6</td>
+<td title="Version">3.12.12</td>
 <td title="Extra Info">0-9</td>
 </tr>
 <tr><td colspan="7">
@@ -235,36 +247,16 @@
     authentication_failure_close: YES
     per_consumer_qos: YES
     direct_reply_to: YES
-  cluster_name: rabbit@393e6ca4ac36
-  copyright: Copyright (c) 2007-2023 VMware, Inc. or its affiliates.
+  cluster_name: rabbit@b71f887c75e7
+  copyright: Copyright (c) 2007-2023 Broadcom Inc and/or its subsidiaries
   information: Licensed under the MPL 2.0. Website: https://rabbitmq.com
-  platform: Erlang/OTP 25.3.2.7
+  platform: Erlang/OTP 25.3.2.8
   product: RabbitMQ
-  version: 3.12.6
-  mechanisms: AMQPLAIN PLAIN
+  version: 3.12.12
+  mechanisms: PLAIN AMQPLAIN
   locales: en_US
 </pre>
 </td></tr>
-<tr class="success">
-<td title="Port">5811</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">unknown</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">5911</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">cpdlc</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">5962</td>
 <td title="Protocol">tcp</td>
@@ -303,7 +295,17 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
+<td>22</td>
+<td>tcp</td>
+<td>ssh</td>
+<td>OpenSSH</td>
+<td>9.4</td>
+<td>cpe:/a:openbsd:openssh:9.4</td>
+<td>protocol 2.0</td>
+</tr>
+<tr>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -313,7 +315,17 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
+<td>179</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
@@ -323,7 +335,7 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>1080</td>
 <td>tcp</td>
 <td>socks</td>
@@ -333,7 +345,7 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>1081</td>
 <td>tcp</td>
 <td>pvuniwien</td>
@@ -343,7 +355,7 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>3000</td>
 <td>tcp</td>
 <td>ppp</td>
@@ -353,7 +365,7 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>5002</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -363,57 +375,17 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
-<td>5225</td>
-<td>tcp</td>
-<td>hp-server</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
-<td>5357</td>
-<td>tcp</td>
-<td>wsdapi</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>5800</td>
 <td>tcp</td>
 <td>amqp</td>
 <td>RabbitMQ</td>
-<td>3.12.6</td>
+<td>3.12.12</td>
 <td></td>
 <td>0-9</td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
-<td>5811</td>
-<td>tcp</td>
-<td>unknown</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
-<td>5911</td>
-<td>tcp</td>
-<td>cpdlc</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>5962</td>
 <td>tcp</td>
 <td>unknown</td>
@@ -423,7 +395,7 @@
 <td></td>
 </tr>
 <tr>
-<td>91.208.207.217 - www.conseiller-numerique.gouv.fr</td>
+<td>91.208.207.214 - www.conseiller-numerique.gouv.fr</td>
 <td>9999</td>
 <td>tcp</td>
 <td>tcpwrapped</td>

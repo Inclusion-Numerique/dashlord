@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 25 Feb 2024 03:23:45",
+	"@generated": "Sun, 3 Mar 2024 03:51:42",
 	"site":[ 
 		{
 			"@name": "https://lesbases.anct.gouv.fr",
@@ -9,6 +9,33 @@
 			"@port": "443",
 			"@ssl": "true",
 			"alerts": [ 
+				{
+					"pluginid": "10062",
+					"alertRef": "10062",
+					"alert": "PII Disclosure",
+					"name": "PII Disclosure",
+					"riskcode": "3",
+					"confidence": "3",
+					"riskdesc": "High (High)",
+					"desc": "<p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p>",
+					"instances":[ 
+						{
+							"uri": "https://lesbases.anct.gouv.fr/bases/conseiller-numerique-contributions",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "576318303574",
+							"otherinfo": "Credit Card Type detected: Maestro\nBank Identification Number: 576318\nBrand: MAESTRO\nCategory: \nIssuer: "
+						}
+					],
+					"count": "1",
+					"solution": "<p>Check the response for the potential presence of personally identifiable information (PII), ensure nothing sensitive is leaked by the application.</p>",
+					"otherinfo": "<p>Credit Card Type detected: Maestro</p><p>Bank Identification Number: 576318</p><p>Brand: MAESTRO</p><p>Category: </p><p>Issuer: </p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "3810"
+				},
 				{
 					"pluginid": "10202",
 					"alertRef": "10202",
@@ -114,7 +141,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html</p><p>https://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -149,7 +176,7 @@
 					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -184,7 +211,7 @@
 					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -219,7 +246,7 @@
 					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -254,7 +281,7 @@
 					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -289,7 +316,7 @@
 					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10110",
@@ -302,7 +329,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -316,7 +343,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "110"
+					"sourceid": "116"
 				},
 				{
 					"pluginid": "110009",
@@ -364,7 +391,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/657-066fa5c57a8242ab.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -372,7 +399,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -380,7 +407,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/3659-f8d36db5c953492c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -388,7 +415,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/error-9e43f02e0816e383.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/4927-f2758fb18295218d.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -396,7 +423,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -404,7 +431,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-54172d96907e9a10.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -412,7 +439,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-6aaf8b39095fae01.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -420,7 +447,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-ae6e94f8d577c54d.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-9f971ebf67fa19af.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -428,7 +455,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -450,7 +477,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10037",
@@ -527,7 +554,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=MaitriseDesOutilsNumeriques/ressources",
+							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -535,7 +562,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources",
+							"uri": "https://lesbases.anct.gouv.fr/rechercher/tout/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -557,7 +584,7 @@
 					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework</p><p>https://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10096",
@@ -570,7 +597,7 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -584,7 +611,7 @@
 					"reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "110"
+					"sourceid": "116"
 				},
 				{
 					"pluginid": "10094",
@@ -605,7 +632,7 @@
 							"otherinfo": "\\x001e\uFFFD\uFFFD\t\uFFFD^\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDq\uFFFD+v*'N+e{\uFFFD\uFFFD}\uFFFDe"
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -649,43 +676,51 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5D/ressources/page-34271969c0c2a59e",
-							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\uFFFDn\uFFFD\uFFFD\uFFFD\\\uFFFD\u035A\uFFFD\uFFFD"
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
 						},
 						{
 							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=DemarchesEtServicesEnLigne/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5D/ressources/page-34271969c0c2a59e",
-							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\uFFFDn\uFFFD\uFFFD\uFFFD\\\uFFFD\u035A\uFFFD\uFFFD"
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
 						},
 						{
 							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=DiagnosticDeCompetencesNumeriques/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5D/ressources/page-34271969c0c2a59e",
-							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\uFFFDn\uFFFD\uFFFD\uFFFD\\\uFFFD\u035A\uFFFD\uFFFD"
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
 						},
 						{
 							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=InclusionNumerique/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5D/ressources/page-34271969c0c2a59e",
-							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\uFFFDn\uFFFD\uFFFD\uFFFD\\\uFFFD\u035A\uFFFD\uFFFD"
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
 						},
 						{
 							"uri": "https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "5D/ressources/page-34271969c0c2a59e",
-							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\uFFFDn\uFFFD\uFFFD\uFFFD\\\uFFFD\u035A\uFFFD\uFFFD"
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/rechercher/tout/ressources",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "5D/ressources/page-a2657dd2e4064347",
+							"otherinfo": "\uFFFD?\uFFFDz\uFFFD(\uFFFD\uFFFD\\x001e\uFFFD\uFFFDZ\uFFFD\uFFFD\u06EE{u\u075E\uFFFDN\uFFFD\u07CE"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>\\x001e\uFFFD\uFFFD\t\uFFFD^\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDq\uFFFD+v*'N+e{\uFFFD\uFFFD}\uFFFDe</p>",
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -712,55 +747,7 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script>self.__next_f.push([1,\"c:[\\\"$\\\",\\\"div\\\",null,{\\\"style\\\":{\\\"display\\\":\\\"flex\\\",\\\"flexDirection\\\":\\\"column\\\",\\\"minHeight\\\"\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from",
-							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \" */var r,i,s=\"0123456789abcdef\",o=\"2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "query",
-							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \" */var r=n(51641),i=n(19045),s=\"function\"==typeof Object.is?Object.is:function(t,e){return t===e&&(0!==t||1/t==1/e)||t!=t&&e!=e}\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug",
-							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \" */(t={}).parse=function(e,t){if(\"string\"!=typeof e)throw TypeError(\"argument str must be a string\");for(var r={},o=e.split(i),a\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "query",
-							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6053],{94447:function(e,t,n){\"use strict\";n.d(t,{W:function(){return v}\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/7634-c6faaf95e4162348.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7634],{16092:function(e,t,r){r.d(t,{Lf:function(){return n\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "SELECT",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1561],{7860:function(e,t,r){let n,i,s,o,a,l;r.d(t,{U:funct\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -768,20 +755,68 @@
 							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"*/function(){var r={}.hasOwnProperty;function o(){for(var t=\"\",e=0;e<arguments.length;e++){var n=arguments[e];n&&(t=i(t,function\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3185],{46122:function(e,r,t){Promise.resolve().then(t.t.bind(t,60657,23\", see evidence field for the suspicious comment/snippet."
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in the element starting with: \" */var r,i,s=\"0123456789abcdef\",o=\"2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \" */var r=n(33044),i=n(24343),s=\"function\"==typeof Object.is?Object.is:function(t,e){return t===e&&(0!==t||1/t==1/e)||t!=t&&e!=e}\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/40b7d9fd-3eab1a318b5cc825.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "select",
-							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6746],{55308:function(e,t,n){var r,l=n(51641),a=n(6263),o=\", see evidence field for the suspicious comment/snippet."
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1809],{92019:function(e,t,n){var r,l=n(33044),a=n(5059),o=\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/4293-3b875ee2626163c4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4293],{17118:function(e,t,r){r.d(t,{Lf:function(){return n\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bug",
+							"otherinfo": "The following pattern was used: \\bBUG\\b and was detected in the element starting with: \" */(t={}).parse=function(e,t){if(\"string\"!=typeof e)throw TypeError(\"argument str must be a string\");for(var r={},o=e.split(i),a\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5191],{13367:function(e,t,n){\"use strict\";n.d(t,{W:function(){return v}\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "SELECT",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1561],{12226:function(e,t,r){let n,i,s,o,a,l;r.d(t,{U:func\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3185],{2546:function(e,r,t){Promise.resolve().then(t.t.bind(t,3659,23))\", see evidence field for the suspicious comment/snippet."
 						},
 						{
 							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
@@ -798,7 +833,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10109",
@@ -913,7 +948,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "131"
+					"sourceid": "118"
 				},
 				{
 					"pluginid": "10049",
@@ -948,7 +983,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -1004,6 +1039,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://lesbases.anct.gouv.fr/images/spinner.svg",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://lesbases.anct.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Dest",
@@ -1020,13 +1063,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1047,6 +1090,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://lesbases.anct.gouv.fr/images/spinner.svg",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://lesbases.anct.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Mode",
@@ -1063,13 +1114,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1090,6 +1141,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://lesbases.anct.gouv.fr/images/spinner.svg",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://lesbases.anct.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-Site",
@@ -1106,13 +1165,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "90005",
@@ -1133,6 +1192,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://lesbases.anct.gouv.fr/images/spinner.svg",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://lesbases.anct.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Sec-Fetch-User",
@@ -1149,13 +1216,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "32"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10049",
@@ -1168,7 +1235,7 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
 					"instances":[ 
 						{
-							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js",
+							"uri": "https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1265,7 +1332,7 @@
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "100"
+					"sourceid": "99"
 				}
 			]
 		}

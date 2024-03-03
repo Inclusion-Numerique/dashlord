@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 25 Feb 2024 03:23:45
+		Generated on Sun, 3 Mar 2024 03:51:42
 	</h3>
 
 	<h3>
@@ -148,7 +148,7 @@ td {
 					<div>High</div>
 				</td>
 				<td align="center">
-					<div>0</div>
+					<div>1</div>
 				</td>
 			</tr>
 			<tr>
@@ -196,6 +196,11 @@ td {
 					align="center">Risk Level</th>
 				<th width="20%"
 					align="center">Number of Instances</th>
+			</tr>
+			<tr>
+				<td><a href="#10062">PII Disclosure</a></td>
+				<td align="center" class="risk-3">High</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
@@ -255,7 +260,7 @@ td {
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10027">Information Disclosure - Suspicious Comments</a></td>
@@ -280,22 +285,22 @@ td {
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">3</td>
+				<td align="center">4</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
@@ -313,6 +318,91 @@ td {
 
 	
 		<h3>Alert Detail</h3>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-3"><a
+						id="10062"></a>
+						<div>High</div></th>
+					<th class="risk-3">PII Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/bases/conseiller-numerique-contributions">https://lesbases.anct.gouv.fr/bases/conseiller-numerique-contributions</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">576318303574</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Credit Card Type detected: Maestro
+Bank Identification Number: 576318
+Brand: MAESTRO
+Category: 
+Issuer: </td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Check the response for the potential presence of personally identifiable information (PII), ensure nothing sensitive is leaked by the application.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/359.html">359</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10062/">10062</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
 		
 			<table class="results">
 				<tr height="24">
@@ -1433,7 +1523,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js">https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js">https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1632,7 +1722,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/657-066fa5c57a8242ab.js">https://lesbases.anct.gouv.fr/_next/static/chunks/657-066fa5c57a8242ab.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js">https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1663,7 +1753,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js">https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js">https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1694,7 +1784,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js">https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/3659-f8d36db5c953492c.js">https://lesbases.anct.gouv.fr/_next/static/chunks/3659-f8d36db5c953492c.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1725,7 +1815,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/error-9e43f02e0816e383.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/error-9e43f02e0816e383.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/4927-f2758fb18295218d.js">https://lesbases.anct.gouv.fr/_next/static/chunks/4927-f2758fb18295218d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1756,7 +1846,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js">https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1787,7 +1877,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-54172d96907e9a10.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-54172d96907e9a10.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1818,7 +1908,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js">https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-6aaf8b39095fae01.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/not-found-6aaf8b39095fae01.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1849,7 +1939,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-ae6e94f8d577c54d.js">https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-ae6e94f8d577c54d.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-9f971ebf67fa19af.js">https://lesbases.anct.gouv.fr/_next/static/chunks/main-app-9f971ebf67fa19af.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1880,7 +1970,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js">https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js">https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2255,7 +2345,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/rechercher/thematiques=MaitriseDesOutilsNumeriques/ressources">https://lesbases.anct.gouv.fr/rechercher/thematiques=MaitriseDesOutilsNumeriques/ressources</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources">https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2286,7 +2376,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources">https://lesbases.anct.gouv.fr/rechercher/thematiques=NavigationSurInternet/ressources</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/rechercher/tout/ressources">https://lesbases.anct.gouv.fr/rechercher/tout/ressources</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2404,7 +2494,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js">https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js">https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2519,7 +2609,7 @@ The upgrade-insecure-requests directive does not support values
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2695,12 +2785,12 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5D/ressources/page-34271969c0c2a59e</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�?�z�(����Z���n���\�͚��</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
 					</tr>
 				
 					<tr>
@@ -2726,12 +2816,12 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5D/ressources/page-34271969c0c2a59e</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�?�z�(����Z���n���\�͚��</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
 					</tr>
 				
 					<tr>
@@ -2757,12 +2847,12 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5D/ressources/page-34271969c0c2a59e</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�?�z�(����Z���n���\�͚��</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
 					</tr>
 				
 					<tr>
@@ -2788,12 +2878,12 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5D/ressources/page-34271969c0c2a59e</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�?�z�(����Z���n���\�͚��</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
 					</tr>
 				
 					<tr>
@@ -2819,17 +2909,48 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5D/ressources/page-34271969c0c2a59e</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">�?�z�(����Z���n���\�͚��</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/rechercher/tout/ressources">https://lesbases.anct.gouv.fr/rechercher/tout/ressources</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">5D/ressources/page-a2657dd2e4064347</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">�?�z�(����Z��ۮ{uݞ�N�ߎ</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2914,193 +3035,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js">https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">from</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bFROM\b and was detected in the element starting with: &quot; */var r,i,s=&quot;0123456789abcdef&quot;,o=&quot;2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js">https://lesbases.anct.gouv.fr/_next/static/chunks/2716-210465c9e0ee7030.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">query</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bQUERY\b and was detected in the element starting with: &quot; */var r=n(51641),i=n(19045),s=&quot;function&quot;==typeof Object.is?Object.is:function(t,e){return t===e&amp;&amp;(0!==t||1/t==1/e)||t!=t&amp;&amp;e!=e}&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js">https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">bug</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bBUG\b and was detected in the element starting with: &quot; */(t={}).parse=function(e,t){if(&quot;string&quot;!=typeof e)throw TypeError(&quot;argument str must be a string&quot;);for(var r={},o=e.split(i),a&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js">https://lesbases.anct.gouv.fr/_next/static/chunks/6053-95fd20c79dee8523.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">query</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bQUERY\b and was detected in the element starting with: &quot;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6053],{94447:function(e,t,n){&quot;use strict&quot;;n.d(t,{W:function(){return v}&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/7634-c6faaf95e4162348.js">https://lesbases.anct.gouv.fr/_next/static/chunks/7634-c6faaf95e4162348.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">select</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7634],{16092:function(e,t,r){r.d(t,{Lf:function(){return n&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js">https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-00047c5d70d4f2ed.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">SELECT</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1561],{7860:function(e,t,r){let n,i,s,o,a,l;r.d(t,{U:funct&quot;, see evidence field for the suspicious comment/snippet.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js">https://lesbases.anct.gouv.fr/_next/static/chunks/9712-9d311e55d308a5d3.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js">https://lesbases.anct.gouv.fr/_next/static/chunks/2623-818eb6eb7222beea.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3131,7 +3066,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d63308a310c46249.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js">https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3151,18 +3086,49 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">user</td>
+						<td width="80%">from</td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3185],{46122:function(e,r,t){Promise.resolve().then(t.t.bind(t,60657,23&quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bFROM\b and was detected in the element starting with: &quot; */var r,i,s=&quot;0123456789abcdef&quot;,o=&quot;2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js">https://lesbases.anct.gouv.fr/_next/static/chunks/ebe38080-a4e209f016809b55.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js">https://lesbases.anct.gouv.fr/_next/static/chunks/3370-82288561c9d3e8d0.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">query</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bQUERY\b and was detected in the element starting with: &quot; */var r=n(33044),i=n(24343),s=&quot;function&quot;==typeof Object.is?Object.is:function(t,e){return t===e&amp;&amp;(0!==t||1/t==1/e)||t!=t&amp;&amp;e!=e}&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/40b7d9fd-3eab1a318b5cc825.js">https://lesbases.anct.gouv.fr/_next/static/chunks/40b7d9fd-3eab1a318b5cc825.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3187,7 +3153,162 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent2">Other Info</td>
-						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6746],{55308:function(e,t,n){var r,l=n(51641),a=n(6263),o=&quot;, see evidence field for the suspicious comment/snippet.</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1809],{92019:function(e,t,n){var r,l=n(33044),a=n(5059),o=&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/4293-3b875ee2626163c4.js">https://lesbases.anct.gouv.fr/_next/static/chunks/4293-3b875ee2626163c4.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">select</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4293],{17118:function(e,t,r){r.d(t,{Lf:function(){return n&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js">https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">bug</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bBUG\b and was detected in the element starting with: &quot; */(t={}).parse=function(e,t){if(&quot;string&quot;!=typeof e)throw TypeError(&quot;argument str must be a string&quot;);for(var r={},o=e.split(i),a&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js">https://lesbases.anct.gouv.fr/_next/static/chunks/5191-73c8d8ba5ee4e912.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">query</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bQUERY\b and was detected in the element starting with: &quot;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5191],{13367:function(e,t,n){&quot;use strict&quot;;n.d(t,{W:function(){return v}&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js">https://lesbases.anct.gouv.fr/_next/static/chunks/7957908e-ee0c40b5054ff02e.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">SELECT</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&quot;use strict&quot;;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1561],{12226:function(e,t,r){let n,i,s,o,a,l;r.d(t,{U:func&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js">https://lesbases.anct.gouv.fr/_next/static/chunks/app/layout-d403d0746f315f56.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3185],{2546:function(e,r,t){Promise.resolve().then(t.t.bind(t,3659,23))&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -4001,6 +4122,37 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/images/spinner.svg">https://lesbases.anct.gouv.fr/images/spinner.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://lesbases.anct.gouv.fr/robots.txt">https://lesbases.anct.gouv.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4062,7 +4214,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4147,6 +4299,37 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/images/spinner.svg">https://lesbases.anct.gouv.fr/images/spinner.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://lesbases.anct.gouv.fr/robots.txt">https://lesbases.anct.gouv.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4208,7 +4391,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4293,6 +4476,37 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/images/spinner.svg">https://lesbases.anct.gouv.fr/images/spinner.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://lesbases.anct.gouv.fr/robots.txt">https://lesbases.anct.gouv.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4354,7 +4568,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4439,6 +4653,37 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/images/spinner.svg">https://lesbases.anct.gouv.fr/images/spinner.svg</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://lesbases.anct.gouv.fr/robots.txt">https://lesbases.anct.gouv.fr/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4500,7 +4745,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">4</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4554,7 +4799,7 @@ Z,x�ۡ�݊x��h��%�ǁ��h���%��</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js">https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-7bf77fe025445344.js</a></td>
+						<td width="80%"><a href="https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js">https://lesbases.anct.gouv.fr/_next/static/chunks/webpack-f15751128585e9d3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

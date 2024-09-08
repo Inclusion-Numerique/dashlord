@@ -1,0 +1,936 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "candidat.conseiller-numerique.gouv.fr.",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 25552\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;candidat.conseiller-numerique.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 25552\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;candidat.conseiller-numerique.gouv.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\nconseiller-numerique.gouv.fr.\t1800\tIN\tSOA\tremy.ns.cloudflare.com. dns.cloudflare.com. 2351128236 10000 2400 604800 1800\n",
+      "timestamp": "2024-09-08T01:06:12.769692576Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/options-method.yaml",
+      "template-url": "https://templates.nuclei.sh/public/options-method",
+      "template-id": "options-method",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
+      "info": {
+        "name": "Allowed Options Method",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "miscellaneous",
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "extracted-results": [
+        "OPTIONS,HEAD,GET,POST"
+      ],
+      "request": "OPTIONS /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAllow: OPTIONS,HEAD,GET,POST\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb08f6c8615878-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:16 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=re%2BqdBV2DHU1fn%2F2xUTZyKc%2BopIvSSMtMQwrxw%2Femu53iBp5D0W8BzOnVrCtrwgRJJvX2j7ULoQBveC8XI0f%2BXKkP9Td%2Fw05vzNhx%2ByMLOx6q5TLiyMtJwkw9GBwpDBVYvqwT4L6OZF2WCbwYsuS%2BwqawjpuQfAs\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JNMCMKTPX0NFVZ3QTYF8V\r\n\r\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:16.863922151Z",
+      "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/tech-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tech-detect",
+      "template-id": "tech-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
+      "info": {
+        "name": "Wappalyzer Technology Detection",
+        "author": [
+          "hakluke",
+          "righettod"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cloudflare",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb098d8bf4d46b-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:40 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=rTwxzcvJoIxz6200tBbTcDRF%2BS2411rox%2FZj54ZbhwLfV8Ud8zAIMRs%2BVBGqA9PhYKs5QWa5C0Ofe2yKpoKYKrMvTU27bkxuzmSydROiY0CNvgbVFVtv0dsNx%2BvYGYYuNC%2FgJPYuibj9gckfoaYS7173lHCw%2FMbZ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP8Q2NQ0N4RRV3QAFQGF8\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:41.074547401Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.095629306Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.095678388Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.09569572Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.095948983Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.095982505Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.095997132Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.096012741Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.096025886Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "strict-transport-security",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.096039371Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.096052726Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "request": "GET /login HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb09b3a9fb0684-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:06:47 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qv6wYceCxSzNbjPR3yrdqtwal2egRfAFHrIV3O0IrluZjPj2BeY48qW0ZCtsqMEoqLPcfbOTOBMtxJMnkpdk0a9RruFOUad021SUIBB7%2B6xn8QGbZ%2FxU4FyXh%2FTsEElmm4mzPZywOAuzFXR%2BY8obA9joKpnF12bJ\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JP94GZP2C5PEJ153KBVDP\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:47.096065329Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/robots-txt-endpoint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/robots-txt-endpoint",
+      "template-id": "robots-txt-endpoint",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/robots-txt-endpoint.yaml",
+      "info": {
+        "name": "robots.txt endpoint prober",
+        "author": [
+          "caspergn",
+          "pdteam"
+        ],
+        "tags": [
+          "miscellaneous",
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 2
+        }
+      },
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/robots.txt",
+      "request": "GET /robots.txt HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAge: 414\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=14400\r\nCf-Cache-Status: HIT\r\nCf-Ray: 8bfb09db0972080e-IAD\r\nContent-Type: text/plain\r\nDate: Sun, 08 Sep 2024 01:06:53 GMT\r\nEtag: W/\"43-61dfcb61d47b4\"\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=a%2B0%2BbFDvYu2jAosKPs4VJFC5CFd0%2FdbMa%2FZ0eOlu0%2BjXbL3UczGbxeQ4MUWvzIdtJlgyiTuBUtG4mxZ4kLkwFjYRe%2B2pBpCQQPdnzMEpDjv7fi7p8lw8LR4A02NIk7E9QUeHWihTN8tFzNf4qGqlFTRStExQ31t4\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J71EN64TXTRGFVGQKB1ASSWZ\r\nVary: Accept-Encoding\r\n\r\n# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:06:53.316674836Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/robots.txt'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "cloudflare",
+      "type": "http",
+      "host": "https://candidat.conseiller-numerique.gouv.fr/login",
+      "matched-at": "https://candidat.conseiller-numerique.gouv.fr/login/",
+      "request": "POST /login/ HTTP/1.1\r\nHost: candidat.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8bfb0a122bd638fb-IAD\r\nContent-Type: text/html\r\nDate: Sun, 08 Sep 2024 01:07:02 GMT\r\nLast-Modified: Wed, 24 Jul 2024 11:38:04 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2B19MUf3bTJajBatwn9BZj6hlrZelejPvwocrGk0J7D2F%2BakGEqHGOTGRBteGPP23Zy0Kvhf8akaPtSOaHr6UikvHdlR9b6wzsCwtjYvCxqcEjrTfGhM1qwXJfPELQa2SH7d%2BCkC%2BaIY7372c0xDfbYHZydRqUp37\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nSozu-Id: 01J77JQ09HP62XMBYV6GXNPDHC\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\" data-fr-reset data-fr-theme=\"light\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon-32.png\" type=\"image/png\" sizes=\"32x32\" />\n    <link rel=\"icon\" href=\"/favicon-64.png\" type=\"image/png\" sizes=\"64x64\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000000\" />\n    <meta name=\"description\" content=\"espace candidat\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Espace Conseiller Numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-DeZvmJaj.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-B7yFAyIc.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script>\n      var _paq = window._paq = window._paq || [];\n      _paq.push([\"setDocumentTitle\", document.domain + \"/\" + document.title]);\n      _paq.push([\"setCookieDomain\", \"*.conseiller-numerique.gouv.fr\"]);\n      _paq.push([\"setDomains\", [\"*.conseiller-numerique.gouv.fr\"]]);\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function() {\n        var u=\"https://stats.data.gouv.fr/\";\n        _paq.push(['setTrackerUrl', u+'matomo.php']);\n        _paq.push(['setSiteId', '147']);\n        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];\n        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);\n      })();\n    </script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:07:02.212219481Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: candidat.conseiller-numerique.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://candidat.conseiller-numerique.gouv.fr/login/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "Google Trust Services"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.247882274Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "candidat.conseiller-numerique.gouv.fr"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.248008219Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/deprecated-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/deprecated-tls",
+      "template-id": "deprecated-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/deprecated-tls.yaml",
+      "info": {
+        "name": "Deprecated TLS Detection",
+        "author": [
+          "righettod",
+          "forgedhallpass"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Both TLS 1.1 and SSLv3 are deprecated in favor of stronger encryption.\n",
+        "reference": [
+          "https://ssl-config.mozilla.org/#config=intermediate"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 3,
+          "shodan-query": "ssl.version:sslv2 ssl.version:sslv3 ssl.version:tlsv1 ssl.version:tlsv1.1"
+        },
+        "remediation": "Update the web server's TLS configuration to disable TLS 1.1 and SSLv3.\n"
+      },
+      "extractor-name": "tls_1.1",
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.536804134Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/deprecated-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/deprecated-tls",
+      "template-id": "deprecated-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/deprecated-tls.yaml",
+      "info": {
+        "name": "Deprecated TLS Detection",
+        "author": [
+          "righettod",
+          "forgedhallpass"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Both TLS 1.1 and SSLv3 are deprecated in favor of stronger encryption.\n",
+        "reference": [
+          "https://ssl-config.mozilla.org/#config=intermediate"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 3,
+          "shodan-query": "ssl.version:sslv2 ssl.version:sslv3 ssl.version:tlsv1 ssl.version:tlsv1.1"
+        },
+        "remediation": "Update the web server's TLS configuration to disable TLS 1.1 and SSLv3.\n"
+      },
+      "extractor-name": "tls_1.0",
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls10"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.602926101Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls10"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.695260925Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.7558696Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/weak-cipher-suites.yaml",
+      "template-url": "https://templates.nuclei.sh/public/weak-cipher-suites",
+      "template-id": "weak-cipher-suites",
+      "template-path": "/home/runner/nuclei-templates/ssl/weak-cipher-suites.yaml",
+      "info": {
+        "name": "Weak Cipher Suites Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "misconfig"
+        ],
+        "description": "A weak cipher is defined as an encryption/decryption algorithm that uses a key of insufficient length. Using an insufficient length for a key in an encryption/decryption algorithm opens up the possibility (or probability) that the encryption scheme could be broken.",
+        "reference": [
+          "https://www.acunetix.com/vulnerabilities/web/tls-ssl-weak-cipher-suites/",
+          "http://ciphersuite.info"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "matcher-name": "tls-1.0",
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "[tls10 TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA]"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.799779773Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.820564934Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/weak-cipher-suites.yaml",
+      "template-url": "https://templates.nuclei.sh/public/weak-cipher-suites",
+      "template-id": "weak-cipher-suites",
+      "template-path": "/home/runner/nuclei-templates/ssl/weak-cipher-suites.yaml",
+      "info": {
+        "name": "Weak Cipher Suites Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "misconfig"
+        ],
+        "description": "A weak cipher is defined as an encryption/decryption algorithm that uses a key of insufficient length. Using an insufficient length for a key in an encryption/decryption algorithm opens up the possibility (or probability) that the encryption scheme could be broken.",
+        "reference": [
+          "https://www.acunetix.com/vulnerabilities/web/tls-ssl-weak-cipher-suites/",
+          "http://ciphersuite.info"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "matcher-name": "tls-1.1",
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "[tls11 TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA]"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.863055467Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "candidat.conseiller-numerique.gouv.fr",
+      "matched-at": "candidat.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-09-08T01:09:52.877341569Z",
+      "matcher-status": true
+    }
+  ]
+]

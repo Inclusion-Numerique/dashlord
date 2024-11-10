@@ -1,0 +1,1028 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "www.conseiller-numerique.gouv.fr.",
+      "matched-at": "www.conseiller-numerique.gouv.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 37576\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;www.conseiller-numerique.gouv.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 37576\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;www.conseiller-numerique.gouv.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\nconseiller-numerique.gouv.fr.\t1800\tIN\tSOA\tremy.ns.cloudflare.com. dns.cloudflare.com. 2356396263 10000 2400 604800 1800\n",
+      "timestamp": "2024-11-10T01:08:25.340004198Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/options-method.yaml",
+      "template-url": "https://templates.nuclei.sh/public/options-method",
+      "template-id": "options-method",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/options-method.yaml",
+      "info": {
+        "name": "Allowed Options Method",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "miscellaneous",
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "extracted-results": [
+        "OPTIONS,HEAD,GET,POST"
+      ],
+      "request": "OPTIONS / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAllow: OPTIONS,HEAD,GET,POST\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0226d76bdbfa62-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:08:30 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=SWsLn9rF3SzZBdlNEKG4V0P3Ps%2BJOcFhbe%2BBemM2aWOIC6SHurPS5kybebKb6EZ2vhDIGorBAD9D56UFuIqF8vWq%2F1W372clUTbaIODBj1QFzV7DTAz2sNaDaFaoe9eOz1IqzkRKoJaCdPBRuSLM6T0MqA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1581&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3122&recv_bytes=587&delivery_rate=2950413&cwnd=252&unsent_bytes=0&cid=6a1c78da0d2831c4&ts=152&x=0\"\r\nSozu-Id: 01JC9STZE556024EYR3EGXCZDD\r\n\r\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:08:30.134764885Z",
+      "curl-command": "curl -X 'OPTIONS' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/fingerprinthub-web-fingerprints.yaml",
+      "template-url": "https://templates.nuclei.sh/public/fingerprinthub-web-fingerprints",
+      "template-id": "fingerprinthub-web-fingerprints",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/fingerprinthub-web-fingerprints.yaml",
+      "info": {
+        "name": "FingerprintHub Technology Fingerprint",
+        "author": [
+          "pdteam",
+          "righettod"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "description": "FingerprintHub Technology Fingerprint tests run in nuclei.",
+        "reference": [
+          "https://github.com/0x727/fingerprinthub"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "drupal",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e022775aa506423-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:08:55 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=wrZsm8rX5kkLXW9%2BsyBveQBHWPPZLGdfZXEOOh4vJv4tFNzTOunmua%2Br51U53GTw%2BISTs8LbKBmQdvC%2BGWbPbQL0oOba2P1F%2FrSKJI6p%2BI7h39AUwtVquGXxj6TA%2FJ2Cct8oY4gUzehe%2F2QCvuudaDe8Cg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1520&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3124&recv_bytes=583&delivery_rate=2932238&cwnd=252&unsent_bytes=0&cid=8d751dfd3222555d&ts=580&x=0\"\r\nSozu-Id: 01JC9SVQPQGE4FYPF347X0EB0C\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:08:56.009128902Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/tech-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tech-detect",
+      "template-id": "tech-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
+      "info": {
+        "name": "Wappalyzer Technology Detection",
+        "author": [
+          "hakluke",
+          "righettod"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cloudflare",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e022775aa506423-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:08:55 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=wrZsm8rX5kkLXW9%2BsyBveQBHWPPZLGdfZXEOOh4vJv4tFNzTOunmua%2Br51U53GTw%2BISTs8LbKBmQdvC%2BGWbPbQL0oOba2P1F%2FrSKJI6p%2BI7h39AUwtVquGXxj6TA%2FJ2Cct8oY4gUzehe%2F2QCvuudaDe8Cg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1520&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3124&recv_bytes=583&delivery_rate=2932238&cwnd=252&unsent_bytes=0&cid=8d751dfd3222555d&ts=580&x=0\"\r\nSozu-Id: 01JC9SVQPQGE4FYPF347X0EB0C\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:08:56.017583578Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "content-security-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901893319Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "permissions-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901939385Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-content-type-options",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901956887Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "clear-site-data",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901969801Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-opener-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901982365Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-resource-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.901998224Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "strict-transport-security",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.902011619Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-permitted-cross-domain-policies",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.902024022Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "referrer-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.902036225Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "cross-origin-embedder-policy",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.90204948Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/http-missing-security-headers.yaml",
+      "template-url": "https://templates.nuclei.sh/public/http-missing-security-headers",
+      "template-id": "http-missing-security-headers",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/http-missing-security-headers.yaml",
+      "info": {
+        "name": "HTTP Missing Security Headers",
+        "author": [
+          "socketz",
+          "geeknik",
+          "g4l1t0",
+          "convisoappsec",
+          "kurohost",
+          "dawid-czarnecki",
+          "forgedhallpass",
+          "jub0bs",
+          "userdehghani"
+        ],
+        "tags": [
+          "misconfig",
+          "headers",
+          "generic"
+        ],
+        "description": "This template searches for missing HTTP security headers. The impact of these missing headers can vary.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "x-frame-options",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr",
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227aa6af724e2-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:03 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=eD661tWEHXIwhtBpJ8GhG1roVsmb%2BaHseKqDpXkIWMT7g8SETQUXusIp%2FOJKSTEwYBTpR2OnAPvsaB6VMDLrDWnZoST%2FJjvjPm0tHbmhbXOVcvizz%2FAer%2F3s9vyiA2MNRqhEtm%2FwCYMOZuMVPmjxnRyuZQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1317&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3123&recv_bytes=583&delivery_rate=3454838&cwnd=252&unsent_bytes=0&cid=4b643b5e41f23c28&ts=158&x=0\"\r\nSozu-Id: 01JC9SVYD8BQ392R696TF339ZH\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:03.902062364Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/robots-txt-endpoint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/robots-txt-endpoint",
+      "template-id": "robots-txt-endpoint",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/robots-txt-endpoint.yaml",
+      "info": {
+        "name": "robots.txt endpoint prober",
+        "author": [
+          "caspergn",
+          "pdteam"
+        ],
+        "tags": [
+          "miscellaneous",
+          "misc",
+          "generic"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 2
+        }
+      },
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr/robots.txt",
+      "request": "GET /robots.txt HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAge: 439\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=14400\r\nCf-Cache-Status: HIT\r\nCf-Ray: 8e0227d8a9e924f3-SJC\r\nContent-Type: text/plain\r\nDate: Sun, 10 Nov 2024 01:09:11 GMT\r\nEtag: W/\"43-62619ac6ca24e\"\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qRfgDwVRvowsQnRPKwnXTOebRPmxGNgoPqfI932v59Fp18xR%2Bu5nrHPISFN8cfy%2F8GnSFSgc68zzgw%2B1XQL%2B9pjiMGJ07%2FQXOV59Eoms6anNXq1G85ebN55hOMyJHZSiRN2Zf3rdzICRyicQFkg%2BTUvgdg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1452&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3122&recv_bytes=593&delivery_rate=2827722&cwnd=252&unsent_bytes=0&cid=94f4adec07dea17a&ts=21&x=0\"\r\nSozu-Id: 01JC9SEWEMWH1NHAD4X4BHDT5C\r\nVary: Accept-Encoding\r\n\r\n# https://www.robotstxt.org/robotstxt.html\nUser-agent: *\nDisallow:\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:11.167215819Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr/robots.txt'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz",
+          "sullo"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute.\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity",
+          "https://developer.mozilla.org/en-us/docs/web/security/subresource_integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr/",
+      "extracted-results": [
+        "https://js.hcaptcha.com/1/api.js"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0227fcb802fa5a-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:17 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=yxNXGf3w64MoOtA8rVmuW0DsKpMVgJQOzV0bbWg2%2B5fwX0V8LFpL8i2d0H8W12Bn%2BBYLfeL89zvLOJxLjvyyTggJwgrqFIy4pjHWc9ujyDmjfexlJgzkwzVOpyeUY5NCa329Yw4ueqCxT%2F9R1GC%2BDF3mEA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1555&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3122&recv_bytes=549&delivery_rate=2699432&cwnd=252&unsent_bytes=0&cid=ab8b48a9996fd79c&ts=154&x=0\"\r\nSozu-Id: 01JC9SWECXR5SVQ83CRJ66Q9BZ\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:17.063185815Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: www.conseiller-numerique.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "cloudflare",
+      "type": "http",
+      "host": "https://www.conseiller-numerique.gouv.fr",
+      "matched-at": "https://www.conseiller-numerique.gouv.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: www.conseiller-numerique.gouv.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nAlt-Svc: h3=\":443\"; ma=86400\r\nCache-Control: max-age=60, private, proxy-revalidate\r\nCf-Cache-Status: DYNAMIC\r\nCf-Ray: 8e0228251fa5ced1-SJC\r\nContent-Type: text/html\r\nDate: Sun, 10 Nov 2024 01:09:23 GMT\r\nLast-Modified: Mon, 04 Nov 2024 17:32:49 GMT\r\nNel: {\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}\r\nReport-To: {\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=tw9AgZFiS%2Bri920JNZcTmBu7FB%2FlsJhCFGZRaEX%2BuH0ivqZI%2BJicpT4lTdXce16Z1tJPPpI73%2FYllUB4uI19ngYmqN5Xg%2F%2BFBslF44yJ6%2Fc5%2BP4WoYmAL%2FlStAsEWbTXVKw7Rh9tYOIbN4PMuv8iSTqLow%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}\r\nServer: cloudflare\r\nServer-Timing: cfL4;desc=\"?proto=TCP&rtt=1355&sent=5&recv=7&lost=0&retrans=0&sent_bytes=3123&recv_bytes=668&delivery_rate=2702839&cwnd=250&unsent_bytes=0&cid=0881131ba16603ca&ts=152&x=0\"\r\nSozu-Id: 01JC9SWEPS1YB5KQG6YP8V3GP0\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"/favicon.ico\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#000091\" />\n    <meta name=\"description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta name=\"robots\" content=\"noarchive\" />\n    <meta property=\"og:image\" content=\"/cartographie-cnfs-min.svg\" />\n    <meta property=\"og:url\" content=\"https://www.conseiller-numerique.gouv.fr\" />\n    <meta property=\"og:title\" content=\"Conseiller numérique\" />\n    <meta property=\"og:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:locale\" content=\"fr_FR\" />\n    <meta property=\"og:site_name\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:url\" content=\"https://www.conseiller.numerique.gouv.fr\" />\n    <meta name=\"twitter:title\" content=\"Conseiller numérique\" />\n    <meta name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:image\" content=\"https://www.gouvernement.fr/sites/all/themes/custom/gouvernement/img/thumbnail_site.png\" />\n    <meta name=\"twitter:description\" content=\"Sur une durée de deux ans, l’état finance la formation et le déploiement de 4 000 Conseillers numériques.\" />\n    <meta property=\"fb:app_id\" content=\"\" />\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-16x16.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-32*32.png\" />\n    <link rel=\"manifest\" href=\"/manifest.json\" />\n    <title>Conseiller numérique</title>\n    <meta name=\"google-site-verification\" content=\"eND3WF_iW6YzE4bYPRUYnRxnMR_5cyk54SOAB50HVug\" />\n    <script type=\"module\" crossorigin src=\"/assets/index-D1D-zXbQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BzXmBaE5.css\">\n  </head>\n  <body>\n    <noscript>You need to enable JavaScript to run this app.</noscript>\n    <div id=\"root\"></div>\n    <script type=\"text/javascript\">\n      var _paq = window._paq || [];\n      _paq.push(['trackPageView']);\n      _paq.push(['enableLinkTracking']);\n      (function () {\n          var u = \"https://stats.data.gouv.fr/\";\n          _paq.push(['setTrackerUrl', u + 'matomo.php']);\n          _paq.push(['setSiteId', '147']);\n          var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];\n          g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);\n      })();\n    </script>\n    <script src=\"https://js.hcaptcha.com/1/api.js\" async defer></script>\n  </body>\n</html>\n",
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:09:23.54532756Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.conseiller-numerique.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.conseiller-numerique.gouv.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "Google Trust Services"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.462189144Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "www.conseiller-numerique.gouv.fr"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.462335297Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/deprecated-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/deprecated-tls",
+      "template-id": "deprecated-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/deprecated-tls.yaml",
+      "info": {
+        "name": "Deprecated TLS Detection",
+        "author": [
+          "righettod",
+          "forgedhallpass"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Both TLS 1.1 and SSLv3 are deprecated in favor of stronger encryption.\n",
+        "reference": [
+          "https://ssl-config.mozilla.org/#config=intermediate"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 3,
+          "shodan-query": "ssl.version:sslv2 ssl.version:sslv3 ssl.version:tlsv1 ssl.version:tlsv1.1"
+        },
+        "remediation": "Update the web server's TLS configuration to disable TLS 1.1 and SSLv3.\n"
+      },
+      "extractor-name": "tls_1.1",
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.637309874Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/deprecated-tls.yaml",
+      "template-url": "https://templates.nuclei.sh/public/deprecated-tls",
+      "template-id": "deprecated-tls",
+      "template-path": "/home/runner/nuclei-templates/ssl/deprecated-tls.yaml",
+      "info": {
+        "name": "Deprecated TLS Detection",
+        "author": [
+          "righettod",
+          "forgedhallpass"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Both TLS 1.1 and SSLv3 are deprecated in favor of stronger encryption.\n",
+        "reference": [
+          "https://ssl-config.mozilla.org/#config=intermediate"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 3,
+          "shodan-query": "ssl.version:sslv2 ssl.version:sslv3 ssl.version:tlsv1 ssl.version:tlsv1.1"
+        },
+        "remediation": "Update the web server's TLS configuration to disable TLS 1.1 and SSLv3.\n"
+      },
+      "extractor-name": "tls_1.0",
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls10"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.664767744Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls10"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.948312837Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls11"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.974135139Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:10.997015055Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:11.020286584Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/weak-cipher-suites.yaml",
+      "template-url": "https://templates.nuclei.sh/public/weak-cipher-suites",
+      "template-id": "weak-cipher-suites",
+      "template-path": "/home/runner/nuclei-templates/ssl/weak-cipher-suites.yaml",
+      "info": {
+        "name": "Weak Cipher Suites Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "misconfig"
+        ],
+        "description": "A weak cipher is defined as an encryption/decryption algorithm that uses a key of insufficient length. Using an insufficient length for a key in an encryption/decryption algorithm opens up the possibility (or probability) that the encryption scheme could be broken.",
+        "reference": [
+          "https://www.acunetix.com/vulnerabilities/web/tls-ssl-weak-cipher-suites/",
+          "http://ciphersuite.info"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "matcher-name": "tls-1.0",
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "[tls10 TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA]"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:11.046016429Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/weak-cipher-suites.yaml",
+      "template-url": "https://templates.nuclei.sh/public/weak-cipher-suites",
+      "template-id": "weak-cipher-suites",
+      "template-path": "/home/runner/nuclei-templates/ssl/weak-cipher-suites.yaml",
+      "info": {
+        "name": "Weak Cipher Suites Detection",
+        "author": [
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls",
+          "misconfig"
+        ],
+        "description": "A weak cipher is defined as an encryption/decryption algorithm that uses a key of insufficient length. Using an insufficient length for a key in an encryption/decryption algorithm opens up the possibility (or probability) that the encryption scheme could be broken.",
+        "reference": [
+          "https://www.acunetix.com/vulnerabilities/web/tls-ssl-weak-cipher-suites/",
+          "http://ciphersuite.info"
+        ],
+        "severity": "low",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "matcher-name": "tls-1.1",
+      "type": "ssl",
+      "host": "www.conseiller-numerique.gouv.fr",
+      "matched-at": "www.conseiller-numerique.gouv.fr:443",
+      "extracted-results": [
+        "[tls11 TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA]"
+      ],
+      "ip": "172.67.144.206",
+      "timestamp": "2024-11-10T01:12:11.07322253Z",
+      "matcher-status": true
+    }
+  ]
+]
